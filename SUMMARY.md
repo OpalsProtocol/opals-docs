@@ -1,9 +1,27 @@
-# Table of Contents
+# Table of contents
 
 * [Introduction](README.md)
 * [What is Opals?](overview/what-is-opals.md)
 * [Why Choose Opals?](overview/why-opals.md)
 * [How It Works](overview/how-it-works.md)
+
+## components
+
+* [Patron Cards](components/patron-cards.md)
+* [Tokens](components/tokens.md)
+* [Markets](components/markets.md)
+* [Claims](components/claims.md)
+* [Distributor](components/distributor.md)
+* [Staking](components/staking.md)
+* [LP Tokens](components/lp-tokens.md)
+
+## Mechanisms
+
+* [PatronPower System](mechanisms/patronpower-system.md)
+* [Template Factory Pattern](mechanisms/template-factory.md)
+* [Open Vested Liquidity (OVL)](mechanisms/open-vested-liquidity.md)
+* [Anti-Gaming Mechanisms](mechanisms/anti-gaming-mechanisms.md)
+* [Tokenomics](mechanisms/tokenomics.md)
 
 ## For Founders
 
@@ -25,24 +43,6 @@
 * [Staking & Rewards Guide](for-investors/staking-rewards-guide.md)
 * [Risk Management](for-investors/risk-management.md)
 * [Maximizing Returns](for-investors/maximizing-returns.md)
-
-## Components
-
-* [Patron Cards](components/patron-cards.md)
-* [Tokens](components/tokens.md)
-* [Markets](components/markets.md)
-* [Claims](components/claims.md)
-* [Distributor](components/distributor.md)
-* [Staking](components/staking.md)
-* [LP Tokens](components/lp-tokens.md)
-
-## Mechanisms
-
-* [PatronPower System](mechanisms/patronpower-system.md)
-* [Template Factory Pattern](mechanisms/template-factory.md)
-* [Open Vested Liquidity (OVL)](mechanisms/open-vested-liquidity.md)
-* [Anti-Gaming Mechanisms](mechanisms/anti-gaming-mechanisms.md)
-* [Tokenomics](mechanisms/tokenomics.md)
 
 ## Technical Documentation
 

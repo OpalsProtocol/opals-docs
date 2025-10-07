@@ -1,15 +1,5 @@
 # What is Opals?
 
-## 30-Second Explanation
-
-Opals is a token launch platform that lets founders deploy complete crypto projects in 5 minutes for $15.
-
-No coding required. No giving up equity. No $500K in fees.
-
-Your community funds you by buying NFTs. Those NFTs unlock token rewards forever. Liquidity gets locked permanently so projects cannot rug.
-
-## 2-Minute Explanation
-
 ### The Problem
 
 Every crypto founder faces the same choice. Take VC money and lose control. Use a launchpad and pay massive fees. Or build everything from scratch for months.
@@ -34,7 +24,7 @@ Opals uses PatronPower. Lock permanently: 10x multiplier. Lock for 7 days: 0.024
 
 Short-term speculators earn almost nothing. Diamond hands earn exponentially more. Your most loyal supporters get rewarded accordingly.
 
-## Complete Overview
+## Introducing Opals
 
 ### What Makes Opals Different
 
@@ -76,7 +66,7 @@ All of this happens automatically. No manual distribution. No trust required. Ju
 
 ## Who Uses Opals
 
-### Persona 1: The Founder
+### The Founder
 
 **Background**: You built a crypto product. Community loves it. Ready to launch a token.
 
@@ -88,7 +78,7 @@ All of this happens automatically. No manual distribution. No trust required. Ju
 
 **Benefit**: Zero equity dilution. No board seats given. No multi-month fundraising process. Just you and your believers.
 
-### Persona 2: The Investor
+### The Investor
 
 **Background**: You find early-stage crypto projects. Invest when nobody knows them yet. Hold long-term.
 
@@ -100,7 +90,7 @@ All of this happens automatically. No manual distribution. No trust required. Ju
 
 **Benefit**: Bot-resistant pricing. Unruggable liquidity. 10x rewards for permanent commitment. Real ownership, not temporary points.
 
-### Persona 3: The Developer
+### The Developer
 
 **Background**: You build crypto infrastructure. Need token for protocol governance and incentives. Want proven security.
 
@@ -112,19 +102,19 @@ All of this happens automatically. No manual distribution. No trust required. Ju
 
 **Benefit**: 74.7% gas savings. Zero custom security review needed. All patterns proven in production. Focus on protocol, not token infrastructure.
 
-## Feature Validation
+## Features
 
 Every feature claimed here maps to specific smart contracts:
 
 **"10x permanent lock multiplier"**: PatronClaim.sol line 62 returns lpAmount × 10 for permanent locks. Mathematically enforced.
 
-**"2% platform fee"**: SteppedMarket.sol line 79 defines TOTAL_FEE_BPS = 200. Hardcoded constant.
+**"2% platform fee"**: SteppedMarket.sol line 79 defines TOTAL\_FEE\_BPS = 200. Hardcoded constant.
 
 **"Liquidity locked permanently"**: PatronClaim.sol has no withdrawal function for LP tokens. Only reward token claims exist.
 
 **"0.024x to 5x flexible staking"**: VaultClaim.sol lines 61-65 define linear scaling from 7 days to 4 years.
 
-**"74.7% gas savings"**: EIP-1167 minimal proxy pattern implemented in OpalsFactory.sol. Full deployment ~13.4M gas vs clone-based createProject 3.38M gas (measured in test/misc/MiscTests.t.sol).
+**"74.7% gas savings"**: EIP-1167 minimal proxy pattern implemented in OpalsFactory.sol. Full deployment \~13.4M gas vs clone-based createProject 3.38M gas (measured in test/misc/MiscTests.t.sol).
 
 **"Reentrancy protection"**: All state-changing functions use nonReentrant modifier. ReentrancyGuard inherited throughout.
 
@@ -132,7 +122,7 @@ Every feature claimed here maps to specific smart contracts:
 
 These are not marketing claims. These are contract specifications validated by 375 passing tests.
 
-## Core Design Principles
+## Design Principles
 
 ### Transparency Over Promises
 
