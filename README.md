@@ -1,4 +1,4 @@
-# Launch Your Token in 5 Minutes. Keep 100% Control.
+# Introduction
 
 <figure><img src=".gitbook/assets/introducing.png" alt="Opals Platform Interface"><figcaption></figcaption></figure>
 
@@ -12,7 +12,7 @@ Traditional funding is broken. VCs demand 35% equity plus board control. Launchp
 
 Your community wants to support you directly. They believe in your vision. They want to be part of your success from day one.
 
-Opals makes this possible. Deploy your entire project in minutes. Keep 100% control.
+Opals makes this possible. Deploy your entire project in minutes. Keep 100% control of it.
 
 ## Launch complete ecosystems in minutes
 
@@ -40,7 +40,6 @@ No VCs demanding board seats. No launchpads taking 7% fees. Just you and your co
 
 [Launch your project →](for-founders/quick-start.md)
 
-
 ## Supporters
 
 Become an early believer in projects you trust.
@@ -50,7 +49,6 @@ Your commitment level determines rewards. Permanent locks earn 10x more than sho
 Liquidity is permanently locked. Projects cannot rug. Your investment is protected by smart contracts.
 
 [Buy Patron Cards →](for-supporters/buying-cards.md)
-
 
 ## Developers
 
@@ -62,7 +60,6 @@ Deploy through template factory. Inherit proven security. Focus on your unique f
 
 [Read technical docs →](technical/architecture.md)
 
-
 ### Trading Rewards
 
 Custom Uniswap V2 fork charges 1% per swap. 100% goes to Distributor for PatronPower-weighted rewards.
@@ -73,8 +70,6 @@ Rewards accumulate automatically. Claim anytime through smart contracts.
 
 [Reward distribution details →](economics/rewards.md)
 
-
-
 Ready to launch? Choose your path:
 
 **Learn the complete process**: [Learn the complete process →](overview/how-it-works.md)
@@ -82,4 +77,3 @@ Ready to launch? Choose your path:
 **Questions?**: [Join our community →](https://discord.gg/opals)
 
 **Technical support**: [Read the docs →](help/getting-started.md)
-
