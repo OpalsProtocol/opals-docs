@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit", 
+      "Write",
+      "WebFetch",
+      "Grep",
+      "Glob",
+      "LS",
+      "MultiEdit",
+      "NotebookRead",
+      "NotebookEdit", 
+      "TodoRead",
+      "TodoWrite",
+      "WebSearch"
+    ],
+    "defaultMode": "acceptEdits",
+    "deny": [
+      "Read(./.env*)",
+      "Read(./secrets/**)",
+      "Read(./.api-keys)",      
+      "Bash(sudo :*)",
+      "Bash(curl :*)",
+      "Write(./.env*)"
+    ],
+    "ask": [
+      "Bash(rm :*)",
+      "Bash(git push :*)",
+      "Write(package.json)",
+      "Write(package-lock.json)"
+    ]
+  }
+}
