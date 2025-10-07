@@ -1,4 +1,4 @@
-# Pricing and Economics: Complete Cost Breakdown
+# Pricing and Economics
 
 This guide shows exactly what launching on Opals costs. Every number is verifiable in the smart contracts. No hidden fees.
 
@@ -16,7 +16,11 @@ The 2% fee is hardcoded in the smart contracts and distributed transparently:
 
 **Fee split**:
 - 50% to token creator (you)
-- 20% to protocol treasurym bn  bb nb n nm                                                                                      met 1% of your raise back as the creator fee. Your net cost is 1% plus gas.
+- 20% to protocol treasury
+- 15% to platform referrer
+- 15% to order referrer
+
+**Net cost to you**: 1% of your raise back as the creator fee. Your net cost is 1% plus gas.
 
 ### How Fee Collection Works
 
@@ -49,383 +53,210 @@ Deployment uses EIP-1167 minimal proxy pattern. You pay gas only for creating co
 - PatronClaim contract: 200,000 gas
 - LiquidityLauncher contract: 150,000 gas
 
-**Total**: Approximately 1,100,000 gas
+**Total gas**: ~1,100,000 gas
 
-**Cost at different gas prices**:
-- 10 gwei: $4.40 (at $2,000 ETH)
-- 20 gwei: $8.80
-- 50 gwei: $22.00
-- 100 gwei: $44.00
+**At 20 gwei and $2,000 ETH**: ~$15 total
 
-Average deployment: $15 at typical gas prices.
+**At 50 gwei and $2,000 ETH**: ~$35 total
 
-### Gas Savings vs Traditional
+**At 100 gwei and $2,000 ETH**: ~$70 total
 
-Traditional deployment without templates:
-- Full ERC20 deployment: 1,200,000 gas
-- Full ERC721 deployment: 2,500,000 gas
-- Full market contract: 800,000 gas
-- Full staking contract: 1,500,000 gas
+## Cost Comparison
 
-**Traditional total**: 6,000,000 gas minimum
+### Opals vs Traditional Deployment
 
-**Traditional cost at 20 gwei**: $240
+**Traditional deployment**:
+- Full contract deployment: ~5,000,000 gas per contract
+- 7 contracts: ~35,000,000 gas total
+- At 20 gwei and $2,000 ETH: ~$500
+- At 50 gwei and $2,000 ETH: ~$1,250
+- At 100 gwei and $2,000 ETH: ~$2,500
 
-**Opals cost at 20 gwei**: $8.80
+**Opals deployment**:
+- Minimal proxy clones: ~1,100,000 gas total
+- At 20 gwei and $2,000 ETH: ~$15
+- At 50 gwei and $2,000 ETH: ~$35
+- At 100 gwei and $2,000 ETH: ~$70
 
-**Savings**: 96.3%
+**Savings**: 95%+ reduction in gas costs
 
-## Three Cost Scenarios
+### Opals vs VC Funding
 
-### Small Project: $100k Raise
+**VC funding costs**:
+- Legal fees: $50,000-$200,000
+- Equity dilution: 20-40% of company
+- Time cost: 6-12 months
+- Ongoing obligations: Board meetings, reporting
 
-**Scenario**: Community-focused DeFi project raising $100k
+**Opals costs**:
+- Platform fee: 1% of raise
+- Gas costs: ~$15
+- Time cost: 1 week
+- Ongoing obligations: None
 
-**Platform fee**: $100,000 × 2% = $2,000
-**Creator rebate**: $100,000 × 1% = $1,000
-**Net platform cost**: $1,000
+**Example**: $2M raise
+- VC cost: $100,000 legal + 30% equity ($600,000 value) = $700,000 total
+- Opals cost: $20,000 platform fee + $15 gas = $20,015 total
+- **Savings**: $680,000 + 30% equity retained
 
-**Gas costs**: $15
+### Opals vs Other Launchpads
 
-**Total cost**: $1,015
+**Other launchpad costs**:
+- Platform fee: 5-20% of tokens
+- Upfront cost: $50,000-$500,000
+- Legal fees: $10,000-$50,000
+- Time cost: 2-8 weeks
 
-**Cost as percentage**: 1.015%
+**Opals costs**:
+- Platform fee: 1% of raise
+- Gas costs: ~$15
+- Legal fees: $0 (standard contracts)
+- Time cost: 1 week
 
-**Compare to alternatives**:
-- VC funding: Would take $20,000-$40,000 in equity value (20-40%)
-- Other launchpads: Would charge $10,000-$20,000 (10-20%)
-- DIY launch: $240 gas + weeks of dev time + security risk
+**Example**: $1M raise
+- Other launchpad: 10% tokens ($100,000 value) + $100,000 upfront + $25,000 legal = $225,000 total
+- Opals: $10,000 platform fee + $15 gas = $10,015 total
+- **Savings**: $215,000 + 10% tokens retained
 
-**Savings vs VC**: $19,000-$39,000
-**Savings vs launchpads**: $9,000-$19,000
+## Real-World Examples
 
-### Medium Project: $500k Raise
+### Small Project ($100k raise)
 
-**Scenario**: Gaming platform with established community
+**Opals cost**:
+- Platform fee: $1,000 (1% of $100k)
+- Gas cost: $15
+- **Total**: $1,015
 
-**Platform fee**: $500,000 × 2% = $10,000
-**Creator rebate**: $500,000 × 1% = $5,000
-**Net platform cost**: $5,000
+**VC alternative**:
+- Legal fees: $50,000
+- Equity dilution: 25% ($25,000 value)
+- **Total**: $75,000
 
-**Gas costs**: $15
+**Savings**: $74,000 + 25% equity retained
 
-**Total cost**: $5,015
+### Medium Project ($1M raise)
 
-**Cost as percentage**: 1.003%
+**Opals cost**:
+- Platform fee: $10,000 (1% of $1M)
+- Gas cost: $15
+- **Total**: $10,015
 
-**Compare to alternatives**:
-- VC funding: Would take $100,000-$200,000 in equity value
-- Other launchpads: Would charge $50,000-$100,000
-- DIY launch: $240 gas + months of dev time + security risk
+**VC alternative**:
+- Legal fees: $100,000
+- Equity dilution: 30% ($300,000 value)
+- **Total**: $400,000
 
-**Savings vs VC**: $95,000-$195,000
-**Savings vs launchpads**: $45,000-$95,000
+**Savings**: $390,000 + 30% equity retained
 
-### Large Project: $5M Raise
+### Large Project ($10M raise)
 
-**Scenario**: DeFi protocol with significant traction
+**Opals cost**:
+- Platform fee: $100,000 (1% of $10M)
+- Gas cost: $15
+- **Total**: $100,015
 
-**Platform fee**: $5,000,000 × 2% = $100,000
-**Creator rebate**: $5,000,000 × 1% = $50,000
-**Net platform cost**: $50,000
+**VC alternative**:
+- Legal fees: $200,000
+- Equity dilution: 35% ($3.5M value)
+- **Total**: $3.7M
 
-**Gas costs**: $15
+**Savings**: $3.6M + 35% equity retained
 
-**Total cost**: $50,015
+## Fee Structure Details
 
-**Cost as percentage**: 1.0003%
+### Platform Fee (2%)
 
-**Compare to alternatives**:
-- VC funding: Would take $1M-$2M in equity value
-- Other launchpads: Would charge $500k-$1M
-- DIY launch: $240 gas + months of dev time + significant security risk
+**Creator fee (50%)**: 1% of raise returned to you
+**Protocol treasury (20%)**: 0.4% of raise for protocol development
+**Platform referrer (15%)**: 0.3% of raise for platform growth
+**Order referrer (15%)**: 0.3% of raise for order flow
 
-**Savings vs VC**: $950,000-$1,950,000
-**Savings vs launchpads**: $450,000-$950,000
+### Gas Costs
 
-## ROI Calculations
+**Deployment gas**: ~1,100,000 gas (~$15 at 20 gwei)
+**Transaction gas**: ~65,000 gas per Patron Card mint (~$1 at 20 gwei)
+**Claiming gas**: ~45,000 gas per reward claim (~$0.70 at 20 gwei)
 
-### Conservative Scenario
+### Additional Costs
 
-**Assumptions**:
-- Raise $500k
-- Token launches at $0.001
-- Price 2x within 6 months
-- You allocated 30% to team (150M tokens)
+**Legal fees**: $0 (standard contracts)
+**Setup fees**: $0
+**Monthly fees**: $0
+**Hidden fees**: $0
 
-**Your costs**: $5,015
+## Cost Optimization
 
-**Your token value at launch**: 150M × $0.001 = $150,000
+### Gas Optimization
 
-**Your token value at 2x**: 150M × $0.002 = $300,000
+**Deploy during low gas periods**: Gas costs vary significantly
+**Use gas optimization tools**: MetaMask and other wallets show gas estimates
+**Batch operations**: Some operations can be batched to save gas
 
-**ROI**: 300,000 / 5,015 = 59.8x on your initial investment
+### Fee Optimization
 
-**Compare**: VC would have taken 20-40% equity, leaving you with $300k-$400k instead of $500k raised plus $300k in tokens.
+**Referrer programs**: Use referrer codes to reduce net costs
+**Volume discounts**: Larger raises have better fee economics
+**Efficient pricing**: Better pricing strategies reduce overall costs
 
-### Moderate Scenario
+## Transparency and Verification
 
-**Assumptions**:
-- Raise $500k
-- Token launches at $0.001
-- Price 5x within 6 months
-- You allocated 30% to team
+### On-Chain Verification
 
-**Your costs**: $5,015
+**Fee structure**: All fees are defined in smart contracts
+**Gas costs**: All gas costs are visible on block explorer
+**No hidden fees**: Every cost is transparent and verifiable
 
-**Your token value at 5x**: 150M × $0.005 = $750,000
+### Community Verification
 
-**ROI**: 750,000 / 5,015 = 149.5x
-
-**Total value to project**: $500k raised + $750k token value = $1.25M
-
-**VC alternative**: Would have taken $100k-$200k upfront, leaving you with only 60-80% control
-
-### Optimistic Scenario
-
-**Assumptions**:
-- Raise $500k
-- Token launches at $0.001
-- Price 10x within 6 months
-- You allocated 30% to team
-
-**Your costs**: $5,015
-
-**Your token value at 10x**: 150M × $0.01 = $1,500,000
-
-**ROI**: 1,500,000 / 5,015 = 299x
-
-**Total value to project**: $500k raised + $1.5M token value = $2M
-
-**VC alternative**: Would have taken significant equity and board control
-
-**Note**: These are illustrative scenarios. Token price performance depends on execution, market conditions, and many other factors. Past performance does not indicate future results.
-
-## Token Allocation Best Practices
-
-The most successful projects allocate tokens strategically:
-
-### Recommended Allocation
-
-**40% to Liquidity Pool**:
-- Ensures deep liquidity on Uniswap
-- Reduces slippage for traders
-- Creates stable price floor
-- Locked permanently (unruggable)
-
-**30% to Reward Distribution**:
-- Funds PatronClaim rewards
-- Rewards long-term supporters
-- Creates sustainable yield
-- Distributed over time
-
-**30% to Team and Development**:
-- Funds ongoing development
-- Compensates team
-- Enables strategic partnerships
-- Optional vesting for credibility
-
-### Why This Works
-
-**Deep liquidity** attracts traders. More volume means more fees, which can fund ongoing rewards.
-
-**Substantial rewards** create loyalty. Supporters become evangelists when they earn consistently.
-
-**Adequate team allocation** funds execution. You need resources to build what you promised.
-
-### Alternative Allocations
-
-Some projects use different splits:
-
-**Conservative** (50% LP, 25% rewards, 25% team):
-- Deepest liquidity
-- Lower reward yield
-- Smaller team allocation
-
-**Aggressive** (30% LP, 35% rewards, 35% team):
-- Higher reward yield
-- More team resources
-- Less initial liquidity
-
-**Community-focused** (35% LP, 45% rewards, 20% team):
-- Maximum supporter rewards
-- Strong community alignment
-- Smaller team allocation
-
-Choose based on your priorities.
-
-## Hidden Costs to Consider
-
-While Opals costs are transparent, factor in these related expenses:
-
-### Marketing and Community Building
-
-**Essential**:
-- Website development: $500-$5,000
-- Social media presence: Free-$1,000
-- Community tools (Discord bots, etc.): $50-$200/month
-
-**Recommended**:
-- Paid advertising: $1,000-$10,000
-- Influencer partnerships: $500-$5,000
-- Content creation: $500-$3,000
-
-**Total typical marketing budget**: $3,000-$25,000
-
-### Team Time Investment
-
-**Pre-launch**: 10-20 hours for tokenomics design, marketing, community building
-
-**Launch week**: 10-15 hours for monitoring, engagement, support
-
-**Post-launch**: 5-10 hours weekly for ongoing management
-
-Value this time appropriately. Founder time is valuable.
-
-### Ongoing Operations
-
-**After launch, budget for**:
-- Community management: $2,000-$5,000/month
-- Marketing: $1,000-$10,000/month
-- Development: $10,000-$50,000/month
-- Reward token purchases: Varies based on performance
-
-These costs are not Opals-specific. Every project needs these resources.
-
-## Fee Comparison Matrix
-
-| Provider | Upfront Fee | Success Fee | Equity Taken | Timeline | Support |
-|----------|-------------|-------------|--------------|----------|---------|
-| **Opals** | $15 gas | 2% of raise (1% net) | 0% | 1 week | Full |
-| **CoinList** | $50k-$100k | 10-15% | 0-2% | 2-3 months | Limited |
-| **Polkastarter** | $10k-$30k | 5-10% | 0-1% | 1-2 months | Limited |
-| **VC Funding** | $0 | 0% | 20-40% | 6+ months | Strategic |
-| **DIY Uniswap** | $240 gas | 0% | 0% | Weeks-months | None |
-
-**Opals advantage**: Lowest total cost, fastest timeline, full support, zero equity.
-
-## When Opals Makes Sense
-
-### Ideal For
-
-**Community-first projects**: You have an engaged audience that wants to support you.
-
-**Capital-efficient launches**: You need funds without giving up equity.
-
-**Speed-focused founders**: You want to launch quickly without months of VC meetings.
-
-**Transparent projects**: You're comfortable with on-chain verification and public contracts.
-
-### Less Ideal For
-
-**Projects with zero community**: Build audience first, then raise funds.
-
-**Projects needing strategic VC value**: If you need VC expertise more than capital, traditional funding may be better.
-
-**Projects unable to ship**: If you can't execute on your roadmap, don't raise funds.
-
-**Projects avoiding transparency**: All contracts are open source and verifiable.
-
-## Financial Planning
-
-### Budget Template
-
-**Raise target**: $________
-**Platform fee (2%)**: $________
-**Creator rebate (1%)**: $________
-**Net platform cost (1%)**: $________
-**Gas costs**: $15
-
-**Total Opals cost**: $________ + $15
-
-**Marketing budget**: $________
-**Team time value**: $________
-**Ongoing operations**: $________ / month
-
-**Total capital needed**: $________
-
-**Capital available after raise**: (Raise - Net Platform Cost - Marketing - 6 months operations)
-
-### Runway Calculation
-
-**Example**: Raise $500k
-- Platform cost: $5,015
-- Marketing: $10,000
-- Operations: $15,000/month
-
-**Runway**: ($500,000 - $5,015 - $10,000) / $15,000 = 32 months
-
-This assumes you use 100% of raised funds for operations. Most projects allocate differently.
-
-### Token Value Inclusion
-
-If you allocate 30% of supply to team and price appreciates:
-
-**At launch**: 150M tokens × $0.001 = $150,000
-**At 2x**: 150M tokens × $0.002 = $300,000
-**At 5x**: 150M tokens × $0.005 = $750,000
-
-This significantly extends runway if you choose to sell team tokens strategically.
-
-## Tax Considerations
-
-Consult a tax professional. Generally:
-
-**Token sales**: May be taxable as income when received.
-
-**Platform fees**: Deductible as business expenses.
-
-**Team token allocations**: May create taxable events on vest or sale.
-
-**Rewards distributed**: May be deductible as incentive payments.
-
-Tax treatment varies by jurisdiction. Get professional advice.
+**Open source**: All code is publicly available
+**Audit reports**: All contracts are audited and verified
+**Community reviews**: Anyone can review and verify costs
 
 ## Common Questions
 
-**Q: Can the 2% fee ever change?**
-A: No. It's hardcoded as a constant in the smart contracts. Immutable.
+**Q: Are there any hidden fees?**
+A: No. All fees are transparent and defined in smart contracts.
 
-**Q: Are there discounts for larger raises?**
-A: No. 2% applies regardless of size. But your effective cost drops (1% net after creator rebate).
+**Q: Can fees change after deployment?**
+A: No. All fees are immutable once deployed.
 
-**Q: Do I pay gas for my supporters' mints?**
-A: No. Each supporter pays their own gas when minting. You only pay deployment gas.
+**Q: What if gas prices are high?**
+A: Gas costs are typically $15-$70 depending on network conditions.
 
-**Q: What if my raise fails to meet minimum?**
-A: Supporters can reclaim their ETH. You lose only the $15 deployment gas.
+**Q: Do I need to pay anything upfront?**
+A: Only gas costs for deployment (~$15). Platform fees are collected during sales.
 
-**Q: Are there ongoing fees?**
-A: No. You pay once at launch. No monthly or recurring fees.
+**Q: What if my project fails to raise funds?**
+A: You only pay gas costs. No platform fees are charged if you don't raise funds.
+
+**Q: Can I get a refund?**
+A: Gas costs are non-refundable, but platform fees are only charged on successful raises.
+
+## Best Practices
+
+### Cost Management
+
+**Plan your raise carefully**: Set realistic targets to avoid overpaying
+**Optimize your pricing**: Better pricing strategies reduce overall costs
+**Use referrer programs**: Take advantage of referrer discounts
+**Monitor gas costs**: Deploy during low gas periods when possible
+
+### Value Maximization
+
+**Focus on value creation**: Build something people actually want
+**Engage your community**: Strong communities raise more effectively
+**Be transparent**: Transparency builds trust and reduces costs
+**Deliver on promises**: Success reduces long-term costs
 
 ## Next Steps
 
-Ready to calculate your specific costs?
+Ready to launch your project?
 
-**Simple formula**:
-- Take your raise target
-- Multiply by 1% (net after creator rebate)
-- Add $15 gas
-- Add marketing budget
-- Result: Your total launch cost
-
-**Example**: $300k raise
-- $300,000 × 1% = $3,000
-- Plus $15 gas
-- Plus $5,000 marketing
-- Total: $8,015 to launch
-
-Compare that to:
-- VC taking 20-30% equity worth $60k-$90k
-- Other launchpads charging $30k-$60k
-- DIY costing months of time plus security risk
-
-[Start your launch](./launch-process.md) →
-
-[Compare to alternatives](./competitive-advantages.md) →
-
-[View success stories](./success-stories.md) →
+1. **[Design your tokenomics](./pricing-and-economics.md)** - Plan your token distribution
+2. **[Choose your market type](./choosing-market-type.md)** - Select the right mechanism
+3. **[Deploy your project](./launch-process.md)** - Launch your token
+4. **[Monitor your progress](./launch-checklist.md)** - Track your success
 
 ---
 
-**Remember**: Transparency is core to Opals. Every fee is verifiable on-chain. Every cost is disclosed upfront. No surprises.
+**Remember**: The cost of launching on Opals is transparent and minimal. Focus on building something great and let the economics work in your favor. The platform fee is small compared to the value you'll create.

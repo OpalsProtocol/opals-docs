@@ -1,4 +1,4 @@
-# For Investors: Earn Up to 10x More by Supporting Great Projects
+# For Investors
 
 Find early-stage crypto projects and earn rewards that scale with your commitment. No rug pulls. No insider deals. Just transparent, protected investment opportunities.
 

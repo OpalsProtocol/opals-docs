@@ -26,13 +26,23 @@
 * [Risk Management](for-investors/risk-management.md)
 * [Maximizing Returns](for-investors/maximizing-returns.md)
 
-## Core Concepts
+## Components
 
-* [PatronPower System](core-concepts/patronpower-system.md)
-* [Template Factory Pattern](core-concepts/template-factory.md)
-* [Open Vested Liquidity (OVL)](core-concepts/open-vested-liquidity.md)
-* [Anti-Gaming Mechanisms](core-concepts/anti-gaming-mechanisms.md)
-* [Tokenomics](core-concepts/tokenomics.md)
+* [Patron Cards](components/patron-cards.md)
+* [Tokens](components/tokens.md)
+* [Markets](components/markets.md)
+* [Claims](components/claims.md)
+* [Distributor](components/distributor.md)
+* [Staking](components/staking.md)
+* [LP Tokens](components/lp-tokens.md)
+
+## Mechanisms
+
+* [PatronPower System](mechanisms/patronpower-system.md)
+* [Template Factory Pattern](mechanisms/template-factory.md)
+* [Open Vested Liquidity (OVL)](mechanisms/open-vested-liquidity.md)
+* [Anti-Gaming Mechanisms](mechanisms/anti-gaming-mechanisms.md)
+* [Tokenomics](mechanisms/tokenomics.md)
 
 ## Technical Documentation
 
@@ -41,6 +51,7 @@
 * [Integration Guide](technical/integration-guide.md)
 * [Contracts Reference](technical/contracts-reference.md)
 * [Security](technical/security.md)
+* [Litepaper](technical/litepaper.md)
 
 ## Resources
 

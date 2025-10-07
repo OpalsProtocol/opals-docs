@@ -1,4 +1,4 @@
-# Launch Checklist: Your Complete Action Plan
+# Launch Checklist
 
 Use this checklist to ensure nothing gets missed. Most successful launches follow this sequence.
 
@@ -48,305 +48,186 @@ Use this checklist to ensure nothing gets missed. Most successful launches follo
 - [ ] **Compliance checks completed**: KYC/AML requirements reviewed if applicable
 - [ ] **Risk disclosures prepared**: Clear warnings about investment risk
 
-### Technical Preparation
+## Launch Day (Day 0)
 
-- [ ] **Wallet set up**: MetaMask or similar Web3 wallet configured
-- [ ] **Hardware wallet acquired**: Ledger or Trezor for admin wallet security (recommended)
-- [ ] **ETH for gas obtained**: At least $50 worth of ETH in deployment wallet
-- [ ] **Test wallet created**: Practice deployment on testnet (optional but recommended)
-- [ ] **Block explorer bookmarked**: Etherscan or equivalent for your deployment chain
-- [ ] **Configuration values written down**: All parameters ready for deployment form
+### Technical Setup
 
----
+- [ ] **Wallet connected**: MetaMask or other wallet connected to Opals
+- [ ] **Gas fees prepared**: Sufficient ETH for deployment ($15 typical)
+- [ ] **Configuration reviewed**: All settings double-checked
+- [ ] **Contracts deployed**: Project contracts deployed successfully
+- [ ] **Block explorer verified**: Contracts visible and verified
+- [ ] **Test transaction completed**: Basic functionality tested
 
-## Deployment Phase (30 Minutes)
+### Community Activation
 
-### Wallet Setup
+- [ ] **Launch announcement posted**: All channels updated simultaneously
+- [ ] **Community notified**: Discord/Telegram members alerted
+- [ ] **Social media active**: Regular updates and engagement
+- [ ] **FAQ pinned**: Common questions easily accessible
+- [ ] **Support channels open**: Team available to answer questions
+- [ ] **Progress tracking**: Real-time updates on funding progress
 
-- [ ] **Web3 wallet connected**: MetaMask or WalletConnect connected to Opals dashboard
-- [ ] **Correct network selected**: Ethereum mainnet, Base, Optimism, etc.
-- [ ] **Sufficient ETH confirmed**: At least $50 for gas (deployment costs approximately $15)
-- [ ] **Admin wallet secured**: Using hardware wallet or secure backup for admin keys
+### Monitoring and Support
 
-### Project Configuration
+- [ ] **Sales dashboard active**: Real-time monitoring of Patron Card sales
+- [ ] **Community engagement**: Responding to questions and comments
+- [ ] **Technical support**: Helping users with wallet and transaction issues
+- [ ] **Progress updates**: Regular updates on funding progress
+- [ ] **Issue resolution**: Addressing any problems quickly
+- [ ] **Celebration milestones**: Acknowledging funding milestones
 
-- [ ] **Project name entered**: What your project is called
-- [ ] **Token symbol entered**: 3-5 character ticker (e.g., "OPALS")
-- [ ] **Token supply entered**: Total tokens to mint (e.g., 1,000,000,000)
-- [ ] **Market type selected**: Stepped, Fixed, or Members
-- [ ] **Pricing parameters entered**: Based on your pre-launch strategy
-- [ ] **Sale duration set**: How long the sale runs (e.g., 7 days)
-- [ ] **Minimum threshold entered**: Minimum ETH to reach for launch
-
-### Liquidity Configuration
-
-- [ ] **LP percentage set**: How much goes to Uniswap (recommended: 40%)
-- [ ] **Slippage tolerance confirmed**: 2% default is recommended
-- [ ] **LP recipient verified**: PatronClaim address is correct destination
-
-### Reward Configuration
-
-- [ ] **Reward percentage set**: How much for PatronClaim rewards (recommended: 30%)
-- [ ] **Distribution schedule planned**: When rewards will be sent to PatronClaim
-
-### Final Review
-
-- [ ] **All parameters double-checked**: Token supply, symbol, pricing all correct
-- [ ] **Total raise calculated**: Expected ETH based on your configuration
-- [ ] **Threshold reasonable**: Set to 50-70% of target raise
-- [ ] **Ready to commit**: Understanding that parameters are immutable after deployment
-
-### Deployment Execution
-
-- [ ] **"Deploy Project" clicked**: Initiated deployment transaction
-- [ ] **Transaction confirmed**: Wallet approved transaction
-- [ ] **Confirmation waited**: Transaction mined (approximately 30 seconds)
-- [ ] **Success verified**: Dashboard shows successful deployment
-
-### Post-Deployment Verification
-
-- [ ] **All contracts deployed**: 7+ contracts visible on block explorer
-- [ ] **Admin wallet verified**: Your wallet listed as project admin
-- [ ] **Market contract verified**: Pricing parameters match your configuration
-- [ ] **Token contract verified**: Supply and symbol correct
-- [ ] **Addresses saved**: All contract addresses copied and stored securely
-
----
-
-## Launch Announcement (Immediately After Deployment)
-
-### Share Contract Addresses
-
-- [ ] **Market contract posted**: Where supporters mint Patron Cards
-- [ ] **Token contract posted**: For adding to wallets
-- [ ] **Project dashboard link shared**: Opals interface for your project
-- [ ] **All addresses verified**: Double-checked before posting
-
-### Announce on All Channels
-
-- [ ] **Twitter announcement**: Thread explaining launch, pricing, how to participate
-- [ ] **Discord announcement**: @everyone with launch details
-- [ ] **Telegram announcement**: Pinned message with all information
-- [ ] **Website updated**: Homepage reflects live launch
-- [ ] **Email list notified**: If you have subscribers
-
-### Launch Post Checklist
-
-Your announcement should include:
-- [ ] Launch time (specific: "Live now!" or "November 15 at 12:00 UTC")
-- [ ] Contract address (market contract where minting happens)
-- [ ] Pricing details (how much per card, how stepped pricing works)
-- [ ] Benefits of Patron Cards (LP allocation, reward potential, PatronPower)
-- [ ] How to participate (step-by-step: connect wallet, go to address, mint)
-- [ ] Sale duration (how long sale runs)
-- [ ] Support resources (where to ask questions)
-
----
-
-## Active Sale Phase (During 1-Week Sale)
+## Active Sale Phase (Days 1-7)
 
 ### Daily Monitoring
 
-- [ ] **Check sales progress**: How many cards minted, ETH raised, time remaining
-- [ ] **Monitor current batch**: For SteppedMarket, which batch is selling
-- [ ] **Track wallet activity**: Unique wallet count, repeat buyers
-- [ ] **Watch for technical issues**: Any errors being reported?
+- [ ] **Sales progress tracked**: Daily review of funding progress
+- [ ] **Community engagement**: Daily interaction with community
+- [ ] **Technical issues resolved**: Any problems addressed quickly
+- [ ] **Progress updates shared**: Regular updates on funding progress
+- [ ] **Celebration milestones**: Acknowledging funding milestones
+- [ ] **Support provided**: Helping users with questions and issues
 
-### Daily Communication
+### Marketing and Promotion
 
-- [ ] **Post daily update**: Sales progress, milestones reached, excitement building
-- [ ] **Answer community questions**: Respond to all questions in Discord/Telegram
-- [ ] **Share holder count**: How many unique supporters now have cards
-- [ ] **Create urgency**: "Batch 5 is 80% sold!" (if using SteppedMarket)
-
-### Milestone Celebrations
-
-- [ ] **25% sold**: Celebrate with community, share excitement
-- [ ] **50% sold**: Major milestone post, thank supporters
-- [ ] **75% sold**: Build urgency for remaining cards
-- [ ] **Minimum threshold reached**: Announce that launch is guaranteed
-- [ ] **Fully sold**: Major celebration, announce automatic launch coming
-
-### Community Engagement
-
-- [ ] **Host AMA**: Answer questions live in Discord or Twitter Spaces
-- [ ] **Share team updates**: What you're building, progress on roadmap
-- [ ] **Retweet supporters**: Amplify community members promoting project
-- [ ] **Create content**: Blog posts, videos, threads explaining project deeper
-
-### Problem Handling
-
-If sales are slower than expected:
-- [ ] **Increase marketing**: More posts, reach out to influencers
-- [ ] **Host events**: AMAs, Twitter Spaces, community calls
-- [ ] **Explain PatronPower**: Educate on long-term reward potential
-- [ ] **Share roadmap**: Remind community what you're building
-- [ ] **Be transparent**: If concerned, communicate honestly
-
-If sales are faster than expected:
-- [ ] **Prepare for early launch**: May hit threshold before sale duration ends
-- [ ] **Scale community management**: More questions coming in
-- [ ] **Communicate post-launch plans**: What happens after Uniswap launch
-- [ ] **Thank community**: Express gratitude for fast support
-
----
-
-## Automatic Launch (When Threshold Reached)
-
-### Launch Happens Automatically
-
-The LiquidityLauncher contract handles launch automatically when threshold is met. No manual intervention needed or possible.
-
-- [ ] **Launch transaction confirmed**: Check block explorer for liquidity addition
-- [ ] **Uniswap pair created**: Token + ETH pair exists on Uniswap
-- [ ] **LP tokens sent to PatronClaim**: Verify LP tokens in PatronClaim contract
-- [ ] **Trading begins**: Token is now tradeable on Uniswap
-
-### Immediate Post-Launch
-
-- [ ] **Announce trading live**: Post on all channels that token is now tradeable
-- [ ] **Share Uniswap link**: Direct link to your token's Uniswap page
-- [ ] **Post initial price**: What launch price ended up being
-- [ ] **Thank supporters**: Public gratitude to Patron Card holders
-- [ ] **Reiterate long-term vision**: This is just the beginning
-
-### Monitor Launch Day
-
-- [ ] **Watch initial trading**: Price movement, volume, liquidity depth
-- [ ] **Answer questions**: Community will have many questions
-- [ ] **Track key metrics**: Holder count, trading volume, price volatility
-- [ ] **Be present**: High visibility in community channels
-
----
-
-## Post-Launch Phase (First Week)
-
-### Immediate Actions (Day 1-2)
-
-- [ ] **Distribute first rewards**: Send initial reward tokens to PatronClaim within 48 hours
-- [ ] **Update community on plans**: Share what you're building next
-- [ ] **Engage with holders**: Thank individual supporters, retweet their posts
-- [ ] **Monitor sentiment**: Are supporters happy? Any concerns?
-
-### First Week Tasks
-
-- [ ] **Track staking metrics**: How many Patron Cards staked? What lock durations?
-- [ ] **Calculate PatronPower**: Verify total PatronPower matches expectations
-- [ ] **Monitor trading health**: Volume, liquidity depth, holder growth
-- [ ] **Engage consistently**: Daily posts, regular presence in Discord
-- [ ] **Start shipping**: Begin work on roadmap milestones immediately
+- [ ] **Social media active**: Regular posts and engagement
+- [ ] **Community events**: AMAs, live streams, contests
+- [ ] **Influencer engagement**: Working with crypto influencers
+- [ ] **Press outreach**: Media coverage and interviews
+- [ ] **Partnership announcements**: Strategic partnerships announced
+- [ ] **Milestone celebrations**: Acknowledging funding milestones
 
 ### Community Management
 
-- [ ] **Answer all questions**: No question too small or repetitive
-- [ ] **Share progress updates**: What team is working on
-- [ ] **Recognize top supporters**: Call out highest PatronPower holders
-- [ ] **Create feedback loops**: Ask community for input on decisions
-- [ ] **Build culture**: Establish norms for community interaction
+- [ ] **Questions answered**: Responding to community questions
+- [ ] **Issues resolved**: Addressing any problems quickly
+- [ ] **Feedback collected**: Gathering community feedback
+- [ ] **Improvements made**: Implementing community suggestions
+- [ ] **Relationships built**: Building strong community relationships
+- [ ] **Advocates created**: Turning supporters into advocates
 
----
+## Post-Launch Phase (Days 8+)
 
-## Ongoing Operations (Monthly)
+### Token Launch
 
-### Regular Reward Distributions
-
-- [ ] **Set distribution schedule**: Monthly or quarterly (choose one and stick to it)
-- [ ] **Allocate reward tokens**: Transfer tokens to PatronClaim
-- [ ] **Announce distribution**: Let community know rewards are claimable
-- [ ] **Track claim rates**: How many supporters claiming?
-- [ ] **Maintain consistency**: Never miss a scheduled distribution
-
-### Roadmap Execution
-
-- [ ] **Ship milestones on schedule**: Deliver what you promised
-- [ ] **Communicate progress**: Regular updates even when progress is slow
-- [ ] **Adjust plans transparently**: If priorities change, explain why
-- [ ] **Celebrate wins**: Share completed milestones with community
+- [ ] **Threshold reached**: Minimum funding target achieved
+- [ ] **Liquidity launched**: Automatic token launch completed
+- [ ] **Trading began**: Token trading on Uniswap started
+- [ ] **Price discovery**: Initial price determined by market
+- [ ] **Community notified**: Supporters informed of launch
+- [ ] **Celebration shared**: Launch success celebrated
 
 ### Community Engagement
 
-- [ ] **Weekly updates**: Minimum one substantial update per week
-- [ ] **Monthly AMAs**: Host live Q&A sessions
-- [ ] **Respond to concerns**: Address issues promptly and transparently
-- [ ] **Recognize contributions**: Thank active community members
+- [ ] **Launch celebration**: Community celebration of success
+- [ ] **Reward distribution**: Helping supporters claim rewards
+- [ ] **Ongoing engagement**: Regular community interaction
+- [ ] **Progress updates**: Regular project updates
+- [ ] **Feedback collection**: Gathering community feedback
+- [ ] **Relationship building**: Building strong community relationships
 
-### Metrics Tracking
+### Project Development
 
-- [ ] **Token metrics**: Price, volume, holder count, liquidity depth
-- [ ] **Staking metrics**: Cards staked, average lock duration, total PatronPower
-- [ ] **Reward metrics**: Tokens distributed, claim rates, top earners
-- [ ] **Community metrics**: Discord/Telegram members, Twitter engagement, active participants
+- [ ] **Roadmap execution**: Delivering on project promises
+- [ ] **Value creation**: Building real value for community
+- [ ] **Progress sharing**: Regular updates on development
+- [ ] **Community involvement**: Involving community in decisions
+- [ ] **Feedback implementation**: Using community feedback
+- [ ] **Success celebration**: Celebrating project milestones
 
----
+## Ongoing Management
 
-## Red Flags to Avoid
+### Community Maintenance
 
-These are common mistakes that hurt launches:
+- [ ] **Regular engagement**: Daily community interaction
+- [ ] **Progress updates**: Regular project updates
+- [ ] **Feedback collection**: Gathering community feedback
+- [ ] **Issue resolution**: Addressing problems quickly
+- [ ] **Relationship building**: Building strong relationships
+- [ ] **Advocate creation**: Turning supporters into advocates
 
-### Before Launch
+### Project Development
 
-- [ ] **NOT launching to zero audience** (build 50+ engaged people first)
-- [ ] **NOT overpricing early batches** (start 30-50% below clearing price)
-- [ ] **NOT using unclear tokenomics** (transparency builds trust)
-- [ ] **NOT skipping legal review** (consult counsel on securities laws)
+- [ ] **Roadmap execution**: Delivering on promises
+- [ ] **Value creation**: Building real value
+- [ ] **Progress sharing**: Regular updates
+- [ ] **Community involvement**: Involving community
+- [ ] **Feedback implementation**: Using feedback
+- [ ] **Success celebration**: Celebrating milestones
 
-### During Launch
+### Performance Monitoring
 
-- [ ] **NOT going radio silent** (daily updates minimum)
-- [ ] **NOT ignoring questions** (answer everything)
-- [ ] **NOT overselling returns** (don't guarantee price performance)
-- [ ] **NOT changing terms** (immutable anyway, but don't try to reframe)
+- [ ] **Metrics tracked**: Key performance indicators monitored
+- [ ] **Progress measured**: Success metrics measured
+- [ ] **Improvements made**: Continuous improvement
+- [ ] **Feedback acted on**: Community feedback implemented
+- [ ] **Relationships maintained**: Strong relationships maintained
+- [ ] **Success celebrated**: Milestones celebrated
 
-### After Launch
+## Common Mistakes to Avoid
 
-- [ ] **NOT forgetting reward distributions** (consistency matters)
-- [ ] **NOT abandoning community** (maintain engagement)
-- [ ] **NOT failing to deliver roadmap** (ship what you promised)
-- [ ] **NOT focusing only on price** (build product, price follows)
+### Pre-Launch Mistakes
 
----
+- [ ] **Don't rush**: Take time to build community and value proposition
+- [ ] **Don't overpromise**: Be realistic about what you can deliver
+- [ ] **Don't ignore feedback**: Listen to your community and adapt
+- [ ] **Don't give up**: Persistence pays off in community building
+- [ ] **Don't go alone**: Get help from experienced community builders
+
+### Launch Day Mistakes
+
+- [ ] **Don't panic**: Stay calm and focused during launch
+- [ ] **Don't ignore issues**: Address problems quickly
+- [ ] **Don't overpromise**: Be realistic about expectations
+- [ ] **Don't give up**: Persistence pays off during launch
+- [ ] **Don't go alone**: Get help from experienced launchers
+
+### Post-Launch Mistakes
+
+- [ ] **Don't disappear**: Stay engaged with your community
+- [ ] **Don't ignore feedback**: Listen to your community and adapt
+- [ ] **Don't give up**: Persistence pays off in project development
+- [ ] **Don't go alone**: Get help from experienced developers
+- [ ] **Don't forget to celebrate**: Acknowledge your successes
 
 ## Success Metrics
 
-By end of first month, healthy projects show:
+### Pre-Launch Metrics
 
-### During Sale
+- [ ] **Community size**: Number of engaged community members
+- [ ] **Engagement level**: Level of community engagement
+- [ ] **Value proposition clarity**: How well you explain your value
+- [ ] **Pricing strategy**: How well you price your Patron Cards
+- [ ] **Marketing preparation**: How well you prepare for launch
+- [ ] **Legal compliance**: How well you handle legal requirements
 
-- [ ] **50%+ sold in first 3 days** (good momentum)
-- [ ] **Active community engagement** (questions being asked, excitement visible)
-- [ ] **Steady purchase velocity** (not all in first hour, not painfully slow)
+### Launch Day Metrics
 
-### Post-Launch
+- [ ] **Sales velocity**: How fast Patron Cards sell
+- [ ] **Community engagement**: Level of community engagement
+- [ ] **Technical performance**: How well the system works
+- [ ] **Issue resolution**: How quickly you resolve problems
+- [ ] **Support quality**: How well you support users
+- [ ] **Celebration level**: How well you celebrate milestones
 
-- [ ] **60%+ of Patron Cards staked** (supporters committing long-term)
-- [ ] **Average lock duration over 1 year** (strong belief in project)
-- [ ] **At least one reward distribution** (showing consistency)
-- [ ] **Active development visible** (shipping roadmap milestones)
-- [ ] **Healthy trading volume** (community growing beyond initial supporters)
+### Post-Launch Metrics
 
----
+- [ ] **Community retention**: How many supporters stay engaged
+- [ ] **Project progress**: How well you deliver on promises
+- [ ] **Value creation**: How much value you create
+- [ ] **Community satisfaction**: How satisfied your community is
+- [ ] **Advocate creation**: How many advocates you create
+- [ ] **Success celebration**: How well you celebrate successes
 
-## Your Personal Checklist
+## Next Steps
 
-Before declaring launch ready:
+Ready to launch your project?
 
-- [ ] I have built an engaged community of at least 50-100 people
-- [ ] I have designed and shared tokenomics transparently
-- [ ] I have chosen market type and pricing strategy
-- [ ] I have prepared all marketing materials
-- [ ] I have consulted legal counsel on compliance
-- [ ] I have a secure wallet with ETH for deployment
-- [ ] I have a plan for consistent reward distributions
-- [ ] I am committed to delivering on my roadmap
-- [ ] I am ready to engage with community daily during and after launch
-- [ ] I understand parameters are immutable once deployed
-
-If all boxes checked: You're ready to launch.
-
-[View full launch process](./launch-process.md) →
-
-[Start your deployment](../README.md) →
+1. **[Design your tokenomics](./pricing-and-economics.md)** - Plan your token distribution
+2. **[Choose your market type](./choosing-market-type.md)** - Select the right mechanism
+3. **[Deploy your project](./launch-process.md)** - Launch your token
+4. **[Monitor your progress](./launch-checklist.md)** - Track your success
 
 ---
 
-**Remember**: This checklist is based on successful launches. Every item matters. Don't skip steps. Your community is investing in your execution. Deliver.
+**Remember**: This checklist is a guide, not a rule. Adapt it to your specific needs and circumstances. The most important thing is to stay focused on building something great and serving your community.

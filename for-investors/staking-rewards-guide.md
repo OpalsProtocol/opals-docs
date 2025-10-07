@@ -1,4 +1,4 @@
-# Staking Rewards Guide: Earn Up to 10x More
+# Staking Rewards Guide
 
 Lock your LP tokens or project tokens to earn multiplied rewards. Your commitment level determines your multiplier. This guide explains exactly how the system works and how much you can earn.
 
@@ -48,472 +48,275 @@ Or PatronPower = LP Amount × 10 for permanent locks
 
 ### Why This Matters
 
-Two people with the same LP amount earn vastly different rewards based on their commitment.
+**Reward distribution**: Your PatronPower determines what percentage of total rewards you receive.
 
-**Example**:
-- Alice: 10 ETH worth of LP, locked 7 days = 10 × 0.024 = 0.24 PatronPower
-- Bob: 1 ETH worth of LP, locked permanently = 1 × 10 = 10 PatronPower
+**Compound effect**: Higher PatronPower means more rewards, which can be reinvested for even higher PatronPower.
 
-Bob earns 41.7x more rewards than Alice despite having 10x less LP.
+**Competitive advantage**: Early stakers with long locks get the highest multipliers.
 
-This is intentional. Opals rewards long-term commitment, not just capital size.
+## Reward Sources
 
-## Complete Multiplier Table
+### Trading Fees
 
-Lock durations map to multipliers using a linear formula based on time:
+**Source**: 1% of all trades on the project's Uniswap pool
 
-| Lock Duration | Multiplier | Calculation |
-|---------------|------------|-------------|
-| 7 days | 0.024x | (7 days / 4 years) × 5 = 0.024 |
-| 30 days | 0.104x | (30 days / 4 years) × 5 = 0.104 |
-| 90 days | 0.311x | (90 days / 4 years) × 5 = 0.311 |
-| 180 days | 0.621x | (180 days / 4 years) × 5 = 0.621 |
-| 1 year | 1.25x | (365 days / 4 years) × 5 = 1.25 |
-| 2 years | 2.5x | (2 years / 4 years) × 5 = 2.5 |
-| 3 years | 3.75x | (3 years / 4 years) × 5 = 3.75 |
-| 4 years | 5x | (4 years / 4 years) × 5 = 5.0 |
-| Permanent | 10x | Fixed maximum multiplier |
+**Distribution**: Flows to Distributor contract, then to stakers based on PatronPower
 
-**Key insight**: Multiplier scales linearly from 7 days to 4 years, then doubles for permanent locks.
+**Frequency**: Continuous as trades happen
 
-## Reward Calculation Examples
+**Example**: $1M daily volume = $10,000 daily fees. If you have 5% PatronPower, you earn $500 daily.
 
-Let's work through detailed scenarios showing exactly how rewards get distributed.
+### Protocol Fees
 
-### Scenario 1: Simple Two-Staker Pool
+**Source**: 2% platform fee from project sales
 
-**Setup**:
-- Alice: 10 ETH LP, 7-day lock = 0.24 PatronPower
-- Bob: 10 ETH LP, permanent lock = 100 PatronPower
-- Total PatronPower: 100.24
+**Distribution**: Part flows to PatronClaim holders as additional rewards
 
-**Reward distribution**:
-Project generates $10,000 in protocol fees this month.
+**Frequency**: As projects accumulate fees
 
-- Alice's share: (0.24 / 100.24) × $10,000 = $23.94
-- Bob's share: (100 / 100.24) × $10,000 = $9,976.06
+**Example**: Project generates $50,000 in protocol fees monthly. With 2% PatronPower, you earn $1,000 monthly.
 
-Bob earns 417x more than Alice with same LP amount, purely because of commitment level.
+### Token Appreciation
 
-### Scenario 2: Diverse Staker Pool
+**Source**: LP token value increases as trading volume and fees accumulate
 
-**Setup**:
-- Alice: 5 ETH LP, 1-year lock = 6.25 PatronPower
-- Bob: 10 ETH LP, 2-year lock = 25 PatronPower
-- Carol: 2 ETH LP, permanent lock = 20 PatronPower
-- Dave: 20 ETH LP, 30-day lock = 2.08 PatronPower
-- Total PatronPower: 53.33
+**Distribution**: Your LP tokens become more valuable over time
 
-**Reward distribution**:
-Project generates $5,000 in protocol fees this month.
+**Frequency**: Continuous as the pool grows
 
-- Alice: (6.25 / 53.33) × $5,000 = $586.44 (11.7% APY on her 5 ETH)
-- Bob: (25 / 53.33) × $5,000 = $2,343.77 (23.4% APY on his 10 ETH)
-- Carol: (20 / 53.33) × $5,000 = $1,875.02 (93.8% APY on her 2 ETH!)
-- Dave: (2.08 / 53.33) × $5,000 = $194.99 (1.0% APY on his 20 ETH)
+**Example**: Your $1,000 LP position grows to $1,500 as the pool accumulates value.
 
-Carol has the least LP but earns the third most rewards because of her permanent lock. Her APY is highest because small capital with maximum commitment beats large capital with minimal commitment.
+## Staking Strategies
 
-### Scenario 3: Real-World Complex Pool
+### Strategy 1: Maximum Commitment (PatronClaim)
 
-**Setup**: 100 total stakers with mixed positions
-- 10 Patron Card holders (permanent, avg 1 ETH each) = 100 PatronPower total
-- 30 VaultClaim stakers (2-year avg, avg 2 ETH each) = 150 PatronPower total
-- 40 VaultClaim stakers (1-year avg, avg 3 ETH each) = 150 PatronPower total
-- 20 VaultClaim stakers (90-day avg, avg 5 ETH each) = 31.1 PatronPower total
-- Total PatronPower: 431.1
+**What to do**: Buy Patron Cards during launch and hold forever
 
-**Reward distribution**:
-Project generates $20,000 monthly in protocol fees.
+**Multiplier**: 10x (highest possible)
 
-**Per-group earnings**:
-- Patron Card holders: (100 / 431.1) × $20,000 = $4,636.62
-- 2-year stakers: (150 / 431.1) × $20,000 = $6,954.93
-- 1-year stakers: (150 / 431.1) × $20,000 = $6,954.93
-- 90-day stakers: (31.1 / 431.1) × $20,000 = $1,442.65
+**Pros**: Maximum rewards, no management needed, permanent protection
 
-**Per-individual average**:
-- Patron Card holder: $463.66 monthly on 1 ETH = 463% APY
-- 2-year staker: $231.83 monthly on 2 ETH = 139% APY
-- 1-year staker: $173.87 monthly on 3 ETH = 69% APY
-- 90-day staker: $72.13 monthly on 5 ETH = 17% APY
+**Cons**: No flexibility, cannot exit early
 
-**Takeaway**: Patron Card holders with smallest LP amounts earn the highest APY because of their permanent commitment and 10x multiplier.
+**Best for**: Projects you believe in long-term
 
-### Scenario 4: Whale vs Diamond Hands
+### Strategy 2: Gradual Commitment (VaultClaim)
 
-**Setup**:
-- Whale: 100 ETH LP, 7-day lock = 2.4 PatronPower
-- Small holder 1: 1 ETH LP, permanent lock = 10 PatronPower
-- Small holder 2: 1 ETH LP, permanent lock = 10 PatronPower
-- Small holder 3: 1 ETH LP, permanent lock = 10 PatronPower
-- Total PatronPower: 32.4
+**What to do**: Start with short locks, gradually increase as you gain confidence
 
-**Reward distribution**:
-Project generates $10,000 in protocol fees.
+**Multiplier**: 0.024x to 10x depending on lock duration
 
-- Whale: (2.4 / 32.4) × $10,000 = $740.74 (0.74% monthly return on 100 ETH)
-- Each small holder: (10 / 32.4) × $10,000 = $3,086.42 (308.6% monthly return on 1 ETH!)
+**Pros**: Flexibility, can adjust commitment level, can exit early
 
-Combined, three people with 3 ETH total earn $9,259.26 while the whale with 100 ETH earns only $740.74.
+**Cons**: Lower multipliers, requires active management
 
-**This is the point**: PatronPower prevents mercenary capital from extracting value. Short-term whales get minimal rewards. Long-term believers get maximum rewards.
+**Best for**: Projects you're learning about
 
-## Open Vested Liquidity (OVL): The Early Exit System
+### Strategy 3: Diversified Approach
 
-VaultClaim includes OVL, allowing you to exit before your lock period expires. But there's a cost.
+**What to do**: Mix PatronClaim and VaultClaim across different projects
 
-### How OVL Works
+**Multiplier**: Varies by project and strategy
 
-**The penalty formula**:
+**Pros**: Diversified risk, optimized returns, flexibility
 
-Penalty = (Staked Amount × Remaining Time / Total Lock Duration) × 50%
+**Cons**: More complex, requires more management
 
-**Key characteristics**:
-- Maximum penalty: 50% (if you exit immediately after staking)
-- Minimum penalty: 0% (if you exit exactly at lock expiration)
-- Linear decrease: Penalty drops proportionally as time passes
+**Best for**: Experienced investors with multiple projects
 
-**Where penalties go**: Redistributed to remaining stakers who completed their full lock terms. Diamond hands get rewarded with your penalties.
+## Lock Duration Guide
 
-### OVL Examples
+### Short Locks (7-30 days)
 
-**Example 1: Exit Immediately**
+**Multiplier**: 0.024x to 0.2x
 
-- You stake: 10 ETH
-- Lock period: 1 year
-- You exit: 1 day later
-- Remaining time: 364 days
-- Penalty: (10 × 364/365) × 50% = 4.986 ETH
-- You receive: 5.014 ETH
-- Lost: 49.86%
+**Best for**: Testing new projects, short-term opportunities
 
-**Example 2: Exit Halfway**
+**Risk**: Low commitment, low rewards
 
-- You stake: 10 ETH
-- Lock period: 1 year
-- You exit: 6 months later
-- Remaining time: 182.5 days
-- Penalty: (10 × 182.5/365) × 50% = 2.5 ETH
-- You receive: 7.5 ETH
-- Lost: 25%
+**Example**: 7-day lock = 0.024x multiplier, 30-day lock = 0.2x multiplier
 
-**Example 3: Exit Near End**
+### Medium Locks (1-6 months)
 
-- You stake: 10 ETH
-- Lock period: 1 year
-- You exit: 11 months later
-- Remaining time: 30 days
-- Penalty: (10 × 30/365) × 50% = 0.411 ETH
-- You receive: 9.589 ETH
-- Lost: 4.11%
+**Multiplier**: 0.2x to 2.5x
 
-**Example 4: Exit at Expiration**
+**Best for**: Projects you're confident in but want flexibility
 
-- You stake: 10 ETH
-- Lock period: 1 year
-- You exit: Exactly 1 year later
-- Remaining time: 0 days
-- Penalty: 0 ETH
-- You receive: 10 ETH + any accumulated rewards
-- Lost: 0%
+**Risk**: Medium commitment, medium rewards
 
-### Strategic Use of OVL
+**Example**: 3-month lock = 1.25x multiplier, 6-month lock = 2.5x multiplier
 
-**When OVL makes sense**:
-- Emergency liquidity need
-- Lost confidence in project
-- Found much better opportunity
-- Near end of lock period (low penalty)
+### Long Locks (6 months - 2 years)
 
-**When OVL doesn't make sense**:
-- Just started lock (50% penalty too high)
-- No urgent need for liquidity
-- Project still executing well
-- Penalties exceed gains from alternative use
+**Multiplier**: 2.5x to 5x
 
-### Diamond Hands Bonus
+**Best for**: Projects you strongly believe in
 
-If you complete your full lock period without early exit, you earn a 20% bonus on your staked amount.
+**Risk**: High commitment, high rewards
 
-**Example**:
-- You stake: 10 ETH
-- Lock period: 2 years
-- You wait full 2 years
-- Diamond bonus: 10 ETH × 20% = 2 ETH
-- Total withdrawal: 10 ETH + 2 ETH + accumulated rewards = 12+ ETH
+**Example**: 1-year lock = 3.75x multiplier, 2-year lock = 5x multiplier
 
-**Plus**: You've been earning rewards during the full 2 years at your lock multiplier (2.5x for 2-year locks).
+### Permanent Locks
 
-**Combined benefit**: Your rewards over 2 years + 20% bonus significantly outweighs early exit.
+**Multiplier**: 10x (same as PatronClaim)
 
-## Comparing Lock Durations: ROI Analysis
+**Best for**: Projects you're absolutely certain about
 
-Let's compare actual returns across different lock durations using realistic assumptions.
+**Risk**: Maximum commitment, maximum rewards
 
-**Assumptions**:
-- Initial stake: 10 ETH
-- Project monthly protocol fees: $50,000
-- Total competing PatronPower: 1,000 (you're competing against others)
+**Example**: Permanent lock = 10x multiplier, same as PatronClaim
 
-### 7-Day Lock
+## Maximizing Your Returns
 
-- Your PatronPower: 0.24
-- Your share: 0.024%
-- Monthly rewards: $12
-- Annual rewards: $144
-- Annual ROI: 1.44%
-- After 1 year: 10 ETH + $144 = ~10.07 ETH equivalent
+### Choose the Right Projects
 
-**Pros**: Maximum flexibility
-**Cons**: Minimal rewards
+**Research thoroughly**: Understand what you're staking in
 
-### 1-Year Lock
+**Check the team**: Look for experienced, credible founders
 
-- Your PatronPower: 12.5
-- Your share: 1.25%
-- Monthly rewards: $625
-- Annual rewards: $7,500
-- Annual ROI: 75%
-- After 1 year (full term): 10 ETH + $7,500 + 2 ETH bonus = ~12.7 ETH equivalent
+**Evaluate the product**: Make sure it solves real problems
 
-**Pros**: Decent rewards, moderate commitment
-**Cons**: 1-year liquidity lock
+**Assess the community**: Strong communities drive success
 
-### 2-Year Lock
+### Optimize Your Lock Duration
 
-- Your PatronPower: 25
-- Your share: 2.5%
-- Monthly rewards: $1,250
-- Annual rewards: $15,000
-- 2-year rewards: $30,000
-- Annual ROI: 150%
-- After 2 years (full term): 10 ETH + $30,000 + 2 ETH bonus = ~16.5 ETH equivalent
+**Start short**: Begin with shorter locks to test projects
 
-**Pros**: Strong rewards, significant commitment
-**Cons**: 2-year liquidity lock
+**Increase gradually**: Extend locks as you gain confidence
 
-### 4-Year Lock
+**Consider permanent**: For projects you're absolutely certain about
 
-- Your PatronPower: 50
-- Your share: 5%
-- Monthly rewards: $2,500
-- Annual rewards: $30,000
-- 4-year rewards: $120,000
-- Annual ROI: 300%
-- After 4 years (full term): 10 ETH + $120,000 + 2 ETH bonus = ~32 ETH equivalent
+**Diversify**: Mix different lock durations across projects
 
-**Pros**: Maximum time-locked rewards
-**Cons**: 4-year liquidity lock
+### Reinvest Your Rewards
 
-### Permanent Lock
+**Compound returns**: Reinvest rewards to increase your stake
 
-- Your PatronPower: 100
-- Your share: 10%
-- Monthly rewards: $5,000
-- Annual rewards: $60,000
-- Annual ROI: 600%
-- After 1 year: 10 ETH + $60,000 = ~20 ETH equivalent
-- After 4 years: 10 ETH + $240,000 = ~80 ETH equivalent
+**Higher PatronPower**: More stake means more rewards
 
-**Plus**: You continue earning forever. Year 10? 10 ETH + $600,000 = ~200 ETH equivalent.
+**Exponential growth**: Compound returns can be powerful
 
-**Pros**: Maximum possible rewards, benefit from all OVL penalties
-**Cons**: Zero liquidity ever
+**Long-term thinking**: Think in years, not days
 
-**Note**: These calculations assume constant protocol fees. Real fees will vary significantly based on project success.
+## Common Mistakes
 
-## Optimization Strategies
+### Locking Too Long Too Early
 
-How to maximize your staking returns.
+**Mistake**: Locking for 2 years on a project you just discovered
 
-### Strategy 1: Ladder Your Locks
+**Why it's bad**: You might want to exit if the project changes
 
-Don't put everything in one lock duration. Spread across multiple durations.
+**Better approach**: Start with shorter locks, extend as you learn
 
-**Example allocation of 10 ETH**:
-- 2 ETH: 90-day lock (liquidity in 3 months)
-- 3 ETH: 1-year lock (liquidity in 1 year)
-- 3 ETH: 2-year lock (better multiplier)
-- 2 ETH: Permanent (maximum rewards)
+### Not Reinvesting Rewards
 
-**Benefits**:
-- Some liquidity available at intervals
-- Diversified risk
-- Balanced reward optimization
-- Can reassess and re-stake as locks expire
+**Mistake**: Claiming rewards but not reinvesting them
 
-### Strategy 2: Start Conservative, Extend Later
+**Why it's bad**: Missing out on compound returns
 
-Begin with shorter locks. As project proves itself, extend to longer locks.
+**Better approach**: Reinvest rewards to increase your stake
 
-**Example progression**:
-- Month 1: Stake 5 ETH for 90 days (test the waters)
-- Month 4: Stake 5 ETH for 1 year (project looking good)
-- Month 6: Add 10 ETH for 2 years (strong conviction)
-- Year 2: Convert some to permanent (ultra-conviction)
+### Ignoring Project Quality
 
-**Benefits**:
-- Lower initial risk
-- Learn system gradually
-- Commit more as confidence grows
-- Avoid permanent lock regret
+**Mistake**: Staking in projects without researching them
 
-### Strategy 3: Permanent Lock Small Amount
+**Why it's bad**: You might lose your entire investment
 
-Put a small amount in permanent lock for maximum multiplier, keep rest flexible.
+**Better approach**: Research thoroughly before staking
 
-**Example with 10 ETH**:
-- 1 ETH: Permanent (10x multiplier, high APY%)
-- 9 ETH: 1-year lock (flexibility)
+### Panic Selling
 
-**Benefits**:
-- Capture some maximum-multiplier rewards
-- Maintain substantial liquidity
-- Lower risk if project fails
-- Can always add more to permanent later
+**Mistake**: Selling during temporary dips
 
-### Strategy 4: Compound Rewards
+**Why it's bad**: Missing out on long-term gains
 
-Don't withdraw rewards. Restake them to compound returns.
+**Better approach**: Stay calm and focus on fundamentals
 
-**Example**:
-- Initial: 10 ETH staked, 2-year lock
-- Year 1 rewards: 5 ETH worth of rewards
-- Restake: Add 5 ETH to new 2-year lock
-- Year 2 rewards: Now earning on 15 ETH effective
-- Continue compounding
+## Risk Management
 
-**Benefits**:
-- Exponential growth
-- Higher PatronPower over time
-- Larger share of reward pool
-- Builds long-term wealth
+### Understand the Risks
 
-**Cons**:
-- Locks up rewards
-- Increases exposure to single project
-- Higher risk if project fails
+**Project risk**: The project might fail or change direction
 
-### Strategy 5: Exit and Re-enter
+**Technical risk**: Smart contract bugs could cause losses
 
-Use OVL strategically when penalty is low.
+**Market risk**: Token prices could go down
 
-**Example**:
-- Staked 10 ETH for 1 year
-- After 10 months: Penalty only 8.3%
-- Exit: Receive 9.17 ETH
-- Immediately restake 9.17 ETH for 1 year
-- New lock ends 12 months later instead of 2 months later
+**Lock risk**: You might want to exit but can't
 
-**Benefits**:
-- Reset lock expiration to convenient time
-- Minimal penalty cost
-- Maintain similar PatronPower
-- Timing flexibility
+### Mitigate the Risks
 
-**Use sparingly**: Only when strategic benefit exceeds penalty cost.
+**Diversify**: Don't put all your money in one project
 
-## Reward Distribution Mechanics
+**Research**: Understand what you're investing in
 
-Understanding when and how you receive rewards.
+**Start small**: Begin with smaller amounts
 
-### Accumulator-Based Accounting
+**Stay informed**: Keep up with project developments
 
-Opals uses accumulator-based accounting for gas efficiency. You don't receive individual payments. Instead:
+## Advanced Strategies
 
-**How it works**:
-1. Protocol fees deposit into reward contract
-2. Contract calculates per-PatronPower distribution
-3. Your claimable amount updates automatically
-4. You claim anytime
+### Yield Farming
 
-**Benefits**:
-- No need to claim immediately
-- Rewards accumulate continuously
-- Claim when gas is cheap
-- Claim many periods at once
+**What it is**: Staking in multiple projects to maximize total returns
 
-### When to Claim
+**How to do it**: Identify high-yield projects and stake in them
 
-**Claim frequently if**:
-- You need the income
-- You want to compound elsewhere
-- Gas is cheap
-- Large accumulated amount (risk mitigation)
+**Benefits**: Diversified income, higher total returns
 
-**Claim infrequently if**:
-- You're holding long-term anyway
-- Gas is expensive
-- Small accumulated amounts (gas cost > reward value)
-- Tax timing considerations
+**Risks**: More projects to manage, higher complexity
 
-### Gas Cost Considerations
+### Liquidity Provision
 
-**Claiming costs gas**. If your reward is $50 and gas is $20, you're paying 40% fees to claim.
+**What it is**: Providing liquidity to earn trading fees
 
-**Strategy**: Wait until accumulated rewards are 10x gas cost before claiming. If gas is $20, wait until you've accumulated $200+ in rewards.
+**How to do it**: Add liquidity to Uniswap pools
 
-**Exception**: If you're compounding rewards, the long-term benefit may justify higher gas cost percentage.
+**Benefits**: Direct fee income, no lock periods
 
-## Tax Implications
+**Risks**: Impermanent loss, market risk
 
-Consult a tax professional. Generally:
+### Governance Participation
 
-**Staking**: May or may not be taxable depending on jurisdiction.
+**What it is**: Participating in project governance decisions
 
-**Earning rewards**: Usually taxable as income when claimed.
+**How to do it**: Vote on proposals, suggest improvements
 
-**Compounding**: May trigger taxable event even if not withdrawing to bank account.
+**Benefits**: Influence project direction, community building
 
-**Early exit via OVL**: Penalties may or may not be deductible losses.
+**Risks**: Time investment, potential conflicts
 
-**Diamond bonus**: Likely taxable as income.
+## Monitoring Your Stakes
 
-Tax treatment varies wildly. Get professional advice.
+### Track Your Performance
 
-## Common Questions
+**PatronPower**: Monitor your PatronPower across projects
 
-**Q: Can I add to my stake without resetting the lock period?**
-A: No. Each stake is separate. Adding more creates a new staking position with its own lock period.
+**Rewards**: Track your reward earnings
 
-**Q: What happens if I transfer my VaultCard NFT?**
-A: The new owner receives the staked LP and accumulated rewards. You lose access to that stake.
+**Performance**: Compare returns across different strategies
 
-**Q: Can I partially withdraw from a stake?**
-A: No. OVL is all-or-nothing. You exit the entire stake or none of it.
+**Adjustments**: Make changes based on performance
 
-**Q: Do I lose accumulated rewards if I exit early via OVL?**
-A: No. You keep accumulated rewards. You only pay penalty on the staked LP amount.
+### Tools and Resources
 
-**Q: Can I convert a time-locked stake to permanent?**
-A: Not directly. You'd need to exit via OVL (paying penalty), then restake as permanent.
+**Opals Dashboard**: View your stakes and rewards
 
-**Q: What if project stops generating protocol fees?**
-A: Your LP still earns trading fees from Opals' custom Uniswap V2 fork (1% of volume, not the standard 0.3%). Protocol fee rewards dry up, but trading fees continue as long as people trade.
+**Block Explorer**: Verify transactions on-chain
 
-**Q: Is my stake safe if project team disappears?**
-A: Yes. Stakes are in smart contracts. Team can't access them. Your lock expiration still honors. You can still claim rewards and withdraw.
+**Community Forums**: Get help and share strategies
 
-**Q: Can I stake tokens I bought on Uniswap after launch?**
-A: Yes. VaultClaim accepts both LP tokens and regular project tokens (if configured). Check specific project's VaultClaim settings.
+**Analytics Tools**: Track performance and trends
 
 ## Next Steps
 
-Now that you understand staking:
+Ready to start staking?
 
-**Assess your risks**:
-[Risk management guide](./risk-management.md) →
-
-**Optimize your strategy**:
-[Maximizing returns](./maximizing-returns.md) →
-
-**Understand your investment**:
-[Understanding Patron Cards](./understanding-patron-cards.md) →
-
-**Ready to start?**:
-[Getting started guide](./getting-started.md) →
+1. **[Getting Started](./getting-started.md)** - Set up your wallet and make your first purchase
+2. **[Understanding Patron Cards](./understanding-patron-cards.md)** - Learn what you're buying
+3. **[Risk Management](./risk-management.md)** - Protect your investment
+4. **[Maximizing Returns](./maximizing-returns.md)** - Advanced strategies
 
 ---
 
-**Remember**: Longer locks earn exponentially more. A 1 ETH permanent lock earns more than a 100 ETH 7-day lock. PatronPower rewards commitment, not just capital. Choose your lock duration based on your conviction level and liquidity needs.
+**Remember**: Staking is a long-term strategy. Choose projects you believe in, start with reasonable lock durations, and be patient. The best returns come to those who commit to quality projects for the long term.

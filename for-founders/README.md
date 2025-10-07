@@ -1,18 +1,18 @@
-# For Founders: Launch Your Token the Right Way
+# For Founders
 
 You're building something meaningful. You have a vision. You need capital.
 
-But traditional funding means giving up control, waiting months for VC decisions, or risking a failed Kickstarter campaign with no ongoing relationship. VCs want 20-40% equity plus board seats. Other launchpads charge 10-20% fees and offer zero protection against bots or rug pulls.
+Traditional funding is broken. VCs demand 35% equity plus board control. Launchpads charge $500K in fees plus 7% of your tokens. Both take weeks to months.
 
 There's a better way.
 
-## Launch in 5 Minutes for $15. Keep 100% Control.
+## Launch in 5 Minutes. Keep 100% Control.
 
 Opals lets you raise funds directly from your future supporters. Deploy your entire token launch infrastructure in 5 minutes. Pay $15 instead of $1,000 in gas fees. Keep complete control of your project.
 
 Your supporters become permanent stakeholders, not mercenary speculators. Liquidity is locked forever, making rug pulls mathematically impossible. True believers earn 10x rewards through PatronPower.
 
-**The result?** You get the capital you need, your supporters get sustainable rewards, and nobody can game the system.
+The result? You get the capital you need, your supporters get sustainable rewards, and nobody can game the system.
 
 ## Your Launch Journey
 
@@ -88,8 +88,8 @@ Projects that launched on Opals:
 ### Technical Questions
 
 - **[Architecture Overview](../technical/architecture-overview.md)** - How the system works under the hood
-- **[Core Contracts](../technical/core-contracts.md)** - Detailed contract documentation
-- **[Security Audits](../technical/security-audits.md)** - Third-party audit reports
+- **[Core Contracts](../technical/contracts-reference.md)** - Detailed contract documentation
+- **[Security Audits](../technical/security.md)** - Third-party audit reports
 
 ### General Questions
 
