@@ -17,7 +17,7 @@
 * [Getting Started: Buy Your First Patron Card](for-investors/getting-started.md)
 * [Strategy & Risk Management](for-investors/strategy-and-risk.md)
 
-## Components (Deep Dive)
+## Components
 * [Patron Cards](components/patron-cards.md)
 * [Tokens](components/tokens.md)
 * [Markets](components/markets.md)
@@ -26,14 +26,14 @@
 * [Staking](components/staking.md)
 * [LP Tokens](components/lp-tokens.md)
 
-## Mechanisms (Game Theory & Economics)
+## Mechanisms 
 * [PatronPower System](mechanisms/patronpower-system.md)
 * [Template Factory Pattern](mechanisms/template-factory.md)
 * [Open Vested Liquidity (OVL)](mechanisms/open-vested-liquidity.md)
 * [Anti-Gaming Mechanisms](mechanisms/anti-gaming-mechanisms.md)
 * [Tokenomics](mechanisms/tokenomics.md)
 
-## Technical Documentation
+## Technical
 * [Overview](technical/README.md)
 * [Architecture Overview](technical/architecture-overview.md)
 * [Integration Guide](technical/integration-guide.md)
