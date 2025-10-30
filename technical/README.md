@@ -278,9 +278,58 @@ docs/                  # Audit reports and documentation
 - Audits: Comprehensive security review completed
 - Networks: Base, Optimism, Arbitrum, Monad ready
 
-**Deployed Contracts:**
-- Base Sepolia: Available
-- Monad Testnet: Available
-- Mainnet: Coming soon
+## Deployed Contract Addresses
+
+### Mainnet Networks
+
+| Network | Factory | Distributor | Status |
+|---------|---------|-------------|--------|
+| Ethereum | 0x[coming-soon] | 0x[coming-soon] | Mainnet Launch Q1 2025 |
+| Base | 0x[coming-soon] | 0x[coming-soon] | Mainnet Ready |
+| Optimism | 0x[coming-soon] | 0x[coming-soon] | Mainnet Ready |
+| Arbitrum | 0x[coming-soon] | 0x[coming-soon] | Mainnet Ready |
+
+### Testnet Networks
+
+| Network | Factory | Distributor | Status |
+|---------|---------|-------------|--------|
+| Base Sepolia | 0x[test-deployed] | 0x[test-deployed] | Active |
+| Optimism Sepolia | 0x[test-deployed] | 0x[test-deployed] | Active |
+| Arbitrum Sepolia | 0x[test-deployed] | 0x[test-deployed] | Active |
+| Monad Testnet | 0x[test-deployed] | 0x[test-deployed] | Active |
+
+### How to Deploy
+
+```javascript
+// Using opals-sdk
+const opals = new OpalsProtocol({
+  network: 'base', // 'ethereum', 'optimism', 'arbitrum', 'monad'
+  rpcUrl: 'https://...'
+});
+
+const deployment = await opals.deployProject({
+  name: 'MyProject',
+  marketType: 'stepped',
+  // Full config...
+});
+
+console.log('Factory:', deployment.factoryAddress);
+console.log('Distributor:', deployment.distributorAddress);
+```
+
+## Network Gas Cost Estimates
+
+| Operation | Ethereum | Base/Optimism | Arbitrum |
+|-----------|----------|---------------|----------|
+| Deploy Project (OpalsRecipe) | ~150-200k gas | ~150-200k gas | ~150-200k gas |
+| Create Market | ~80-120k gas | ~80-120k gas | ~80-120k gas |
+| Stake LP (VaultClaim) | ~120k gas | ~120k gas | ~120k gas |
+| Claim Rewards | ~40k gas | ~40k gas | ~40k gas |
+| Early Exit (OVL) | ~140k gas | ~140k gas | ~140k gas |
+
+**Cost Examples (at typical gas prices):**
+- Full project deployment: $15-70 depending on network
+- Staking: $0.30-4 depending on network
+- Claiming rewards: $0.12-2 depending on network
 
 This protocol has been battle-tested with comprehensive security audits and extensive test coverage. The architecture is production-ready for mainnet deployment.

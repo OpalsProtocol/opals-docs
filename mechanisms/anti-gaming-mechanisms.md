@@ -246,14 +246,27 @@ Opals mitigates these through defense in depth. No price oracles to manipulate. 
 
 The key principle: make economic attacks cost more than potential gains. Attackers optimize for profit. Negative EV attacks don't happen.
 
+## MISO Navigation: Understanding Anti-Gaming
+
+**Ingredient**: Six mechanisms (stepped pricing, PatronPower, locks, penalties, atomicity, distribution)
+
+**Recipe**: Combine economic incentives + technical locks = game-proof system. Cheating costs more than cheating gains.
+
+**Navigation**:
+- Want market design? → [Components: Markets](../components/markets.md)
+- Want reward mechanics? → [PatronPower System](./patronpower-system.md)
+- Want flexibility? → [Open Vested Liquidity](./open-vested-liquidity.md)
+- Want deployment? → [Template Factory](./template-factory.md)
+- Want to understand economics? → [Tokenomics](./tokenomics.md)
+
 ## Next Steps
 
 Ready to launch without bots and whales dominating?
 
-Founders: Deploy using Opals templates. Inherit all anti-gaming mechanisms automatically. Focus on building product instead of fighting exploiters.
+**For Founders**: Deploy using Opals templates. Inherit all anti-gaming mechanisms automatically. No bot fighter needed.
 
-Supporters: Participate knowing the game is fair. Long-term commitment earns more than short-term speculation or bot farming.
+**For Supporters**: Participate fairly. Long-term commitment beats short-term speculation. The game is mathematically skewed toward diamond hands.
 
-Developers: Study the anti-gaming implementations. Apply these patterns to your own projects. Economic incentives beat technical barriers.
+**For Developers**: Study the implementations. Economic incentives beat technical barriers. Apply this principle to your own projects.
 
-The anti-gaming mechanisms are live. The economics are fixed. Launch fairly today.
+Anti-gaming mechanisms live. Economics fixed. Launch fairly.

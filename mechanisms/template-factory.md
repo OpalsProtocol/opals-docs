@@ -246,14 +246,27 @@ If Opals disappears tomorrow, your deployed projects continue working. The contr
 
 This decentralization is why serious projects choose the Template Factory over hosted solutions.
 
+## MISO Navigation: Understanding Template Factory
+
+**Ingredient**: Pre-audited contract templates deployed via EIP-1167 cloning (74.7% gas savings)
+
+**Recipe**: OpalsRecipe combines multiple templates into one project. Deploy token, market, claims, launcher simultaneously.
+
+**Navigation**:
+- Want to deploy your project? → [For-Founders Quick Start](../for-founders/quick-start.md)
+- Want cost details? → [For-Founders Pricing](../for-founders/pricing-and-economics.md)
+- Want technical details? → [Technical Architecture](../technical/architecture-overview.md)
+- Want anti-gaming? → [Anti-Gaming Mechanisms](./anti-gaming-mechanisms.md)
+- Want to understand each contract? → [Components](../components/)
+
 ## Next Steps
 
 Ready to deploy for $15?
 
-Founders: Use OpalsRecipe to deploy your complete project. Token, NFTs, markets, claims, launchers. Five minutes. One transaction.
+**For Founders**: Use OpalsRecipe. Deploy token, market, claims, launcher in one transaction. Five minutes. Your project lives.
 
-Developers: Integrate the Template Factory into your deployment pipelines. Reduce costs by 74.7%. Speed up iteration.
+**For Developers**: Integrate Template Factory clones into your tooling. Reduce deployment costs 74.7%. Speed up iteration.
 
-Auditors: Review the master templates. Verify the clone pattern. Audit once, protect thousands of deployments.
+**For Auditors**: Review once. Protect thousands. One master template = infinite secure deployments.
 
-The Template Factory is live. The templates are audited. Start deploying.
+Template Factory is live. Contracts are audited. Start deploying.

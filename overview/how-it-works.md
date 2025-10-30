@@ -1,509 +1,124 @@
-# How It Works
+# How Opals Works
 
-## Four-Phase Launch Process
+Your project launches in four simple phases. Each phase is automated. No manual intervention. No trust required. Just code and math.
 
-Every Opals launch follows the same pattern. Configure, sell, launch, reward. Four phases that take your project from idea to live token with permanent liquidity.
+## The Four Phases (At A Glance)
 
-Each phase maps to specific smart contracts. Everything automated. Nothing manual. Just smart contracts executing agreed rules.
+1. **Deploy** (5 minutes): Fill out a form. Smart contracts deploy automatically.
+2. **Sell** (hours to days): Community buys Patron Cards. ETH accumulates. You keep some, rest goes to liquidity.
+3. **Launch** (instant): Uniswap pair created. LP tokens locked forever. Trading begins.
+4. **Reward** (forever): Each trade generates fees. Card holders claim rewards based on their commitment.
 
-Total time: 5 minutes to deploy. Hours to days for NFT sale. Instant liquidity launch. Perpetual reward distribution.
+That's it. You don't touch anything after deployment. Contracts handle everything else.
 
-## Phase 1: Configuration
+## Phase 1: Deploy Your Project
 
-### What Happens
+You fill out a simple form with your project details:
 
-You configure your project through simple parameters. Token details, market settings, reward structure, liquidity targets.
+- **Token name and supply** (e.g., "MyToken", 1 billion total)
+- **How many Patron Cards** you want to sell (e.g., 5,000 cards)
+- **Card pricing** (e.g., fixed price of 1 ETH, or graduated pricing starting at 0.5 ETH increasing by 0.05 ETH)
+- **How to split raised ETH** between your team and liquidity (e.g., 30% to team, 70% to liquidity)
+- **Optional features** like staking rewards or ETH staking through Aave
 
-Behind the scenes, OpalsFactory deploys 5-15 smart contracts. All clones of pre-audited templates. All wired together through Project hub.
+Click deploy. Done.
 
-This phase takes 5 minutes. No Solidity knowledge required. Just fill out a form. Contracts deploy and configure automatically.
+Smart contracts automatically deploy and wire together. No Solidity knowledge needed. No manual configuration of individual contracts.
 
-### The Contracts Deployed
+Everything you set during deployment is locked in. You can't change token supply after launch. You can't change the split percentage. This is intentional - immutable rules prevent rug pulls.
 
-**Project Hub** (Project.sol): Central coordination contract. Tracks all components. Manages permissions. Wires everything together.
+**Time**: 5 minutes from form to live contracts.
+**Cost**: ~$15 in gas (EIP-1167 minimal proxies save 74.7% vs custom contracts).
+**Result**: Your complete token ecosystem ready for Phase 2.
 
-**Token Contract** (Token.sol): Standard ERC20 with role-based minting. Supply and distribution controlled by configuration.
+## Phase 2: Community Buys Patron Cards
 
-**Card Contract** (Card.sol): ERC721 NFTs representing project ownership. These are your Patron Cards. Holders earn rewards forever.
+Your market is live. Community members can buy Patron Cards.
 
-**Market Contract**: Either SteppedMarket, FixedMarket, or MembersMarket depending on your choice. This is where supporters buy Patron Cards.
+Each card costs ETH (the price you set). Card holders earn LP rewards forever. They can hold, sell on secondary markets, or stake for extra rewards.
 
-**PatronClaim** (PatronClaim.sol): Receives LP tokens from launch. Distributes them to Card holders based on weights. Calculates rewards.
+The sale runs on your timeline. Stop it manually whenever you want. Or set an automatic timeout.
 
-**Liquidity Launcher** (LiquidityLauncher.sol): Accumulates ETH from sales. Creates Uniswap pair. Locks LP tokens in PatronClaim.
+**What happens:**
+- Supporters buy cards → ETH collects in smart contracts
+- Your team receives 50% of the 2% sales fee (~1% of each sale) immediately
+- Rest goes to liquidity pool creation
+- No one removes liquidity. Ever. It's locked by contract, not by promise
 
-Optional contracts based on configuration:
-- **VaultClaim**: Time-locked staking with PatronPower multipliers
-- **WorkLock**: ETH staking through Aave V3 for yield
-- **Distributor**: Direct ETH distribution to supporters
-- **EthRewarder**: Protocol fee collection and distribution
+**Typical timeline**: 1-3 days for projects with good demand. Some finish in hours. Some take a week.
 
-### Key Configuration Decisions
+The longer the sale runs, the more funding you raise. More funding = deeper liquidity = better token price stability.
 
-**Token Supply**: How many tokens total? Common: 1 billion (1e27 in contract terms).
+## Phase 3: Uniswap Pair Launches Automatically
 
-**Card Supply**: How many Patron Cards to mint? This determines funding denominator. Common: 1,000 to 10,000.
+When your NFT sale ends, the smart contracts automatically:
 
-**Market Type**:
-- Stepped: Batch-based pricing. Price increases per package. Bot-resistant.
-- Fixed: Same price for all cards. Simpler but less bot protection.
-- Members: Requires existing membership NFT. Restricted to specific community.
+1. **Take the ETH raised** (minus your team's share)
+2. **Combine it with your tokens** in a Uniswap V2 liquidity pool
+3. **Lock the LP tokens forever** in the PatronClaim contract
 
-**Pricing Strategy**:
-- Low initial price, high increments: Gradual FOMO building
-- High initial price, low increments: Quality filtering
-- Fixed price: Maximum simplicity
+This takes one transaction. It happens instantly.
 
-**Treasury Allocation**: What percentage of raised ETH goes to team vs liquidity? Common: 30% treasury, 70% liquidity.
+The result: Your token is live on Uniswap. Price is determined by the math: ETH in pool ÷ Tokens in pool = Initial price.
 
-**Card Weights**: Do all cards have equal weight? Or do early buyers get bonuses? This affects LP distribution.
+**Example**:
+- Raise: 1,400 ETH from Patron Card sales
+- Tokens for liquidity: 500 million
+- Initial price: 1,400 ETH ÷ 500M tokens = 0.0000028 ETH per token
 
-### Technical Mapping
+The LP tokens (proving the liquidity exists) sit permanently in the PatronClaim contract. No team member can withdraw them. No timelock that expires. Mathematically impossible to rug.
 
-Configuration parameters map to contract initialization:
+Supporters can now trade your token freely. The liquidity you created remains forever.
 
-`tokenSupply` → Token.sol: Sets `totalSupply` in constructor
+## Phase 4: Card Holders Earn Rewards (Forever)
 
-`cardSupply` → Card.sol: Sets `maxSupply` for NFT minting
+Every time someone trades your token on Uniswap, a 1% fee is generated (not the standard 0.3%).
 
-`startingPrice, priceIncrement` → SteppedMarket.sol: Defines pricing curve
+Patron Card holders earn their share of these fees. The bigger your believer (longer they committed their capital), the more they earn.
 
-`treasuryPercent` → LiquidityLauncher.sol: Determines ETH split on launch
+**How it works:**
+- Someone buys 1 million tokens for $10,000 → $100 fee generated
+- That $100 goes to reward Patron Card holders
+- Distribution is based on PatronPower: how much they bought and how long they committed
 
-`baseWeight, bonusWeights` → PatronClaim.sol: Configures LP distribution formula
+**The multiplier:**
+- Lock for 7 days: 0.024x multiplier (minimal reward)
+- Lock for 1 year: 1.25x multiplier (25% bonus)
+- Lock for 4 years: 5x multiplier (500% bonus)
+- **Lock permanently: 10x multiplier (1,000% bonus)**
 
-These values are immutable after deployment. Choose carefully. Cannot change later.
+A supporter with $1,000 locked permanently earns more than a whale with $1 million locked for 7 days.
 
-## Phase 2: NFT Sale
+Commitment beats capital. This prevents mercenary capital from dominating.
 
-### What Happens
+**Claiming rewards:**
+Card holders claim anytime by clicking a button. Claim or let them compound. Your choice.
 
-Your market goes live. Supporters can buy Patron Cards. ETH from sales accumulates in contracts.
+This continues forever. As long as trading happens, fees accumulate. As long as you hold a card, you earn rewards.
 
-Sale continues until target reached or timeout expires. No manual intervention required. Contracts handle everything.
+No team member can stop it. No governance vote can change it. Mathematical formula, enforced by smart contracts.
 
-Duration varies by project. Fast sales: 6 hours. Typical sales: 2-3 days. Maximum: set in configuration.
+## The Full Picture
 
-### The Purchase Flow
+All four phases work together:
 
-Supporter visits market contract. Calls `mint()` function. Sends ETH equal to current price.
+1. You deploy (5 minutes)
+2. Community buys cards (hours to days)
+3. Liquidity launches automatically (instant)
+4. Rewards flow forever (as long as trading happens)
 
-Market contract executes:
+Each phase is automatic. You're not actively managing anything. Contracts enforce the rules. Math ensures fairness.
 
-**Check**: Verify payment amount matches price. Verify supply not exceeded. Verify wallet limits if configured.
+**The key innovation**: Liquidity is locked by code, not by promise. PatronPower ensures commitment is rewarded. Supporters who believe most earn most.
 
-**Effect**: Mint NFT to supporter address. Update `totalSold` counter. Calculate and accumulate fees.
-
-**Interaction**: Send fees to recipients (creator, protocol, referrers). Emit `Minted` event.
-
-This follows CEI pattern. State updated before external calls. Reentrancy protection active. Safe by design.
-
-### Fee Distribution
-
-2% fee on every sale. Split four ways immediately:
-
-**Project Creator** (50% of fee): Sent to project's designated treasury address. Available immediately.
-
-**Protocol** (20% of fee): Sent to Opals protocol. Funds ongoing development and security.
-
-**Platform Referrer** (15% of fee): Sent to whoever referred the project to Opals. Zero if no referrer.
-
-**Order Referrer** (15% of fee): Sent to whoever referred this specific supporter. Zero if direct purchase.
-
-These transfers happen atomically in the same transaction. No manual claims needed. Everything automatic.
-
-### Market Type Differences
-
-**Stepped Market** (SteppedMarket.sol):
-
-Price = `startingPrice + (packageId × priceIncrement)`
-
-Package ID = `totalSold / itemsPerPackage`
-
-Example: Start at 0.1 ETH, increment 0.01 ETH per 100 cards. First 100 cost 0.1. Next 100 cost 0.11. Creates gradual FOMO.
-
-Bot resistance: All purchases in same package pay same price. No first-mover advantage within batch.
-
-**Fixed Market** (FixedMarket.sol):
-
-Price = `fixedPrice` for all cards.
-
-Simpler to understand. Easier to explain. Less bot protection.
-
-Good for projects prioritizing simplicity over bot resistance.
-
-**Members Market** (MembersMarket.sol):
-
-Requires ownership of specific NFT collection. Verifies ownership before allowing purchase.
-
-Good for existing communities. Rewards current members. Creates exclusivity.
-
-### Technical Details
-
-Market contracts inherit from ReentrancyGuard. Every state-changing function has `nonReentrant` modifier.
-
-Fee calculation uses basis points: `feeAmount = (price × TOTAL_FEE_BPS) / 10000`. Where `TOTAL_FEE_BPS = 200` (2%).
-
-Fee splits are constants: `TOKEN_CREATOR_FEE_BPS = 5000` (50% of fee), etc. Hardcoded. Cannot change.
-
-Slippage protection on market interactions. Excess ETH refunded. Insufficient ETH reverts. No edge case losses.
-
-## Phase 3: Token Launch
-
-### What Happens
-
-NFT sale completes. Liquidity Launcher activates. Creates Uniswap V2 pair. Adds initial liquidity. Locks LP tokens.
-
-This happens in a single transaction. Atomic operation. Either everything succeeds or everything reverts. No partial states.
-
-Result: Trading goes live instantly. Initial price determined by raise amount. LP tokens locked in PatronClaim forever.
-
-### The Launch Sequence
-
-LiquidityLauncher.sol `launch()` function executes the following steps:
-
-**Step 1: Split Raised ETH**
-
-Total ETH from sales divided based on treasury percentage.
-
-Example: $2M raised, 30% treasury
-- $600K → Project treasury address
-- $1.4M → Remains for liquidity
-
-**Step 2: Calculate Token Allocation**
-
-Token supply allocated to liquidity based on configuration.
-
-Example: 1B total supply, 50% to liquidity
-- 500M tokens → Liquidity pool
-- 500M tokens → Remain in token contract for other distributions
-
-**Step 3: Create Uniswap Pair**
-
-Call `IUniswapV2Factory(factory).createPair(token, WETH)`
-
-This creates the trading pair. Returns pair address. Stores for future reference.
-
-If pair already exists, uses existing pair address. Idempotent operation.
-
-**Step 4: Approve Router**
-
-`Token.approve(router, tokenAmount)` and `WETH.approve(router, ethAmount)`
-
-Allows Uniswap router to transfer tokens and ETH for liquidity addition.
-
-**Step 5: Add Liquidity**
-
-```
-IUniswapV2Router02(router).addLiquidityETH{value: ethAmount}(
-    tokenAddress,
-    tokenAmount,
-    minTokenAmount,  // 98% of tokenAmount (2% slippage protection)
-    minETHAmount,    // 98% of ethAmount (2% slippage protection)
-    address(this),   // LP tokens sent to this contract
-    deadline
-)
-```
-
-Slippage protection prevents sandwich attacks. 2% tolerance hardcoded.
-
-LP tokens minted to LiquidityLauncher contract.
-
-**Step 6: Transfer LP Tokens**
-
-`lpPair.transfer(patronClaim, lpBalance)`
-
-All LP tokens sent to PatronClaim contract. PatronClaim has no withdrawal function. Locked forever.
-
-**Step 7: Initialize PatronClaim**
-
-PatronClaim.setLPToken(lpPairAddress) registers the LP token address.
-
-PatronClaim.notifyLPReceived() calculates LP per card based on weights.
-
-### Initial Price Calculation
-
-Price = ETH in pool / Tokens in pool
-
-Example: 1.4M ETH, 500M tokens
-- Price = 1,400,000 / 500,000,000 = 0.0000028 ETH per token
-- Or $2.80 per 1,000 tokens at $1,000 ETH
-
-This is the market-clearing price. Fair by definition. Determined by actual raise, not arbitrary choice.
-
-### Technical Mapping
-
-This entire sequence maps to LiquidityLauncher.sol lines 38-106:
-
-Lines 70-72: Create pair via factory
-Lines 74-77: Approve router for token and ETH transfers
-Lines 79-89: Add liquidity with slippage protection
-Lines 92-102: Transfer LP tokens to PatronClaim and initialize
-
-All in one transaction. All CEI pattern compliant. All reentrancy protected.
-
-## Phase 4: Rewards
-
-### What Happens
-
-Trading begins on Opals' custom Uniswap V2 fork. Each swap charges 1% fee (not the standard 0.3%). Fees go to the Distributor contract for PatronPower-weighted distribution.
-
-Patron Card holders can claim their share of accumulated rewards based on their PatronPower anytime.
-
-This phase is perpetual. As long as trading continues, rewards accumulate. As long as cards exist, holders can claim.
-
-### LP Token Ownership Structure
-
-LP tokens locked in PatronClaim contract. PatronClaim tracks which cards exist and their weights.
-
-When a card holder claims, contract calculates:
-1. Total LP tokens held by PatronClaim
-2. Card's share based on weight (card weight / total weight)
-3. Rewards accumulated in that LP share
-4. Transfer rewards to card holder
-
-The LP tokens themselves never leave PatronClaim. Only the rewards from those LP tokens get claimed.
-
-### Weight-Based Distribution
-
-Not all cards are equal. Early supporters can get bonus weights. Founders can get special weights.
-
-Example configuration:
-- Base weight: 100 per card
-- First 100 cards: +50 bonus weight (150 total)
-- Next 900 cards: No bonus (100 total)
-- Total weight: (100 × 150) + (900 × 100) = 105,000
-
-Card 1 LP share: 150 / 105,000 = 0.143%
-Card 500 LP share: 100 / 105,000 = 0.095%
-
-Early supporter gets 50% more LP allocation for same purchase price. Reward for early belief.
-
-### Reward Accumulation Math
-
-Uniswap V2 LP tokens automatically accumulate trading fees. No claiming needed at Uniswap level.
-
-As trading happens:
-- Swap of $10,000: 1% fee = $100 (custom Uniswap V2 fork, not standard 0.3%)
-- Fee goes to Distributor contract
-- Distributor distributes to PatronClaim/VaultClaim based on PatronPower
-- Card holders can claim their share based on PatronPower
-
-Contract uses accumulator pattern for efficient calculations. Tracks rewards per weight instead of per card. Gas-efficient even with 10,000 cards.
-
-### The Claim Process
-
-Card holder calls `PatronClaim.claimTokensForNFTs([cardId])`
-
-Contract executes:
-
-**Step 1: Calculate LP Share**
-
-`lpShare = (cardWeight / totalWeight) × totalLPTokens`
-
-**Step 2: Determine Rewards**
-
-Query Uniswap pair for current reserves. Calculate card's share of both tokens.
-
-Rewards = Token0 amount + Token1 amount (in this case: Project Token + ETH)
-
-**Step 3: Remove Liquidity**
-
-`IUniswapV2Pair(pair).removeLiquidity()` but only for this card's calculated share.
-
-Proportional amounts of both tokens received.
-
-**Step 4: Transfer to Holder**
-
-Send both tokens to card holder address. Update accounting. Emit claim event.
-
-This is safe because only the accumulated rewards get claimed. The base LP position remains locked in PatronClaim.
-
-### Optional: Staking for Multipliers
-
-If project includes VaultClaim, holders can stake their LP tokens for additional multiplier.
-
-Lock LP in VaultClaim → Choose duration → Earn PatronPower multiplier
-
-**7 days**: 0.024x multiplier (almost nothing)
-**1 year**: 1.25x multiplier (25% bonus)
-**4 years**: 5x multiplier (500% bonus)
-**Permanent**: 10x multiplier (1,000% bonus)
-
-This creates second layer of commitment rewards. Already own LP from cards. Lock that LP for even more rewards.
-
-Formula: `multiplier = (lockDuration / 4 years) × 5x` capped at 5x, or 10x for permanent.
-
-Early exit possible through OVL system: `penalty = (remainingTime / totalTime) × 50%`
-
-Penalties redistribute to remaining stakers. Flexibility exists but commitment wins.
-
-### Technical Mapping
-
-PatronClaim.sol implements this:
-
-Lines 158-246: Weight system and LP calculation
-Lines 640-667: getNFTTotalLPTokens() calculates per-card LP allocation
-Lines 248-288: claimTokensForNFTs() executes the claim process
-
-VaultClaim.sol implements staking:
-
-Lines 61-65: Defines multiplier constants and ranges
-Lines 564-605: getPatronPower() calculates multiplier based on duration
-Lines 401-480: earlyExit() handles OVL penalty calculation and redistribution
-
-## Contract Interaction Flow
-
-### The Complete Picture
-
-1. **Configuration**: OpalsFactory deploys Project, Token, Card, Market, PatronClaim, LiquidityLauncher
-2. **Sale**: Supporters buy Cards through Market. ETH accumulates. Fees distribute automatically.
-3. **Launch**: LiquidityLauncher creates Uniswap pair, adds liquidity, locks LP in PatronClaim
-4. **Rewards**: Trading fees accumulate. Card holders claim via PatronClaim. Optional staking in VaultClaim.
-
-Each phase depends on the previous. Cannot launch before sale completes. Cannot claim before launch happens. Sequential, automated, trustless.
-
-### Permission Structure
-
-Project hub controls everything through Operator pattern.
-
-Market can mint Cards: `Card.setOperator(market, true)`
-
-LiquidityLauncher can mint Tokens: `Token.grantRole(MINTER_ROLE, launcher)`
-
-PatronClaim can transfer LP: `Project.setOperator(patronClaim, true)`
-
-These permissions set during deployment. Immutable after initialization. Security through simplicity.
-
-### State Transitions
-
-Market state: Active → Completed
-- Active: Can mint cards, accumulate ETH
-- Completed: Cannot mint, ready for launch
-
-Launcher state: Pending → Launched
-- Pending: Accumulating tokens and ETH
-- Launched: LP created, tokens locked, cannot launch again
-
-PatronClaim state: Uninitialized → Initialized → Active
-- Uninitialized: No LP token set
-- Initialized: LP token registered, awaiting LP transfer
-- Active: LP received, claims enabled
-
-Vault state: Open → Locked → Unlocked → Claimed
-- Open: Can stake
-- Locked: Staking active, cannot unstake before expiry
-- Unlocked: Can unstake without penalty
-- Claimed: Rewards distributed
-
-These states enforce correct sequencing. Cannot skip steps. Cannot repeat operations. Idempotent where safe, restrictive where necessary.
-
-## Gas Costs Breakdown
-
-### Deployment Phase
-
-OpalsFactory uses EIP-1167 minimal proxies. Each clone is ~300 bytes. Each component deployment: ~300K gas.
-
-Full project with 6 components: ~1.8M gas total.
-
-At 50 gwei and $2,000 ETH: ~$15 total cost.
-
-Compare to full deployments: Each component ~3M gas. Full project: ~18M gas. At same prices: ~$1,800 cost.
-
-Savings: 74.7% through template pattern.
-
-### Sale Phase
-
-Each mint: ~100K gas. At 50 gwei: ~$10 per card.
-
-Supporter pays this gas. Not project team. Cost scales with engagement, not with team.
-
-### Launch Phase
-
-Single transaction: ~500K gas. At 50 gwei: ~$50.
-
-Creates pair, adds liquidity, locks LP. All atomic. Team or supporter can trigger.
-
-### Claim Phase
-
-Each claim: ~200K gas. At 50 gwei: ~$20.
-
-Claimant pays. Not project. Only pays when claiming rewards. Optional timing.
-
-### Total Project Cost
-
-Deployment: $15
-Launch: $50
-Total: $65 for complete project
-
-Compare to custom development: $3,000+ gas plus developer time.
-
-## Success Criteria
-
-### Metrics to Track
-
-**Sale Phase**:
-- Cards sold / Total supply
-- ETH raised / Target amount
-- Time elapsed / Time limit
-- Average price paid
-- Unique supporters
-
-**Launch Phase**:
-- Initial price achieved
-- Liquidity depth
-- LP tokens locked amount
-- Treasury amount received
-
-**Reward Phase**:
-- Trading volume
-- Fee generation
-- Claims processed
-- LP value appreciation
-- Average lock duration (if VaultClaim)
-
-### What Good Looks Like
-
-**Fast Sale**: Target reached in hours to days, not weeks. Indicates strong demand.
-
-**Wide Distribution**: Many unique wallets, not few whales. Indicates real community.
-
-**Sustained Trading**: Volume continues post-launch. Indicates real utility, not just speculation.
-
-**Long Locks**: High percentage choosing permanent or long-duration locks. Indicates genuine belief.
-
-**Low Early Exits**: Minimal OVL penalty claims. Indicates aligned supporters.
-
-These metrics are all on-chain. Verifiable. Transparent. No trust required to confirm success.
-
-## Common Issues and Solutions
-
-**Issue**: Sale completes but launch never happens.
-
-**Solution**: Anyone can call `launch()` after sale completes. Permissionless. If team disappears, community can still launch.
-
-**Issue**: Not enough liquidity raised.
-
-**Solution**: Set minimum raise in configuration. Sale reverts if minimum not reached. Supporters refunded automatically.
-
-**Issue**: Card weights misconfigured.
-
-**Solution**: Weights set at deployment. Cannot change. Choose carefully. Test with small deployment first.
-
-**Issue**: Rewards not accumulating.
-
-**Solution**: Rewards come from trading. No trading = no rewards. This is expected. Not a bug.
-
-**Issue**: Cannot unstake from VaultClaim.
-
-**Solution**: Check lock expiry. Early exit requires penalty. After expiry, unstake freely.
+This changes the dynamic completely. Traditional launches reward capital. Opals rewards conviction.
 
 ## Next Steps
 
 Want to launch your own project? [Read the founder's guide](../for-founders/quick-start.md).
 
-Want to understand the economic model? [Learn about PatronPower](../core-concepts/patronpower.md).
+Want to understand the economic model? [Learn about PatronPower](../mechanisms/patronpower-system.md).
 
-Want technical details? [Explore the architecture](../technical/architecture.md).
+Want technical details? [Explore the architecture](../technical/README.md).
 
-Still have questions? [Read the FAQ](../help/faq.md).
+Want to invest in projects? [Start with the investor guide](../for-investors/README.md).

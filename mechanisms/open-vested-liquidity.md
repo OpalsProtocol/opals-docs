@@ -214,14 +214,27 @@ The 20% diamond hands bonus inflates supply modestly. For 4-year locks, this rep
 
 Combined, these mechanics reward patience through both redistribution and bonuses. The longer you hold, the more you earn from others' impatience.
 
+## MISO Navigation: Understanding OVL
+
+**Ingredient**: Early exit mechanism with time-based penalties (% loss based on time remaining)
+
+**Recipe**: Long lock + OVL = optionality. You commit long-term but can exit early if needed (at cost).
+
+**Navigation**:
+- Want to stake? → [Components: Staking](../components/staking.md)
+- Want strategy examples? → [Investor Staking Guide](../for-investors/staking-rewards-guide.md)
+- Want risk management? → [Investor Risk Management](../for-investors/risk-management.md)
+- Want game theory? → [PatronPower System](./patronpower-system.md)
+- Want penalty math? → [Anti-Gaming Mechanisms](./anti-gaming-mechanisms.md)
+
 ## Next Steps
 
 Ready to stake with OVL flexibility?
 
-Founders: Implement OVL for team vesting. Show commitment through 4-year locks while maintaining emergency options.
+**For Founders**: Implement OVL for team vesting. Lock 4 years, maintain emergency access via penalties. Signal commitment.
 
-Supporters: Stake LP tokens in VaultClaim with your chosen duration. Longer locks earn more. Early exit available if needed.
+**For Supporters**: Stake LP with your duration. Longer = more rewards. Need liquidity? Exit early via OVL (pay penalty). Both options work.
 
-Diamond hands: Maintain your full lock duration. Benefit from others' early exits. Earn 20% bonus at completion.
+**For Diamond Hands**: Hold full duration. Earn redistribution from early exiters. Get 20% bonus at unlock. Patience rewarded.
 
-OVL is live. The penalties are fixed. The redistribution is automatic. Start staking today.
+OVL is live. Penalties fixed. Redistribution automatic. Start staking.

@@ -1,260 +1,113 @@
 # Launch Process
 
-This guide walks you through launching your token on Opals from pre-launch planning to post-launch growth. Most founders complete the entire process in about 10 days.
+From first decision to trading. Most projects complete in 10 days.
 
-## Timeline Overview
+## What Happens (The 5 Phases)
 
-**Pre-Launch** (2-3 days): Design tokenomics, build community, prepare marketing
+**Phase 1: Pre-Launch** (2-3 days)
+- Decide: raise target, token allocation, market type, ETH split
+- Build community awareness
+- Not on Opals yet - this is your prep work
 
-**Configuration** (30 minutes): Set up wallet, choose market type, configure pricing
+**Phase 2: Configure** (30 minutes)
+- Fill dashboard form with your decisions
+- Settings lock forever after this
+- No reversals
 
-**Deployment** (5 minutes): Deploy contracts through factory
+**Phase 3: Deploy** (5 minutes)
+- Click deploy, pay ~$15 gas
+- Contracts wire automatically
+- Your market goes live
 
-**Active Sale** (1 week typical): Monitor progress, engage community
+**Phase 4: Card Sale** (1 week typical)
+- Community buys Patron Cards at your prices
+- You monitor and engage
+- Stop whenever you want
 
-**Automatic Launch** (instant): Liquidity provision happens automatically at threshold
+**Phase 5: Liquidity Launch** (automatic)
+- Sale ends → ETH + tokens combine → Uniswap pair created → LP locks forever
+- One transaction, zero manual steps
+- Trading begins immediately
 
-**Post-Launch** (ongoing): Track metrics, distribute rewards, grow project
+## Your Three Critical Decisions
 
-Total time from decision to trading: 10 days average.
+### 1. How Much to Raise?
 
-## Phase 1: Pre-Launch (2-3 Days)
+This determines everything: card supply, pricing, liquidity depth.
 
-### Design Your Tokenomics
+Examples:
+- Small: $50k-$250k
+- Medium: $250k-$2M
+- Large: $2M+
 
-Before deploying anything, design your token distribution:
+Pick a number and commit.
 
-**Recommended allocation**:
-- 40% to liquidity pool
-- 30% to reward distributions
-- 30% to team and development
+### 2. How to Price Cards?
 
-This creates healthy liquidity, rewards supporters, and funds development.
+**Stepped** (recommended): Price increases per batch
+- First 100 cards: 0.5 ETH
+- Next 100 cards: 0.55 ETH
+- Creates sustained momentum
+- Bot resistant
 
-**Set your raise target**: How much ETH do you need?
-- Small projects: $50k-$250k
-- Medium projects: $250k-$2M
-- Large projects: $2M+
+**Fixed**: Same price for all cards
+- Simpler to explain
+- Better for established communities
+- Less bot resistance
 
-Your target determines your Patron Card supply and pricing.
+### 3. How to Split the ETH?
 
-### Choose Your Market Type
+Example: Raise 1,000 ETH
+- 30% to your team wallet (you get ~$600k immediately)
+- 70% to liquidity (you get deep pool, stable price)
 
-Three market types available:
+More to team = more cash now, thinner liquidity
+More to liquidity = deeper pool, better price stability
 
-**SteppedMarket**: Batch-based pricing with increases. Best for most launches. Creates FOMO while staying bot-resistant.
+## Token Allocation
 
-**FixedMarket**: Same price for every NFT. Simplest option. Best for established communities.
+You control the 1 billion token supply:
+- 50% → Liquidity pool (permanent lock)
+- 30% → Team/dev (vesting recommended)
+- 20% → Airdrop/community/reserves
 
-**MembersMarket**: Requires existing NFT ownership to participate. Best for exclusive club launches.
+Can't change after deployment. Choose carefully.
 
-### Build Your Community
+## What You Actually Do
 
-Start building excitement before launch:
+**Before launch**: Build community. That's 90% of the work.
 
-**Social media**: Twitter, Discord, Telegram. Share your vision. Show progress. Build anticipation.
+**During sale**: Share link, answer questions, celebrate milestones. That's it.
 
-**Content marketing**: Blog posts, videos, podcasts. Explain your project. Show your expertise.
+**After launch**: Your supporters earn rewards automatically. Your liquidity is locked automatically. You build your product.
 
-**Influencer outreach**: Partner with crypto influencers. Get them excited about your project.
+## What Opals Does (Automatically)
 
-**Community events**: AMAs, live streams, contests. Engage your audience. Build relationships.
+- Deploys all contracts (you fill out a form)
+- Collects ETH from card sales
+- Creates Uniswap pair when sale ends
+- Locks LP tokens permanently (no team can remove them)
+- Distributes trading fees based on PatronPower (10x for permanent locks)
 
-### Prepare Your Marketing
+## Key Numbers
 
-Create assets you'll need during launch:
+- **Gas cost**: ~$15 (vs $500+ for custom contracts)
+- **Platform fee**: 2% on NFT sales (50% comes back to you)
+- **Lock multipliers**: 7-day = 0.024x, permanent = 10x (416x advantage)
+- **Timeline**: Deploy to trading = 10 days typical
 
-**Project pitch deck**: 10-15 slides explaining your vision, team, and roadmap.
+## What Can Go Wrong
 
-**Video introduction**: 2-3 minute overview of your project and why it matters.
+**Sales are slow** → Your community isn't excited. This is a product/market fit problem, not an Opals problem.
 
-**Social media graphics**: Banners, profile pictures, post templates.
+**Can't change parameters after deployment** → Intentional. Protects supporters from manipulation.
 
-**Press kit**: High-resolution images, team bios, project descriptions.
-
-## Phase 2: Configuration (30 Minutes)
-
-### Connect Your Wallet
-
-Visit the Opals dashboard. Connect your MetaMask wallet. Verify your address.
-
-### Set Basic Information
-
-Fill out your project details:
-
-**Project name**: Choose something memorable and brandable.
-
-**Token symbol**: 3-5 characters, all caps. Make sure it's available.
-
-**Description**: Brief explanation of what you're building and why it matters.
-
-**Website**: Your project's main website.
-
-**Social links**: Twitter, Discord, Telegram, GitHub.
-
-### Configure Tokenomics
-
-Set your token distribution:
-
-**Total supply**: How many tokens will exist? 1 billion is common.
-
-**Decimals**: Usually 18 for ERC-20 tokens.
-
-**Allocation percentages**: Set how tokens are distributed between different card types.
-
-**Vesting schedules**: How long each card type must wait before claiming tokens.
-
-### Choose Your Market Type
-
-Select the market mechanism that fits your project:
-
-**SteppedMarket**: Set batch sizes and price increments. Create urgency while staying fair.
-
-**FixedMarket**: Set a single price for all cards. Simple and predictable.
-
-**MembersMarket**: Configure vouching requirements. Create exclusive access.
-
-### Set Pricing Strategy
-
-Determine your Patron Card prices:
-
-**Starting price**: What's the minimum price for early supporters?
-
-**Price increments**: How much does the price increase per batch?
-
-**Total supply**: How many Patron Cards will you sell?
-
-**Raise target**: What's your minimum and maximum funding goal?
-
-## Phase 3: Deployment (5 Minutes)
-
-### Review Configuration
-
-Double-check all your settings. Once deployed, they cannot be changed.
-
-### Deploy Contracts
-
-Click "Deploy Project". Pay the $15 gas fee. Wait for confirmation.
-
-### Verify Deployment
-
-Check your contracts on the block explorer. Verify they're deployed correctly.
-
-### Test Basic Functions
-
-Mint a test Patron Card. Verify the claiming process works.
-
-## Phase 4: Active Sale (1 Week Typical)
-
-### Launch Your Sale
-
-Activate your Patron Card sale. Share the link with your community.
-
-### Monitor Progress
-
-Track your sales in real-time. Watch your funding progress.
-
-### Engage Community
-
-Keep your community excited. Share updates. Answer questions. Build momentum.
-
-### Adjust Strategy
-
-If sales are slow, consider adjusting your marketing. If sales are fast, consider increasing your target.
-
-## Phase 5: Automatic Launch (Instant)
-
-### Threshold Reached
-
-When your funding target is met, the launch happens automatically.
-
-### Liquidity Creation
-
-The system creates a Uniswap V2 pair with your token and ETH.
-
-### LP Token Locking
-
-LP tokens are locked permanently in the PatronClaim contract.
-
-### Trading Begins
-
-Your token is now tradeable on Uniswap. Price discovery begins.
-
-## Phase 6: Post-Launch (Ongoing)
-
-### Monitor Metrics
-
-Track your token's performance. Monitor trading volume. Watch your community grow.
-
-### Distribute Rewards
-
-Trading fees start flowing to Patron Card holders. Monitor the distribution.
-
-### Community Growth
-
-Continue building your community. Share updates. Celebrate milestones.
-
-### Product Development
-
-Focus on building your product. Deliver on your promises. Create real value.
-
-## Common Challenges
-
-### Slow Sales
-
-If sales are slow, consider:
-- Adjusting your pricing strategy
-- Increasing your marketing efforts
-- Engaging more with your community
-- Lowering your funding target
-
-### Fast Sales
-
-If sales are too fast, consider:
-- Increasing your funding target
-- Adding more Patron Cards
-- Raising your prices
-- Extending your sale period
-
-### Technical Issues
-
-If you encounter technical problems:
-- Check the troubleshooting guide
-- Contact support on Discord
-- Review the technical documentation
-- Ask the community for help
-
-## Success Tips
-
-### Start Early
-
-Begin building your community before you need to raise funds. Relationships take time to build.
-
-### Be Transparent
-
-Share your progress openly. Show your work. Build trust through transparency.
-
-### Focus on Value
-
-Build something people actually want. Solve real problems. Create real value.
-
-### Engage Actively
-
-Don't just post updates. Engage with your community. Answer questions. Build relationships.
-
-### Stay Committed
-
-Launching is just the beginning. Stay committed to your vision. Keep building. Keep growing.
+**Rug pull risk** → Zero. LP tokens locked permanently in contract with no withdrawal function.
 
 ## Next Steps
 
-Ready to start your launch journey?
-
-1. **[Design your tokenomics](./pricing-and-economics.md)** - Plan your token distribution
-2. **[Choose your market type](./choosing-market-type.md)** - Select the right mechanism
-3. **[Deploy your project](./token-launch-mechanics.md)** - Launch your token
-4. **[Monitor your progress](./launch-checklist.md)** - Track your success
-
----
-
-**Remember**: Every successful project started with a vision. You have the tools. You have the community. You have the opportunity. Now go build something great.
+1. Make your three decisions (raise target, market type, ETH split)
+2. Build community for 2-3 days
+3. Go to dashboard and deploy
+4. Run your sale
+5. Opals handles everything else

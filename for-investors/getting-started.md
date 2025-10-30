@@ -1,102 +1,86 @@
-# Getting Started
+# Getting Started: Buy Your First Patron Card
 
-This guide walks you through your first investment on Opals, from wallet setup to making your first purchase. No technical background needed.
+Patron Cards are NFTs that give you permanent ownership in a project's liquidity pool. Buy during launch, lock it, earn trading fees forever.
 
-## What You'll Need
+## What You're Buying
 
-**Hardware**: Computer or smartphone with internet access.
+Each Patron Card = 1% (or whatever % you own) of the liquidity pool permanently locked on Uniswap.
 
-**Software**: Web browser (Chrome, Firefox, or Brave recommended).
+**You get 3 income streams**:
+1. **LP fees**: Opals charges 1% per trade (vs 0.3% standard). You earn your share based on PatronPower.
+2. **Reward tokens**: Projects distribute tokens to early supporters based on lock duration.
+3. **Price appreciation**: If token price rises, your LP value increases too.
 
-**Funds**: ETH for both investment amount and gas fees (typically $50-$500 investment minimum, plus $10-$20 for gas).
+**Example**: Buy 1 card for 1 ETH during launch of $100 total raise
+- You own 1% of liquidity pool
+- Pool gets $70 in liquidity (after fees)
+- Your share: ~$0.7 ETH equivalent in LP tokens
+- Daily trading volume $1M = $10k in fees = you earn ~$100/day (1% share)
 
-**Time**: 15-30 minutes for complete setup and first purchase.
+## Lock Durations & Multipliers
 
-## Step 1: Set Up Your Wallet
+You choose when you lock your card at purchase:
 
-A wallet stores your cryptocurrency and connects to Opals. Think of it like a digital bank account you control.
+| Lock Duration | Multiplier | Use Case |
+|---|---|---|
+| 7 days | 0.024x | Test it out |
+| 90 days | 0.2x | Low commitment |
+| 1 year | 1.25x | Moderate belief |
+| Permanent | 10x | Diamond hands |
 
-### MetaMask Setup (Recommended for Beginners)
+Permanent lock earns **416x more** than 7-day lock (same capital).
 
-MetaMask is the most popular crypto wallet. It works as a browser extension.
+## Setup (15 Minutes)
 
-**Installation**:
-1. Go to metamask.io
-2. Click "Download"
-3. Select your browser (Chrome, Firefox, or Brave)
-4. Click "Add to Browser"
-5. Click "Get Started"
+**1. Get a wallet**
+- Download MetaMask (metamask.io)
+- Create wallet, save your 12-word phrase (don't lose this)
+- Never share recovery phrase with anyone
 
-**Creating Your Wallet**:
-1. Click "Create a Wallet"
-2. Agree to terms
-3. Create a strong password (you'll use this to unlock MetaMask)
-4. Write down your 12-word recovery phrase
-5. Store it somewhere extremely safe (never digital, never photos)
-6. Confirm your recovery phrase by selecting words in order
+**2. Buy ETH**
+- Coinbase, Kraken, Binance, or Gemini
+- Buy $50-$500 worth + $20-50 for gas
+- Send to your MetaMask address
 
-**CRITICAL: Your recovery phrase is everything.** If you lose it and forget your password, your funds are gone forever. If someone steals it, they can steal all your funds. Never share it with anyone. Ever.
+**3. Find a project**
+- Go to Opals dashboard
+- Browse projects during their card sale
+- Read description and tokenomics
 
-### Alternative Wallets
+**4. Buy cards**
+- Connect wallet to project page
+- Click "Buy Patron Card"
+- Select number and lock duration
+- Confirm in MetaMask
 
-**Coinbase Wallet**: Good for Coinbase users. Similar setup process.
+**5. You're done**
+- Card appears in your wallet
+- Rewards accumulate automatically
+- Claim whenever you want
 
-**Ledger or Trezor**: Hardware wallets. Maximum security. Required extra device ($50-$200). Recommended for investments over $10,000.
+## Risks
 
-**Rainbow Wallet**: Mobile-first. Great for phone users.
+✅ **Eliminated by Opals**:
+- Rug pull (liquidity locked permanently)
+- Bot manipulation (stepped pricing)
+- Admin theft (no withdrawal functions)
 
-For this guide, we'll use MetaMask since it's most common.
+⚠️ **Still possible**:
+- Token price drops (market risk)
+- Project fails to execute (execution risk)
+- Your funds are locked if you choose permanent lock
 
-## Step 2: Fund Your Wallet
+## Key Safety Rules
 
-You need ETH to invest and pay gas fees. ETH is the currency of the Ethereum network.
+- **Never share recovery phrase** (that's your funds)
+- **Use hardware wallet** for $10k+ (Ledger, Trezor)
+- **Start small** ($500-1k) and learn before bigger amounts
+- **Diversify** across 5-10 projects (don't put all eggs in one)
 
-### Buying ETH
+## Next: Strategy & Risk
 
-**From exchanges** (easiest for beginners):
-- Coinbase: Buy with credit card or bank transfer
-- Binance: Buy with credit card or bank transfer
-- Kraken: Buy with bank transfer
-- Gemini: Buy with bank transfer
-
-**From friends** (if you know someone with crypto):
-- They can send you ETH directly to your wallet address
-
-**From ATMs** (if available in your area):
-- Find a Bitcoin ATM that also sells ETH
-- Use cash to buy ETH
-
-### How Much ETH Do You Need?
-
-**Minimum investment**: $50-$500 (varies by project)
-**Gas fees**: $10-$20 (for transactions)
-**Total recommended**: $100-$1,000 for your first investment
-
-**Example**: If you want to invest $500, buy $520 worth of ETH to cover gas fees.
-
-### Sending ETH to Your Wallet
-
-1. Copy your wallet address from MetaMask
-2. Go to your exchange
-3. Find "Send" or "Withdraw" ETH
-4. Paste your wallet address
-5. Enter the amount
-6. Confirm the transaction
-7. Wait for confirmation (5-30 minutes)
-
-**Double-check the address**: If you send to the wrong address, your ETH is gone forever.
-
-## Step 3: Connect to Opals
-
-Now you're ready to invest. Let's connect your wallet to Opals.
-
-### Finding a Project
-
-1. Go to opals.io
-2. Browse available projects
-3. Click on a project that interests you
-4. Read the project description and tokenomics
-5. Check the funding progress and time remaining
+Once you're buying, read about:
+- **[Strategy & Risk](./strategy-and-risk.md)** - Lock strategies, diversification, what can go wrong
 
 ### Connecting Your Wallet
 
@@ -177,35 +161,19 @@ Once you've made your first purchase, you need to manage your investment.
 4. Confirm the transaction
 5. Start earning higher rewards
 
-## Common Questions
+## Common Issues
 
-### Technical Questions
+**Transaction failed?** Check ETH balance and try with higher gas.
 
-**Q: What if my transaction fails?**
-A: Check your ETH balance and gas fees. Try again with higher gas.
+**Lost your Patron Card?** It's in your wallet. Losing your wallet = losing your card.
 
-**Q: What if I lose my Patron Card?**
-A: It's stored in your wallet. If you lose your wallet, you lose your card.
+**Want to sell?** Trade on OpenSea or other NFT markets.
 
-**Q: Can I sell my Patron Card?**
-A: Yes, you can sell it on secondary markets like OpenSea.
+**Project fails to launch?** You get refunded if minimum not reached.
 
-**Q: What if the project fails?**
-A: You can reclaim your ETH if the project doesn't reach its threshold.
+**Not sure how much to invest?** Start small ($100-500) and learn before bigger amounts.
 
-### Investment Questions
-
-**Q: How much should I invest?**
-A: Only invest what you can afford to lose. Start small and learn.
-
-**Q: How do I know if a project is good?**
-A: Research the team, read the whitepaper, check the community.
-
-**Q: What if the token price goes down?**
-A: Crypto is volatile. Only invest what you can afford to lose.
-
-**Q: How long should I hold?**
-A: That's up to you. Some hold for days, others for years.
+**Crypto price crashes?** That's normal. Only invest what you can afford to lose completely.
 
 ## Safety Tips
 

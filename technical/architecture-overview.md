@@ -575,6 +575,84 @@ struct Template {
 - With proxies: 2M gas
 - Total savings: 38M gas (74.7%)
 
+## Event Signatures (For Indexing)
+
+All events are indexed on Etherscan and other block explorers:
+
+```solidity
+// Token events
+event Transfer(address indexed from, address indexed to, uint256 value);
+event Approval(address indexed owner, address indexed spender, uint256 value);
+
+// Market events
+event CardPurchased(address indexed buyer, uint256 indexed cardId, uint256 price);
+event MarketPhaseChanged(uint256 newPhase, uint256 newPrice);
+
+// Claim events
+event Claimed(address indexed claimer, uint256 amount, uint256 timestamp);
+event RewardsClaimed(address indexed holder, uint256 amount);
+
+// Staking events
+event Staked(address indexed holder, uint256 amount, uint256 duration);
+event Unstaked(address indexed holder, uint256 amount);
+event EarlyExit(address indexed holder, uint256 lpReceived, uint256 penalty);
+
+// Distributor events
+event FeesDeposited(address indexed token, uint256 amount);
+event RewardsDistributed(address indexed holder, uint256 amount);
+```
+
+## API Integration Examples
+
+### Fetching Deployed Addresses
+
+```javascript
+// Get all projects deployed via OpalsRecipe
+const projects = await opalsSDK.getAllProjects({
+  chainId: 8453, // Base
+  limit: 100,
+  offset: 0
+});
+
+projects.forEach(project => {
+  console.log(`${project.name}:`);
+  console.log(`  Token: ${project.tokenAddress}`);
+  console.log(`  Market: ${project.marketAddress}`);
+  console.log(`  Distributor: ${project.distributorAddress}`);
+  console.log(`  LP: ${project.lpAddress}`);
+});
+```
+
+### Querying PatronPower
+
+```javascript
+// Get a holder's PatronPower across all positions
+const patronPower = await opalsSDK.getPatronPower({
+  holder: '0x...',
+  chainId: 8453
+});
+
+console.log(`Total PatronPower: ${patronPower.total}`);
+console.log(`PatronClaim: ${patronPower.patronClaim}`);
+console.log(`VaultClaim 1-year: ${patronPower.vault1year}`);
+console.log(`VaultClaim 4-year: ${patronPower.vault4year}`);
+```
+
+### Monitoring Fees
+
+```javascript
+// Track fees flowing to a project's Distributor
+const fees = await opalsSDK.getDistributorFees({
+  distributorAddress: '0x...',
+  chainId: 8453,
+  from: blockNumber - 10000
+});
+
+console.log(`Total fees accumulated: ${fees.total}`);
+console.log(`Holders: ${fees.holders.length}`);
+console.log(`Latest distribution: ${fees.lastDistribution}`);
+```
+
 ## Conclusion
 
 The Opals architecture combines battle-tested patterns (EIP-1167, CEI, reentrancy guards) with novel economics (PatronPower, OVL) to create a production-ready platform for sovereign startups.
@@ -591,5 +669,11 @@ The Opals architecture combines battle-tested patterns (EIP-1167, CEI, reentranc
 - Comprehensive security audits completed
 - Battle-tested on multiple testnets
 - Ready for mainnet deployment
+
+**Networks Supported:**
+- Ethereum Mainnet (launching Q1 2025)
+- Base (production ready)
+- Optimism (production ready)
+- Arbitrum (production ready)
 
 Next: [Integration Guide](./integration-guide.md) for deployment patterns and best practices.

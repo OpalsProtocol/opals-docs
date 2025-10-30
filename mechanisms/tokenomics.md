@@ -270,14 +270,27 @@ The latter model wins long-term. It's sustainable. It's honest. It aligns with r
 
 Opals implements this future now. Fixed supply. Fee sharing. Permanent liquidity. Sustainable tokenomics.
 
+## MISO Navigation: Understanding Tokenomics
+
+**Ingredient**: Fixed supply (1e27 max), fee-based rewards, no inflation
+
+**Recipe**: Conservative allocation + sustainable fees = long-term model. Not hype, durability.
+
+**Navigation**:
+- Want to understand allocation? → [Components: Tokens](../components/tokens.md)
+- Want distribution mechanics? → [Components: Distributor](../components/distributor.md)
+- Want to maximize rewards? → [Investor Maximizing Returns](../for-investors/maximizing-returns.md)
+- Want founder strategy? → [For-Founders Pricing](../for-founders/pricing-and-economics.md)
+- Want reward math? → [PatronPower System](./patronpower-system.md)
+
 ## Next Steps
 
 Ready to launch with sustainable tokenomics?
 
-Founders: Deploy with fixed 1e27 supply. Allocate conservatively. Rely on protocol fees for rewards. Build for decades.
+**For Founders**: Deploy fixed supply. Allocate to Patrons, Members, Contributors, Team. Rely on protocol fees (not inflation) for rewards. Build for decades.
 
-Supporters: Buy tokens knowing supply won't inflate. Stake knowing rewards are real. Hold knowing sustainability is built-in.
+**For Supporters**: Buy tokens knowing supply won't dilute. Stake knowing rewards are real, not promises. Hold knowing sustainability is built-in.
 
-Developers: Study the fixed supply model. Apply to your projects. Build sustainable crypto.
+**For Developers**: Study fixed supply model. Apply to your projects. Build sustainable crypto.
 
-Fixed supply tokenomics are live. The model is proven. Launch sustainably today.
+Fixed supply live. Model proven. Launch sustainably.

@@ -48,7 +48,7 @@ Your commitment level determines rewards. Permanent locks earn 10x more than sho
 
 Liquidity is permanently locked. Projects cannot rug. Your investment is protected by smart contracts.
 
-[Buy Patron Cards →](for-supporters/buying-cards.md)
+[Start investing →](for-investors/getting-started.md)
 
 ## Developers
 
@@ -58,7 +58,7 @@ All contracts use battle-tested patterns. CEI pattern enforced. Reentrancy prote
 
 Deploy through template factory. Inherit proven security. Focus on your unique features.
 
-[Read technical docs →](technical/architecture.md)
+[Read technical docs →](technical/README.md)
 
 ### Trading Rewards
 
@@ -68,12 +68,50 @@ LP allocation based on PatronPower. Permanent locks earn 10x base rate.
 
 Rewards accumulate automatically. Claim anytime through smart contracts.
 
-[Reward distribution details →](economics/rewards.md)
+[Understand rewards →](mechanisms/patronpower-system.md)
 
-Ready to launch? Choose your path:
+---
 
-**Learn the complete process**: [Learn the complete process →](overview/how-it-works.md)
+## Quick Navigation
+
+**New to Opals?**
+- [What is Opals?](overview/what-is-opals.md) - 3-minute introduction
+- [How it works](overview/how-it-works.md) - 4-phase founder journey
+- [Why Opals](overview/why-opals.md) - The problem we solve
+
+**For Founders**
+- [Quick Start](for-founders/quick-start.md) - Deploy in 5 minutes
+- [Complete Launch Process](for-founders/launch-process.md) - Step-by-step guide
+- [Pricing & Economics](for-founders/pricing-and-economics.md) - Cost breakdown
+
+**For Investors**
+- [Getting Started](for-investors/getting-started.md) - Set up your wallet
+- [Understanding Patron Cards](for-investors/understanding-patron-cards.md) - NFT mechanics
+- [Staking Rewards](for-investors/staking-rewards-guide.md) - Earn through locks
+- [Maximizing Returns](for-investors/maximizing-returns.md) - Advanced strategies
+- [Risk Management](for-investors/risk-management.md) - Protect your investment
+
+**Components (How It Works)**
+- [Tokens](components/tokens.md) - Token allocation & vesting
+- [Markets](components/markets.md) - Stepped, Fixed, Members options
+- [Patron Cards](components/patron-cards.md) - NFT ownership
+- [Claims](components/claims.md) - Diamond Hands mechanism
+- [Distributor](components/distributor.md) - Fee distribution engine
+- [Staking](components/staking.md) - Lock & earn rewards
+- [LP Tokens](components/lp-tokens.md) - Permanent liquidity guarantee
+
+**Mechanisms (The Economics)**
+- [PatronPower System](mechanisms/patronpower-system.md) - Commitment-based rewards
+- [Template Factory](mechanisms/template-factory.md) - 74.7% cost savings
+- [Open Vested Liquidity](mechanisms/open-vested-liquidity.md) - Flexible exits
+- [Anti-Gaming](mechanisms/anti-gaming-mechanisms.md) - Fair system design
+- [Tokenomics](mechanisms/tokenomics.md) - Fixed supply model
+
+**Technical**
+- [Architecture Overview](technical/architecture-overview.md) - System design
+- [README](technical/README.md) - Deployed addresses & networks
+- [Integration Guide](technical/integration-guide.md) - Deploy your project
+- [Contracts Reference](technical/contracts-reference.md) - API docs
+- [Security](technical/security.md) - Audits & safeguards
 
 **Questions?**: [Join our community →](https://discord.gg/opals)
-
-**Technical support**: [Read the docs →](help/getting-started.md)

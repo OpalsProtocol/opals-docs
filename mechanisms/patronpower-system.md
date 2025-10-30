@@ -230,14 +230,27 @@ The core innovation remains: using time commitment as proof of genuine support. 
 
 For now, PatronPower focuses on its primary mission: ensuring true believers win.
 
+## MISO Navigation: Understanding PatronPower
+
+**Ingredient**: Multiplier system (0.024x to 10x) based on lock duration
+
+**Recipe**: Time commitment → economic advantage. Permanent lock earns 416x more than 7-day lock with same capital.
+
+**Navigation**:
+- Want to understand mechanisms? → [Staking](../components/staking.md)
+- Want to see reward flows? → [Distributor](../components/distributor.md)
+- Want founder perspective? → [For-Founders Launch Process](../for-founders/launch-process.md)
+- Want economics details? → [Tokenomics](./tokenomics.md)
+- Want gameplay advantage? → [Investor Maximizing Returns](../for-investors/maximizing-returns.md)
+
 ## Next Steps
 
 Ready to earn PatronPower?
 
-Founders: Launch your project with built-in PatronPower reward distribution. Every supporter automatically gets fair allocation based on commitment.
+**For Founders**: Launch your project with PatronPower. Lock founder allocations permanently. Signal commitment. Attract true believers.
 
-Supporters: Acquire Patron Cards or stake LP tokens with long lock periods. Earn maximum multipliers through genuine commitment.
+**For Supporters**: Acquire Patron Cards or lock LP permanently. Earn 10x multipliers. Turn conviction into compounding wealth.
 
-Developers: Integrate PatronPower-weighted logic into your governance systems. Use commitment as the trust anchor.
+**For Developers**: Integrate PatronPower weights into voting, access control, or reputation systems. Use time commitment as sybil resistance.
 
-PatronPower is live. The contracts are immutable. The multipliers are fixed. Start earning today.
+PatronPower is immutable. The multipliers are fixed. Start earning.
