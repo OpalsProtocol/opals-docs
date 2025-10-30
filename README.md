@@ -1,117 +1,49 @@
-# Introduction
+# Opals: Community-Funded Token Launches
 
-<figure><img src=".gitbook/assets/introducing.png" alt="Opals Platform Interface"><figcaption></figcaption></figure>
+**Deploy a complete token ecosystem in minutes. Community funds your project. Supporters earn forever. No VCs, no fees, no rugs.**
 
-Stop asking VCs for permission. Fund your project through community supporters.
+## What It Is
 
-Deploy your complete token launch in minutes, not weeks. No coding required. No board seats given away. No $500K in fees.
+Opals is self-service infrastructure for token launches. Deploy token + NFT market + liquidity + staking in one transaction. Keep 100% control. Pay $15 instead of $500K.
 
-## Why Opals Exists
+## Why It Matters
 
-Traditional funding is broken. VCs demand 35% equity plus board control. Launchpads charge $500K in fees plus 7% of your tokens. Both take weeks to months.
+**Problem**: VCs take 35% equity + control. Launchpads charge $500K + 7% tokens. Custom contracts take months + risk.
 
-Your community wants to support you directly. They believe in your vision. They want to be part of your success from day one.
+**Solution**: Direct community funding. Your supporters become permanent owners. Liquidity locked forever = mathematically impossible to rug.
 
-Opals makes this possible. Deploy your entire project in minutes. Keep 100% control of it.
+## How It Works
 
-## Launch complete ecosystems in minutes
+1. **Deploy** - Configure parameters, click deploy (~$15 gas)
+2. **Sell** - Community buys Patron Cards (NFTs) at stepped prices
+3. **Launch** - Sale ends → Uniswap pair created → LP locked forever
+4. **Earn** - Supporters claim trading fees based on PatronPower multiplier
 
-No custom coding required. No smart contract expertise needed. No weeks of development time.
+## Key Numbers
 
-Configure your project through simple parameters. Click deploy. Your complete ecosystem goes live.
+- **Cost**: $15 deployment (vs $500K launchpad, $500K+ VC legal)
+- **Fee**: 2% on NFT sales (50% back to creator)
+- **Multiplier**: 10x for permanent locks (vs 0.024x for 7-day locks)
+- **Gas Savings**: 74.7% (EIP-1167 minimal proxies)
 
-NFT market, token contract, liquidity pool, staking system. All deployed together. All working immediately.
+## For Each Role
 
-## Get Rewarded for Conviction
+**[Founders](for-founders/README.md)** - Deploy in 5 minutes
+Launch token, create liquidity, distribute to early supporters. Keep 100% control.
 
-Early believers earn more rewards than speculators. This is mathematically locked in by smart contracts.
+**[Investors](for-investors/README.md)** - Back projects you believe in
+Permanent locks earn 10x rewards. Rug-proof liquidity. Real ownership.
 
-Liquidity is permanently locked. Earn maximum rewards. Support projects long-term.
+**[Developers](technical/README.md)** - Build on proven infrastructure
+375 tests passing. Battle-tested patterns. Zero custom security risk.
 
-This prevents mercenary capital. It rewards genuine supporters. It creates sustainable projects.
+## Read Next
 
-## Founders
-
-Launch your token without giving up equity or control.
-
-You choose pricing. You set parameters. You keep decision-making power.
-
-No VCs demanding board seats. No launchpads taking 7% fees. Just you and your community.
-
-[Launch your project →](for-founders/quick-start.md)
-
-## Supporters
-
-Become an early believer in projects you trust.
-
-Your commitment level determines rewards. Permanent locks earn 10x more than short-term stakes.
-
-Liquidity is permanently locked. Projects cannot rug. Your investment is protected by smart contracts.
-
-[Start investing →](for-investors/getting-started.md)
-
-## Developers
-
-Build on production-ready infrastructure. 375 tests passing. Complete security audits.
-
-All contracts use battle-tested patterns. CEI pattern enforced. Reentrancy protection throughout.
-
-Deploy through template factory. Inherit proven security. Focus on your unique features.
-
-[Read technical docs →](technical/README.md)
-
-### Trading Rewards
-
-Custom Uniswap V2 fork charges 1% per swap. 100% goes to Distributor for PatronPower-weighted rewards.
-
-LP allocation based on PatronPower. Permanent locks earn 10x base rate.
-
-Rewards accumulate automatically. Claim anytime through smart contracts.
-
-[Understand rewards →](mechanisms/patronpower-system.md)
+- **[What is Opals?](overview/what-is-opals.md)** - 3-minute definition
+- **[Why Opals Exists](overview/why-opals.md)** - Problems & solutions
+- **[How It Works](overview/how-it-works.md)** - 4-phase mechanism
+- **Complete Navigation**: [SUMMARY.md](SUMMARY.md)
 
 ---
 
-## Quick Navigation
-
-**New to Opals?**
-- [What is Opals?](overview/what-is-opals.md) - 3-minute introduction
-- [How it works](overview/how-it-works.md) - 4-phase founder journey
-- [Why Opals](overview/why-opals.md) - The problem we solve
-
-**For Founders**
-- [Quick Start](for-founders/quick-start.md) - Deploy in 5 minutes
-- [Complete Launch Process](for-founders/launch-process.md) - Step-by-step guide
-- [Pricing & Economics](for-founders/pricing-and-economics.md) - Cost breakdown
-
-**For Investors**
-- [Getting Started](for-investors/getting-started.md) - Set up your wallet
-- [Understanding Patron Cards](for-investors/understanding-patron-cards.md) - NFT mechanics
-- [Staking Rewards](for-investors/staking-rewards-guide.md) - Earn through locks
-- [Maximizing Returns](for-investors/maximizing-returns.md) - Advanced strategies
-- [Risk Management](for-investors/risk-management.md) - Protect your investment
-
-**Components (How It Works)**
-- [Tokens](components/tokens.md) - Token allocation & vesting
-- [Markets](components/markets.md) - Stepped, Fixed, Members options
-- [Patron Cards](components/patron-cards.md) - NFT ownership
-- [Claims](components/claims.md) - Diamond Hands mechanism
-- [Distributor](components/distributor.md) - Fee distribution engine
-- [Staking](components/staking.md) - Lock & earn rewards
-- [LP Tokens](components/lp-tokens.md) - Permanent liquidity guarantee
-
-**Mechanisms (The Economics)**
-- [PatronPower System](mechanisms/patronpower-system.md) - Commitment-based rewards
-- [Template Factory](mechanisms/template-factory.md) - 74.7% cost savings
-- [Open Vested Liquidity](mechanisms/open-vested-liquidity.md) - Flexible exits
-- [Anti-Gaming](mechanisms/anti-gaming-mechanisms.md) - Fair system design
-- [Tokenomics](mechanisms/tokenomics.md) - Fixed supply model
-
-**Technical**
-- [Architecture Overview](technical/architecture-overview.md) - System design
-- [README](technical/README.md) - Deployed addresses & networks
-- [Integration Guide](technical/integration-guide.md) - Deploy your project
-- [Contracts Reference](technical/contracts-reference.md) - API docs
-- [Security](technical/security.md) - Audits & safeguards
-
-**Questions?**: [Join our community →](https://discord.gg/opals)
+*[Join community](https://discord.gg/opals) | [View source](https://github.com/opals) | [Documentation guide](DOCUMENTATION_SUMMARY.md)*
