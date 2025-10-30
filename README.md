@@ -21,10 +21,10 @@ Opals is self-service infrastructure for token launches. Deploy token + NFT mark
 
 ## Key Numbers
 
-- **Cost**: $15 deployment (vs $500K launchpad, $500K+ VC legal)
+- **Cost**: $15 deployment (vs $500K launchpad, $100K+ VC legal)
 - **Fee**: 2% on NFT sales (50% back to creator)
-- **Multiplier**: 10x for permanent locks (vs 0.024x for 7-day locks)
-- **Gas Savings**: 74.7% (EIP-1167 minimal proxies)
+- **Multiplier**: 10x for permanent locks (vs 1x 7-day stakers)
+- **Gas Savings**: 94.7% (EIP-1167 minimal proxies)
 
 ## For Each Role
 
@@ -34,8 +34,7 @@ Launch token, create liquidity, distribute to early supporters. Keep 100% contro
 **[Investors](for-investors/README.md)** - Back projects you believe in
 Permanent locks earn 10x rewards. Rug-proof liquidity. Real ownership.
 
-**[Developers](technical/README.md)** - Build on proven infrastructure
-375 tests passing. Battle-tested patterns. Zero custom security risk.
+**[Developers](technical/README.md)** - Build on proven infrastructure. Battle-tested patterns. Zero custom security risk.
 
 ## Read Next
 
