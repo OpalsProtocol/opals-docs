@@ -1,18 +1,15 @@
-# Opals: Community-Funded Token Launches
+## Opals:
+### Community Project Launcher
 
 **Deploy a complete token ecosystem in minutes. Community funds your project. Supporters earn forever. No VCs, no fees, no rugs.**
 
-## What It Is
-
 Opals is self-service infrastructure for token launches. Deploy token + Presale NFTs + Token Claims + LP Vaults + Fee Distributor + Yield Generator, all in one transaction.
 
-## Why It Matters
+## Problem
+No legitimate project will ever launch on a bonding curve. VCs tokens and take 35% equity + control. Launchpads charge $500K + 10% tokens for "Market Making" your project to zero. Community is last. 
 
-**Problem**:  No legitimate project will ever launch on a bonding curve. VCs tokens and take 35% equity + control. Launchpads charge $500K + 10% tokens for "Market Making" your project to zero. Community is last. 
-
-**Solution**: Direct community ownership. Your supporters become owners of Protocol Owned Liquidity (POL). Diamond hand vesting makes rugpulls economically irrational. Rewards distributed to owners of POL.
-
-## How It Works
+## Solution
+Direct community ownership. Your supporters become owners of Protocol Owned Liquidity (POL). Diamond hand vesting makes rugpulls economically irrational. Rewards distributed to owners of POL.
 
 1. **Deploy** - Create 9 contracts in one transaction (~$15 gas)
 2. **Sell** - Patrons buys Presale NFTs (Cards) with locked tokens
@@ -21,7 +18,7 @@ Opals is self-service infrastructure for token launches. Deploy token + Presale 
 5. **Earn** - Presale cards claim based on POL, late adopters need to lock LP to earn share of rewards.
 6. **Stake** - Whales can farm POL by generating yield and sharing with the community.
 
-## For Each Role
+## For Everyone
 
 **[Founders](for-founders/founders.md)** - Deploy in 5 minutes
 Launch token, create liquidity, distribute to early supporters. Keep 100% control.
@@ -29,13 +26,8 @@ Launch token, create liquidity, distribute to early supporters. Keep 100% contro
 **[Investors](for-investors/investors.md)** - Back projects you believe in, risk free farming of POL.
 Permanent locks earn 10x rewards. Rug-proof liquidity. Real ownership. Real rewards.
 
-**[Developers](technical/architecture.md)** - Build on proven infrastructure. Battle-tested patterns. Zero custom security risk.
+**[Community](technical/architecture.md)** - Build on proven infrastructure. Community alignment. Economic incentives.
 
-## Read Next
-
-- **[What is Opals?](overview/opals.md)** - 3-minute definition
-- **[How It Works](overview/how-it-works.md)** - 4-phase mechanism
-- **[FAQ](overview/faq.md)** - Frequently asked questions
 
 ---
 
