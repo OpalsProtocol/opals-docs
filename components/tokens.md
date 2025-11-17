@@ -6,11 +6,11 @@ Opals reverses this. Cards first. Distribution second. Token third. By the time 
 
 ## Why Tokens Come Last
 
-Traditional launches put tokens first. Airdrop to strangers. Hope they stick around. Watch them dump on day one. The incentive structure punishes patience and rewards extraction.
+Traditional launches put tokens first. Airdrop to KOLs. Hope they stick around and tweet about the project. Watch them dump on day one. The incentive structure punishes patience, community building and rewards extraction.
 
-Opals puts tokens last in the sequence: Create Cards � Build Community � Launch Token � Claim with Vesting. By launch day, everyone who holds Presale Cards, Membership Cards, or Contributor Cards has already proven themselves. They joined early. They built value. They committed capital. The token becomes the culmination of that commitment, not the beginning of speculation.
+Opals puts tokens last in the sequence: Create Cards -> Distribute Cards -> Launch Token -> Claim with Vesting. By launch day, everyone who holds Presale Cards, Membership Cards, or Contributor Cards has already proven themselves. They joined early. They built value. They committed capital. They know what they earnt, when they earnt it and how much they earnt. The token becomes the culmination of that commitment, not the beginning of speculation at TGE.
 
-This creates natural filtering. Bots can't farm Membership Cards without participating in the community. Mercenaries can't earn Contributor Cards without doing actual work. By the time token claims open, the holder base is already aligned with the project's long-term success.
+This creates natural filtering. Bots can't farm Membership Cards without participating in the community. KOLs can't earn Contributor Cards without doing actual work. By the time token claims open, the holder base is already aligned with the project's long-term success.
 
 ## Fixed Supply, Real Rewards
 

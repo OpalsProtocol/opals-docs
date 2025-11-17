@@ -1,69 +1,177 @@
 # Architecture: LP Allocation and Fee Distribution
 
-Opals creates permanent liquidity through LP token allocation rather than burning. Every participant ends up owning locked liquidity that generates perpetual fee income. This document explains the technical flow from presale to distribution.
+Technical overview of Opals protocol architecture, component interactions, and capital flows.
 
-## Capital Flow During Presale
+## System Components
 
-When users purchase Patron Cards, the Market contract receives ETH and executes a precise capital split. Eighty percent flows to the Project Treasury for operational runway. Twenty percent accumulates in the Token Launcher for liquidity creation.
+**Core Contracts:**
+- **Market** - Presale contract for Patron Card sales
+- **Token** - ERC20 with fixed supply (1e27)
+- **Project** - Central coordination hub
+- **LiquidityLauncher** - Automated LP creation on threshold
+- **PatronClaim** - Permanent LP allocation for presale participants
+- **VaultClaim** - Flexible LP staking post-launch
+- **WorkLock** - USDC deposits with Aave yield integration
+- **Distributor** - Fee collection and distribution engine
+- **OpalSwap** - Uniswap V2 fork with 1% trading fees
 
-The Token Launcher holds both ETH from sales and its token allocation (20% of total supply, or 2e26 tokens). These reserves wait dormant until the funding threshold triggers. No manual intervention required—the smart contract executes automatically when conditions meet.
+## Capital Flow Architecture
 
-The Project Treasury receives its 80% token allocation (8e26 tokens) immediately at deployment. These tokens vest to Patron Card holders through the Diamond Claim mechanism, creating aligned incentives through time-locked distribution.
+### Presale Phase
 
-## Liquidity Creation and LP Allocation
+**Market Contract:**
+- Receives ETH from Patron Card purchases
+- Executes 80/20 split:
+  - 80% → Project Treasury (operational runway)
+  - 20% → LiquidityLauncher (liquidity creation)
 
-At threshold, the Token Launcher pairs its entire token reserve with accumulated ETH on OpalSwap. This creates the initial liquidity pool with mathematical precision—no slippage, no front-running, no manual calculation.
+**Token Allocation:**
+- Total supply: 1e27 tokens (1 billion with 18 decimals)
+- Split at deployment:
+  - 80% (8e26) → Project Treasury
+  - 20% (2e26) → LiquidityLauncher
 
-The critical innovation: LP tokens transfer to the PatronClaim contract, not to a burn address. The PatronClaim contract contains no withdrawal function. No admin override. No emergency exit. The liquidity locks permanently through missing functionality rather than time-based promises.
+### Liquidity Creation
 
-Patron Card holders receive pro-rata allocation of these LP tokens through card-level accounting. Card #42 owns X LP tokens. Sell the card on OpenSea, the new owner inherits the LP allocation automatically. No migration required. The card itself represents liquidity ownership.
+**LiquidityLauncher Execution:**
+1. Triggers when ETH threshold reached
+2. Pairs 2e26 tokens with accumulated ETH
+3. Creates LP position on OpalSwap
+4. Sends LP tokens → PatronClaim contract
+5. PatronClaim has no withdrawal function (permanent lock)
 
-This creates tradeable, income-generating assets. Secondary markets price cards based on their LP allocation and accumulated fees. Liquidity ownership becomes liquid itself through NFT transferability.
+**LP Allocation:**
+- LP tokens allocated to Patron Cards (not burned)
+- Card-level accounting: Card #N owns X LP tokens
+- NFT transferability: Selling card transfers LP rights
+- Secondary market pricing based on LP allocation
 
-## WorkLock Interest Mechanism
+### WorkLock Mechanism
 
-WorkLock enables risk-free participation through USDC deposits. Users stake USDC, which WorkLock deposits into Aave. The principal remains withdrawable anytime—true liquidity preservation.
+**USDC Deposit Flow:**
+1. User deposits USDC into WorkLock
+2. WorkLock stakes USDC in Aave (receives aUSDC)
+3. Principal remains liquid (withdrawable anytime)
+4. Interest accumulates over time
 
-Interest accumulates as aUSDC. The protocol splits this interest: 70% converts to LP, 30% flows to Project Treasury as operational runway. This dual-purpose mechanism funds both liquidity depth and project development.
+**Interest Distribution:**
+- Split: 70% LP creation / 30% Project Treasury
+- 70% portion processing:
+  - 50% swapped for project tokens (buy pressure)
+  - Remaining 50% paired with tokens
+  - Creates LP position on OpalSwap
+  - LP locked in VaultClaim contract
 
-The 70% portion undergoes "zapping"—half swaps for project tokens, creating buy pressure. The remaining ETH pairs with these tokens, forming new LP positions. Every interest harvest deepens liquidity while supporting token price through automated market buying.
+### Post-Launch Staking
 
-These LP tokens lock in the VaultClaim contract, earning the depositor PatronPower based on their contribution. Risk-free principal, productive interest, permanent liquidity creation—aligned incentives through mechanism design.
+**VaultClaim Mechanics:**
+- Users provide liquidity on OpalSwap
+- Stake LP tokens with chosen duration
+- Duration options: 7 days → permanent
+- PatronPower multipliers:
+  - 7 days: 1.024x
+  - 1 year: 1.25x
+  - 4 years: 5x
+  - Permanent: 10x
 
-## VaultClaim and Post-Launch Staking
+**Early Exit:**
+- Open Vested Liquidity (OVL) allows exit with penalty
+- Penalty formula: `(Remaining Time / Total Duration) × 50%`
+- Penalties redistribute to remaining stakers (PatronPower weighted)
 
-After launch, users can provide liquidity directly on OpalSwap. They receive LP tokens representing their position. These LP tokens stake in the VaultClaim contract with flexible duration options.
+## Fee Distribution System
 
-Lock durations range from seven days to permanent. PatronPower multipliers scale with commitment: 1.024x for week-long locks, 10x for permanent stakes. Time preference encoded in smart contracts.
+### Distributor Architecture
 
-The Open Vested Liquidity mechanism allows early exit with proportional penalties. Need liquidity after one year of a four-year lock? Exit with 37.5% penalty. That penalty redistributes to remaining stakers. Weak hands subsidize diamond hands automatically.
+**Fee Collection:**
+- OpalSwap charges 1% on all swaps
+- Fees accumulate in Distributor contract
+- Distributor tracks total LP across all claim contracts
 
-Both PatronClaim and VaultClaim accumulate LP positions over time. PatronClaim through presale allocation. VaultClaim through post-launch staking and WorkLock interest. Different paths, same destination: locked liquidity earning fees.
-
-## Distributor and Fee Distribution
-
-OpalSwap charges 1% on all trades—higher than Uniswap's 0.3%, but this premium funds the entire reward system. Fees accumulate in the Distributor contract, which maintains a real-time ledger of LP ownership across all claims.
-
-The distribution formula operates with mathematical precision:
-
+**Distribution Calculation:**
 ```
 User Share = (User LP Amount / Total System LP) × Accumulated Fees
 ```
 
-Critical distinction: distribution weights by LP amount, not token holdings. A user with 1,000 LP tokens in VaultClaim earns the same as someone with 1,000 LP tokens in PatronClaim (assuming equal PatronPower multipliers). The system rewards liquidity provision, not token accumulation.
+**Key Properties:**
+- Distribution weighted by LP amount (NOT token holdings)
+- No governance control over distribution
+- No admin override capability
+- Mathematical precision (18 decimals)
 
-Users claim rewards from their respective contracts. PatronClaim for presale participants. VaultClaim for post-launch stakers. No governance votes determine distribution. No admin can modify allocations. Pure mathematical distribution based on provable on-chain state.
+**Claiming:**
+- Users claim from respective contracts:
+  - PatronClaim: Presale participants
+  - VaultClaim: Post-launch stakers
+- Permissionless claiming (anytime)
+- Gas-efficient accumulator pattern
 
-## System Coherence
+## Component Connections
 
-Every mechanism reinforces the core principle: permanent liquidity with distributed ownership. Presale funds create initial liquidity. WorkLock interest deepens it. Post-launch staking expands it. All participants own pieces of an ever-growing, never-shrinking liquidity pool.
+**Presale Flow:**
+```
+User → Market → [80% Treasury / 20% Launcher]
+              → Launcher → OpalSwap → LP → PatronClaim
+```
 
-The missing withdrawal functions make this irreversible. Not "locked until governance votes" or "locked until timelock expires." Locked because the unlock function doesn't exist in compiled bytecode. Mathematical certainty through absent functionality.
+**WorkLock Flow:**
+```
+User → WorkLock → Aave → Interest → [70% LP / 30% Treasury]
+                                   → LP → VaultClaim
+```
 
-Fee distribution creates sustainable yield without token inflation. Volume generates fees. Fees flow to LP owners. No minting. No dilution. Honest economics where low volume means low yield, high volume means high yield. The protocol can't lie about its health through inflationary rewards.
+**Fee Flow:**
+```
+OpalSwap (1% fees) → Distributor → [PatronClaim / VaultClaim]
+                                 → Users claim pro-rata
+```
+
+**Staking Flow:**
+```
+User → OpalSwap (add liquidity) → LP tokens
+    → VaultClaim (stake) → PatronPower multiplier
+```
+
+## Security Model
+
+**Immutability:**
+- All contracts deployed without upgrade functions
+- No admin keys after deployment
+- No governance override mechanisms
+- Code guarantees permanent
+
+**Rug Prevention:**
+- LP tokens allocated to claim contracts
+- Claim contracts lack withdrawal functions
+- Missing functionality = mathematical impossibility
+- Not time-locked (function doesn't exist in bytecode)
+
+**Economic Alignment:**
+- Fee distribution rewards LP ownership
+- Zero token inflation (fixed supply)
+- Sustainable yield from trading volume
+- Honest economics (low volume = low yield)
+
+## LP Accumulation Paths
+
+**Path 1: Presale (PatronClaim)**
+- Buy Patron Cards with ETH
+- Automatic permanent LP allocation
+- 10x PatronPower multiplier
+- Tradeable on secondary markets
+
+**Path 2: Post-Launch (VaultClaim)**
+- Provide liquidity on OpalSwap
+- Stake LP with chosen duration
+- 1.024x-10x multiplier (duration-based)
+- Exit with penalty or wait for expiration
+
+**Path 3: WorkLock (VaultClaim)**
+- Deposit USDC (principal liquid)
+- Interest converts to LP automatically
+- LP locked in VaultClaim
+- Risk-free participation
 
 ---
 
-**Technical Implementation:**
-
-Nine contracts. Atomic deployment. No withdrawal functions. LP tokens allocated, not burned. Distribution by LP ownership, not token weight. This architecture makes rug pulls mathematically impossible while creating sustainable yield for committed participants.
+**All paths converge:** Locked LP ownership → Distributor fee sharing → Sustainable yield without inflation.
