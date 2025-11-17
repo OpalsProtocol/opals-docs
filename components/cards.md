@@ -10,7 +10,7 @@ Cards are non-fungible. This matters because you can't nuke the floor price of a
 
 When a project is ready to launch its token, Card holders can claim their allocation. But the Cards don't disappear, they continue earning protocol fees for the life of the project. This creates permanent alignment between early supporters and long-term project success.
 
-## The Five Card Types
+## Card Types
 
 Opals uses five distinct Card types, each serving a different role in the ecosystem. Together, they create a complete ownership and incentive structure that rewards contribution, commitment, and conviction.
 

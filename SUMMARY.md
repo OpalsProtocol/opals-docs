@@ -4,13 +4,11 @@
 
 * [Overview](README.md)
 * [Opals Protocol](overview/opals.md)
-* [How It Works](overview/how-it-works.md)
-* [FAQ](overview/faq.md)
 
 ## Components
 
-* [Cards](components/cards.md)
 * [Tokens](components/tokens.md)
+* [Cards](components/cards.md)
 * [Markets](components/markets.md)
 * [Keys](components/keys.md)
 * [Launcher](components/launcher.md)
@@ -42,4 +40,5 @@
 * [Architecture](technical/architecture.md)
 * [Opals V2 Recipe](technical/opals-v2-recipe.md)
 * [Litepaper](technical/litepaper.md)
+* [FAQ](technical/faq.md)
 
