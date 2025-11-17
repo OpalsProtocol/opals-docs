@@ -1,270 +1,45 @@
 # Markets
 
-Markets are where Patron Cards get sold. They determine how many cards sell, at what price, and to whom.
+Every token launch faces the same question: how do you distribute ownership fairly while raising the capital you need? Traditional launches handle this poorly. VCs restrict youy to offchain SAFTs, Bonding curves turn communities into PvP arenas where everyone's trying not to be the greater fool.
 
-Opals offers three market types as ingredients. Each serves different founder goals and community dynamics.
+Markets change this. Opals's Markets are the core mechanism that raise capital, giving projects the flexibility to choose how, when, and to whom they distribute ownership. At their heart, Opals' Markets are smart contracts that sell digital assets and issue Cards in return. But unlike traditional launchpads, Opals' Markets are modular. 
 
-## Ingredient 1: Stepped Market
+## Why Markets Matter
 
-The most popular market type.
+The way you distribute Cards determines the community you create. Sell too fast, and you reward speed over conviction. Use bonding curves, and you create front-running wars. Launch without considerations for the community, and bots extract all the value before real supporters can participate.
 
-**How it works**: Cards sell in price tiers. Each tier increases in price.
+Opals Markets solve this by making distribution programmable. Want to reward early believers with better prices? Use stepped pricing. Need to ensure only community members can participate? Implement key-based access control. Want to split proceeds between operations and the token launcher? Configure multiple destination addresses. Every market decision shapes the community you're building.
 
-**Example**: 1M raise, 10k cards total
-- Tier 1: First 2,000 cards at 0.1 ETH = 200 ETH
-- Tier 2: Next 5,000 cards at 0.25 ETH = 1,250 ETH
-- Tier 3: Final 3,000 cards at 0.5 ETH = 1,500 ETH
-- Total: 2,950 ETH (~$4.4M at $1500/ETH)
+## Keys: Controlling Who Participates
 
-**Price increases**: Enforced by smart contracts. Can't buy Tier 2 price until Tier 1 sells out.
+Not every market should be open to everyone. Sometimes you want to reward existing community members. Sometimes you need to prevent bot participation. Sometimes exclusivity creates value.
 
-**Psychology**:
-- Early supporters get better deals (FOMO works both ways)
-- "Beat the price increase" creates urgency
-- Fair to everyone in same tier
-- Bots get no advantage (can't front-run tier cutoffs)
+Keys solve this by gating market access based on Card ownership. If you set a Membership Card as the key for a market, only existing members can participate in that sale round. This lets projects create tiered launches: maybe members-only for the first week, then public after that. Or contributor-only presales before opening to the broader community. We have wrapper contracts that can add more than one collection as keys, so you can have a members-only market for one market, and Azuki, Pudgy and Bored Apes holders as keys for the other.
 
-**Gas costs**: Minimal. Standard Uniswap V2 paired deployment.
+Keys turn access control from a backend problem into a composable primitive. Own the right Card, participate in the market. Don't own it, wait your turn or acquire one through other means.
 
-**Best for**:
-- Projects building hype
-- Founders wanting rapid initial sales
-- Communities with FOMO-driven engagement
+## Pricing Strategies: 
 
-**Example projects**: Most successful Opals launches use Stepped pricing
+Markets support multiple pricing strategies, each solving different problems:
 
-## Ingredient 2: Fixed Market
+**Stepped Pricing** Cards sell in fixed rounds at increasing prices. First 1,000 at 0.1 ETH, next 1,000 at 0.3ETH, final 1,000 at 0.5 ETH. This rewards early believers with better prices while creating natural urgency. Front-running doesn't work because you can't skip rounds. Bots can't game, if they did, they would have to buy the entire round, and becomes economically irrational when combined with diamond hand vesting. 
 
-Predictable, democratic pricing.
+**Linear Pricing** is coming next. Instead of fixed rounds, contributors can buy whatever amount they want whenever they want, with price increasing linearly based on total sold. No artificial cutoffs. No round boundaries. Just smooth price discovery that rewards earlier participation without the race to be first on an exponential price curve. Vesting periods need to be longer, and the price increase capped to 5x the minimum price, but allows for more flexibility in contributions of any size, and suitable for projects with a larger community.
 
-**How it works**: One price for all cards. First-come, first-served basis.
-
-**Example**: 1M raise, 10k cards total at fixed 0.2 ETH
-- Anyone can buy at 0.2 ETH until 10k sold
-- Total raised: 10,000 × 0.2 = 2,000 ETH (~$3M)
-- No price increases
-- No tier gaming
+**Dutch Auctions** will enable true price discovery. Start high, decrease over time until all Cards sell. Everyone who participates pays the final clearing price. This finds fair market value without speculation or gaming. The community collectively determines what the Cards are worth. We have some interesting ideas to make this more exciting, but it's not ready yet.
 
-**Psychology**:
-- Fair and transparent
-- No "best time to buy" strategy
-- Feels democratic
-- Less exciting than stepped (lower FOMO)
-
-**Best for**:
-- Established projects with strong communities
-- Founders wanting pure first-come-first-served fairness
-- Projects avoiding manipulation concerns
 
-**Comparison to Stepped**:
-- Same total raised: Depends on pricing
-- Stepped: Front-loads revenue, ends fast
-- Fixed: Linear revenue over duration
-- Stepped: Creates urgency, Fixed: Creates fairness
-
-## Ingredient 3: Members Market
-
-Exclusive, invite-based access via vouching.
-
-**How it works**:
-1. Project starts with initial members
-2. Existing members can vouch for new participants
-3. Only vouched members can buy cards
+## Multiple Markets: Phased Distribution
 
-**Example**: 1M raise, 10k cards, members market
-- Start: 100 core members
-- Month 1: 100 members buy, can vouch for 500 new
-- Month 2: 600 members can buy, vouch for more
-- Month 3: Market expands organically through trust network
+Projects don't launch once they raise capital in rounds. Maybe you do a stepped pricing presale for early supporters, then six months later run a Dutch auction to distribute remaining Cards at fair market value. Or a members-only market, followed by a public round.
 
-**Psychology**:
-- Creates web of trust
-- Bots can't participate (require real vouching)
-- Community feels exclusive and curated
-- Members take ownership ("I brought in my friend")
-
-**Vouching mechanics**:
-- Member A can vouch for Member B
-- Vouching is a signal of trust
-- Malicious vouchers can get de-vouched by project
-- Creates accountability (your vouches reflect on you)
+Opals supports multiple markets per project. Each market can have its own pricing strategy, its own access keys, its own capital split between operations and the launcher. This lets projects adapt their distribution strategy as they grow, running new markets when they need fresh capital or want to expand the community.
 
-**Best for**:
-- Exclusive launches (limited supply)
-- Community-first projects
-- Projects wanting quality > quantity participants
-- Preventing bot participation
+## Capital Allocation: Operations and Launch
 
-## Recipe: Which Market Type?
+Every market splits proceeds between two destinations: project operations and the token launcher. Projects configure this split when they create the market. Maybe 80% goes to the launcher to ensure deep liquidity, 20% to operations for runway. Or 50/50 if the project needs more immediate capital.
 
-**Use Stepped Market if**:
-- You want fast initial sales
-- Your community likes momentum/FOMO
-- You want tiered reward incentives
-- You're raising a large amount quickly
-
-**Use Fixed Market if**:
-- You want perfect fairness
-- Your community is already strong
-- You want no perception of manipulation
-- You're raising steadily over time
+Different markets can have different splits. Early presale might send 20% to the launcher because runway matters most. Later rounds might send 80% to the launcher because the threshold is nearly met and the token is ready to launch.
 
-**Use Members Market if**:
-- You want high-quality participants
-- You're building an exclusive community
-- You want to prevent bot attacks
-- You prefer vouching-based network effects
-
-## Technical Implementation
+This flexibility ensures capital flows where it's needed most.
 
-All three market types use the same Market contract template with different configurations:
-
-### Stepped Market Contract
-
-**Key state**:
-- `tiers[]`: Array of price tiers
-- `tiersSold[]`: How many sold per tier
-- `currentTier`: Current active tier based on sold count
-
-**Example configuration**:
-```
-tiers = [0.1 ETH, 0.25 ETH, 0.5 ETH]
-tierSizes = [2000, 5000, 3000]  // How many cards per tier
-```
-
-**Buying logic**:
-1. Buyer submits: "Buy 5 cards"
-2. Contract checks: Which tier are we in?
-3. If tier 1 has 100 spots left, buy 5 at 0.1 ETH
-4. If tier 1 full, buy at tier 2 price
-5. Process payment, mint cards
-
-### Fixed Market Contract
-
-**Key state**:
-- `fixedPrice`: Single price for all cards
-- `cardsSold`: Total cards sold so far
-- `maxCards`: Maximum cards this market can sell
-
-**Buying logic**:
-1. Buyer submits: "Buy 5 cards"
-2. Contract checks: Are we under max?
-3. If yes, charge 5 × fixedPrice
-4. Process payment, mint cards
-
-### Members Market Contract
-
-**Key state**:
-- `members[]`: Approved member list
-- `memberCanVouch[]`: Can this member vouch for others?
-- `vouchees[]`: Who vouched for whom
-
-**Buying logic**:
-1. Buyer submits: "Buy 5 cards" + "Voucher: 0x123"
-2. Contract checks: Is buyer approved OR has valid voucher?
-3. If valid, apply member price (may be better than public)
-4. Process payment, mint cards
-5. New buyer gets added to members list
-
-## Real-World Examples
-
-### Example 1: Fast-Growing DeFi Project (Stepped Market)
-
-**Goal**: Raise $5M in 2 weeks
-
-**Configuration**:
-- Tier 1: 0.1 ETH, 15k cards
-- Tier 2: 0.2 ETH, 20k cards
-- Tier 3: 0.3 ETH, 15k cards
-- Total: 50k cards, ~4,750 ETH raised
-
-**Result**:
-- Tier 1 sells out in 24 hours (FOMO kicks in)
-- Tier 2 sells in 1 week
-- Tier 3 sells in final week
-- Momentum builds, community engagement high
-
-### Example 2: Established Protocol (Fixed Market)
-
-**Goal**: Steady participation over 1 month
-
-**Configuration**:
-- Fixed price: 0.15 ETH
-- Max cards: 40k
-- Duration: 30 days
-
-**Result**:
-- Steady daily sales
-- No price urgency
-- Fair to everyone
-- Total raised: ~6,000 ETH
-
-### Example 3: Exclusive Community (Members Market)
-
-**Goal**: High-quality, long-term community
-
-**Configuration**:
-- 100 initial members (founders + advisors)
-- Members can vouch for 5 new members each
-- No maximum cards (until vouchers run out)
-
-**Result**:
-- Network grows organically
-- Only trusted community members
-- Strong long-term bonds
-- Bot-proof participation
-
-## Gas Costs by Market Type
-
-**Stepped Market**: Standard (~21k gas per purchase)
-- More complex tier logic costs minimal extra gas
-
-**Fixed Market**: Minimal (~15k gas per purchase)
-- Simplest logic, lowest gas
-
-**Members Market**: Higher (~50k gas per purchase)
-- Vouching verification adds cost
-- Worth it for bot prevention
-
-## Pricing Formulas
-
-### Stepped Market
-
-```
-Price = tiers[getCurrentTierIndex()]
-currentTier = tierIndex where cumSold < tierSize sum
-```
-
-### Fixed Market
-
-```
-Price = fixedPrice (always)
-```
-
-### Members Market
-
-```
-Price = memberPrice if vouched and isApprovedMember()
-Price = publicPrice if in public launch phase
-```
-
-## Navigation: Choosing Your Market Type
-
-**Decision tree**:
-1. Do you want fast initial sales with momentum?
-   - Yes → Stepped Market
-   - No → Continue
-
-2. Do you want exclusive, vouching-based community?
-   - Yes → Members Market
-   - No → Fixed Market
-
-3. Want to prevent bot participation?
-   - Yes → Members Market
-   - No → Stepped or Fixed (Stepped has other bot protection)
-
-## Next Steps
-
-- **[Tokens](./tokens.md)** - Token distribution matching your market
-- **[Patron Cards](./patron-cards.md)** - NFT mechanics and ownership
-- **[Choosing Your Market](../for-founders/choosing-market-type.md)** - Founder decision guide

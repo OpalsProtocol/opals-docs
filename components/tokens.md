@@ -1,203 +1,41 @@
 # Tokens
 
-Tokens are the economic engine of Opals projects. They're not just speculative assets—they're income-generating instruments tied to real usage.
+The memecoin era taught us one lesson: tokens launched too early become casino chips. Every project rushing to "launch token" before building community, before demonstrating value, before anyone even knows what the project does. Then they wonder why price dumps, why community disappears, why only mercenary capital remains.
 
-## Token Ingredient: What Tokens Do
+Opals reverses this. Cards first. Distribution second. Token third. By the time the token launches, you already know who your supporters are, what they contributed, and how committed they'll be long-term. The token isn't the start of the journeyvit's the reward for completing it.
 
-Tokens in Opals serve four purposes:
+## Why Tokens Come Last
 
-1. **Medium of exchange**: Trading pair on Uniswap (the project token paired with ETH)
-2. **Reward**: Distributed to early supporters based on commitment
-3. **Economic participation**: Trading fees flow to token holders via Distributor
-4. **Governance** (optional): Projects can assign voting rights
+Traditional launches put tokens first. Airdrop to strangers. Hope they stick around. Watch them dump on day one. The incentive structure punishes patience and rewards extraction.
 
-## Token Distribution: Three Classes
+Opals puts tokens last in the sequence: Create Cards � Build Community � Launch Token � Claim with Vesting. By launch day, everyone who holds Presale Cards, Membership Cards, or Contributor Cards has already proven themselves. They joined early. They built value. They committed capital. The token becomes the culmination of that commitment, not the beginning of speculation.
 
-Opals supports flexible token allocation across three classes:
+This creates natural filtering. Bots can't farm Membership Cards without participating in the community. Mercenaries can't earn Contributor Cards without doing actual work. By the time token claims open, the holder base is already aligned with the project's long-term success.
 
-**Patron Cards** (60-80% of supply):
-- Early, committed supporters
-- Buy Patron Cards during launch
-- Longest vesting period (typically 4 years)
-- Earn 10x PatronPower rewards
-- Example: $1M raise, 60% to Patron Cards = 600M tokens allocated
+## Fixed Supply, Real Rewards
 
-**Member & Contributor Cards** (10-30% total):
-- Member Cards: Community members, 10-20% supply, 2-year vest
-- Contributor Cards: Team/advisors, 5-15% supply, 1-year vest
-- Lower PatronPower (2-5x)
+One billion tokens. Minted once. No minting function exists in the contract. Your percentage of supply stays constant forever.
 
-**Team Reserve** (5-10%):
-- Project founders and key team
-- Often vests 4 years with 1-year cliff
-- Aligns team incentives with long-term success
+Most projects promise high APY from staking, then print new tokens to pay those rewards. This is inflation masquerading as yield. Everyone gets 20% more tokens, supply inflates 20%, real value stays flat. It's a mathematical shell game that eventually collapses.
 
-**Example allocation of 1 billion tokens**:
-- Patron Cards: 600M (60%)
-- Member Cards: 200M (20%)
-- Contributor Cards: 100M (10%)
-- Team: 100M (10%)
+Opals rewards come from protocol fees, not token inflation. The 1% trading fees collected by OpalSwap flow to PatronPower holders as actual revenue. If trading volume grows, rewards grow. If volume falls, rewards fall proportionally. This honesty protects the ecosystem from fake yields and unsustainable promises.
 
-All percentages are configurable per project.
+Fixed supply means your tokens maintain their percentage of the total forever. No dilution. No inflation. No future governance vote that changes the rules. The supply cap is immutable, encoded in the smart contract from day one.
 
-## Vesting: Linear Distribution
+## Distribution Through Cards
 
-All tokens vest linearly. No cliffs. No sudden unlocks that create market shocks.
+Tokens distribute to three card types: Presale Cards purchased during fundraising, Membership Cards claimed by early community, and Contributor Cards earned through building value. Each card represents a specific token allocation that vests over time.
 
-**Patron Cards example**: 600M tokens over 4 years = 150M unlocked per year = 12.5M per month
+When you hold a Presale Card, you're entitled to claim tokens according to the vesting schedule. Claim early when only 25% has vested, and you forfeit the remaining 75% to other holders who wait. Claim at full vesting, and you receive your complete allocation plus bonuses from those who claimed early.
 
-**Member Cards example**: 200M tokens over 2 years = 100M per year = 8.3M per month
+This diamond hand vesting mechanism creates economic incentives for long-term holding. The weak hands subsidize the strong hands. Patience becomes profitable. Conviction compounds.
 
-Vesting starts at deployment. Supporters can claim tokens starting immediately but often wait for full vesting to avoid forfeiting unvested tokens (see Diamond Hands mechanism).
+## Productive Assets, Not Speculation
 
-## Trading Fee Revenue Stream
+Tokens aren't meant for speculation. They're meant for productivity. Stake them in Vault Cards to earn PatronPower rewards. Provide liquidity on OpalSwap to earn trading fees. Hold them to participate in governance. The token has utility beyond price appreciation.
 
-Every swap on the project's Uniswap pool generates 1% in fees. These fees flow to the Distributor contract and get distributed based on PatronPower.
+The token launch happens when the Launcher threshold is met. Not on an arbitrary calendar date, not when founders feel ready, but when enough capital commits to guarantee deep, permanent liquidity. This threshold-triggered model ensures every token launches with sufficient liquidity to support healthy price discovery.
 
-**Monthly revenue example**:
-- Trading volume: $10M/month
-- Fee rate: 1% = $100k/month in fees
-- Distributor allocates based on PatronPower
+Once launched, tokens trade on OpalSwap with 1% fees flowing back to PatronPower holders. This creates a feedback loop: more trading generates more fees, more fees reward committed holders, committed holders support the project long-term, project success drives more trading.
 
-Token holders with permanent locks (10x PatronPower) earn 10x more than short-term traders (0.024x multiplier).
-
-## Token Economics: Three Models
-
-### Fixed Supply Model
-
-- Total supply: Fixed (no inflation)
-- Example: 1 billion tokens, max supply
-- Scarcity increases value as adoption grows
-- Most common on Opals
-
-**Pros**:
-- Simple to understand
-- Value increases through scarcity
-- No dilution concerns
-
-**Cons**:
-- Cannot fund ongoing development through token emissions
-- Limited long-term revenue model
-
-### Inflationary Model
-
-- Annual inflation: 3-10% new tokens per year
-- Example: 1 billion initial, 50M new tokens per year
-- Emissions can fund treasury or rewards
-- Less common, requires careful management
-
-**Pros**:
-- Sustainable ongoing funding
-- Can reward community participation over time
-
-**Cons**:
-- Existing holders diluted annually
-- Requires transparent governance
-
-### Hybrid Model
-
-- Fixed supply for Patron/Member/Contributor allocations
-- Small annual emission (1-2%) for ecosystem incentives
-- Balance between scarcity and sustainability
-
-## Governance (Optional)
-
-Projects can assign governance rights to tokens:
-
-**Democratic model**: 1 token = 1 vote on proposals
-**Quadratic voting**: Vote weight = sqrt(tokens held) to reduce whale control
-**Delegated model**: Token holders delegate voting power
-
-Opals leaves governance structure to project teams. Some projects prefer decentralized governance. Others prefer founder-controlled decisions initially.
-
-## Contract Architecture
-
-### Token Contract (ERC20 Standard)
-
-**Deployed by**: TemplateFactory as a clone of Token template
-**Network addresses**: Ethereum, Optimism, Base, Arbitrum
-**Key functions**:
-- `mint(to, amount)`: Create new tokens (only called during allocation)
-- `transfer(recipient, amount)`: Send tokens to another address
-- `approve/transferFrom`: Allow third parties to move your tokens
-
-**Vesting tracking**: Stored in separate Vesting contract (not the token itself)
-
-### Vesting Contract
-
-**Purpose**: Track token release schedules per allocation class
-**Key data**: Start time, cliff (if any), duration, amount claimed vs unclaimed
-
-**Example state**:
-```
-Patron Cards: 600M total, 12.5M per month, started Jan 1, 2025
-- January: 12.5M claimable
-- February: 25M claimable total
-- March: 37.5M claimable total
-...
-```
-
-## Real-World Example: DeFi Protocol Launch
-
-**Scenario**: DeFi protocol raising via Opals
-
-**Token Supply**: 1 billion PROTOCOL tokens
-
-**Allocation**:
-- 600M (60%): Patron Cards - supporter ownership
-- 200M (20%): Member Cards - community members
-- 100M (10%): Contributor Cards - developers, advisors
-- 100M (10%): Team - founders
-
-**Vesting Schedule**:
-- Patron Cards: 4-year linear vest, starts at deployment
-- Member Cards: 2-year linear vest
-- Contributor Cards: 1-year linear vest
-- Team: 4-year vesting with 1-year cliff
-
-**Trading Fees**:
-- Launch with $10M in liquidity
-- First month: $5M trading volume = $50k fees
-- Token holder with Patron Card: Gets rewards based on 10x PatronPower
-
-**Year 1 picture**:
-- 150M Patron tokens vest (25% of allocation)
-- 100M Member tokens vest (50% of allocation)
-- 100M Contributor tokens vest (100%, released)
-- Team tokens locked (1-year cliff)
-- Trading volume growing, fees accumulating
-- Token price determined by market, but backed by fee revenue
-
-## Comparison: Opals vs Traditional Equity
-
-| Aspect | Opals Token | Traditional VC Equity |
-|--------|-----------|---------------------|
-| Distribution | Transparent, smart contract | Private cap table |
-| Vesting | Linear, 4 years typical | Cliff + linear (common 1yr cliff) |
-| Liquidity | Can trade day 1 (vesting permitting) | Illiquid until IPO/acquisition (5-10 years) |
-| Revenue sharing | Via trading fees + governance | Via dividends (rarely given in startups) |
-| Ownership % | Founder keeps majority | Diluted by series rounds |
-| Founder control | Full (no board oversight) | Limited (board seats lost) |
-
-## When Token Distribution Matters Most
-
-**For founders**:
-- Team allocation reflects long-term alignment
-- Patron allocation incentivizes supporter commitment
-- Vesting schedules prevent team dumping
-
-**For supporters**:
-- Vesting schedules determine when you can claim
-- Allocation percentages show founder transparency
-- Fee revenue stream provides real value beyond speculation
-
-**For developers**:
-- Standard ERC20 token integrates with DeFi
-- Vesting contract provides release schedule
-- Distributor handles fee allocation automatically
-
-## Next Steps
-
-- **[Markets](./markets.md)** - How tokens get distributed (Stepped, Fixed, Members)
-- **[Claims](./claims.md)** - How holders claim their token allocations
-- **[Distributor](./distributor.md)** - How fees flow to token holders
+Tokens are the final piece of the Opals mechanism. Not the beginning, the culmination. Not casino chips, productive assets that generate real yield from real protocol activity.

@@ -1,241 +1,53 @@
 # Claims
 
-Claims are the bridge between Patron Cards and tokens. They're how supporters convert card ownership into actual token ownership.
+After three market cycles, one pattern became clear: token vesting is theater. Founders promise lockups, then quietly unlock early. Teams claim four-year vesting, then find creative ways to liquidate immediately. Investors negotiate cliffs, then dump the moment their tokens unlock. The promises mean nothing when they're not enforced by code.
 
-## Ingredient 1: The Claiming Process
+Claim contracts change everything. These aren't promises. These aren't trust-based agreements. These are immutable smart contracts deployed from day one that enforce token distribution exactly as specified, forever. When tokens are allocated to claim contracts, they're locked until conditions are met. No founders can change it. No governance can override it. No market conditions can alter it. The code is law.
 
-Simple and permissionless.
+## Why Claims Matter
 
-**How to claim**:
-1. Wait for project launch (Uniswap pair created)
-2. Connect your wallet with Patron Cards
-3. Call `claim()` on ClaimContract
-4. Receive your tokens in wallet
+Most projects fail because early supporters dump immediately after token launch. The team raises capital, builds for months, launches the token, and within hours the price collapses as everyone exits. This isn't because the project is bad, it's because the incentives are broken.
 
-**That's it**. No KYC. No approvals. No delays. Smart contracts handle everything automatically.
+Claim contracts solve this by making patience profitable and conviction rewarding. When tokens are allocated to a claim contract, Cards can only claim them if certain conditions are met. These conditions are programmed from day one, trustless and immutable.
 
-**Timing**:
-- Claims become available immediately after launch
-- Can claim anytime: day 1, year 1, year 4, whenever
-- Once claimed: cannot claim again (finality)
+For example, when the token launcher raises enough capital to meet the project's threshold, the claim contracts unlock. Projects can set this threshold at deployment, maybe $100K, maybe $5M, whatever ensures sufficient liquidity for a healthy launch. If the threshold isn't met, tokens remain locked. If it is, claims become available.
 
-## Ingredient 2: The Diamond Hands Mechanism
+This creates certainty. Card holders know exactly when they can claim. Projects know exactly when distribution begins. There's no guessing, no governance votes to extend vesting, no founder discretion to change terms. The smart contract enforces what was promised.
 
-This is the secret sauce. Patience is rewarded economically.
+## The Two Core Claim Types
 
-**The mechanic**: When you claim, you forfeit unvested tokens. Forfeited tokens redistribute to remaining holders.
+Opals v2 launches with two claim contracts, each serving a different role in the token distribution system.
 
-**Example**: Patron Card allocation: 1,000 tokens vesting over 4 years
+### Presale Claim: Diamond Hand Vesting
 
-**Scenario A**: Claim at 25% vesting
-- You receive: 250 tokens (25% vested)
-- You forfeit: 750 tokens (75% unvested)
-- Community receives: 750 extra tokens (distributed pro-rata)
+The Presale Claim is where tokens allocated to Presale Cards are held. This is diamond hand vesting in its purest form.
 
-**Scenario B**: Claim at 100% vesting
-- You receive: 1,000 tokens (all vested)
-- You forfeit: 0 tokens
-- Community receives: 0 (you got everything)
+Here's how it works: You can claim your tokens at any time after launch, but you can only claim once. If you claim early during the vesting period, you forfeit your unvested tokens to the remaining Card holders who haven't claimed yet.
 
-**The formula**:
-```
-Your tokens = allocation × (vesting percentage)
-Forfeited = allocation × (1 - vesting percentage)
-Redistributed = forfeited tokens go to remaining holders
-```
+Let's say you hold a Presale Card with 1,000 tokens vesting over four years. Claim at year one when only 25% has vested, and you receive 250 tokens while forfeiting 750 to those still waiting. Claim at year four when fully vested, and you receive your full 1,000 tokens plus your share of what others forfeited.
 
-**Real numbers**: 1M total supply, 600M to Patron Cards, 10,000 Patron Cards
+This creates mathematical incentive alignment. Early claimers subsidize diamond hands. Weak hands strengthen strong hands. Natural selection operates through smart contract logic.
 
-- Each card: 60,000 tokens over 4 years
-- If 5,000 people claim at 25% vesting:
-  - Each gets: 15,000 tokens
-  - Total forfeited: 225M tokens
-  - Remaining 5,000 holders share 225M bonus
-  - Each remaining holder gets ~45k extra tokens
+But there's more. Presale Cards don't just get their vested allocation, they also receive tokens from the distributor contract. As trading happens on OpalSwap, 1% fees flow to the distributor, and a portion of those fees get converted to tokens and allocated to Presale Card holders.
 
-**Why it works**: Claiming early hurts you more than it helps. Patience pays.
+These tokens accumulate in the Presale Claim contract until you decide to claim them. Once you claim, you receive everything that's vested plus everything that's accumulated from fees. But you can't claim again. This creates a powerful dynamic: the longer you wait, the more you accumulate, but you must choose the moment wisely because there's no second chance.
 
-## Ingredient 3: Claiming Strategies
+### Vault Claim: Locked LP Rewarder
 
-Different strategies work for different token holders.
+The second claim contract is the Vault Claim. This is where all tokens allocated to locked liquidity providers are held.
 
-**Strategy 1: Claim Early (Day 1)**
-- Get tokens immediately for trading
-- Forfeit 75% of allocation
-- Best for: Need immediate liquidity, already rich
-- Gas cost: ~60k gas (one-time)
+Unlike the Presale Claim which is for Presale Cards only, the Vault Claim distributes tokens to anyone who has locked LP tokens in vaults. This includes Presale Card holders who have LP allocations, but also anyone who missed the presale and instead provided liquidity on OpalSwap and locked it.
 
-**Strategy 2: Claim at 1 Year (25% vesting)**
-- Get 25% of allocation + share of forfeited tokens
-- Better than day 1, much worse than waiting
-- Best for: Need some tokens but can wait
-- Gas cost: ~60k gas (one-time)
+The Vault Claim distributes tokens based on PatronPower. The longer your LP is locked, the higher your PatronPower multiplier (from 1.024x for 7 days to 10x for 4 years), and the more tokens you can claim from the Vault.
 
-**Strategy 3: Claim at 4 Years (100% vesting)**
-- Get all 60,000 tokens + share of forfeited bonus
-- Maximum allocation + bonus from patient holders
-- Best for: True believers, maximizing tokens
-- Gas cost: ~60k gas (one-time)
+The key difference: Vault Claims are only for locked LPs. You either need to have been allocated LP through a Presale Card, or you need to have provided liquidity yourself and locked it in a vault. No LP lock, no Vault Claim.
 
-**Strategy 4: Never Claim**
-- Keep cards indefinitely
-- Earn 10x PatronPower rewards forever
-- Get trading fee distributions without token disposal
-- Best for: Wants rewards + token price appreciation
+This ensures that token distribution flows to those who contribute liquidity to the ecosystem, not just those who hold tokens. It's alignment through capital commitment, not speculation.
 
-## Recipe: When Should You Claim?
+## Code as Constitution
 
-**Claim early if**:
-- You need tokens for some immediate use
-- You don't believe in project long-term
-- You want to reduce risk by taking gains
+This is the fundamental shift Opals brings to token launches. Vesting isn't a promise, it's code. Distribution isn't at the discretion of founders, it's programmed. Claims aren't managed by administrators, they're enforced by immutable smart contracts.
 
-**Claim later if**:
-- You believe in the project
-- You can afford to wait
-- You want to maximize tokens + bonuses
+When you hold a Card on Opals, you know exactly what you're getting and when you can get it. The Presale Claim rewards patience through diamond hand vesting. The Vault Claim rewards liquidity through PatronPower multipliers. Both are immutable, both are trustless, both are there forever.
 
-**Never claim if**:
-- You want maximum rewards (PatronPower 10x)
-- You trust the project completely
-- You want long-term passive income
-
-## Technical Implementation
-
-### Claim Contract (PatronClaim)
-
-**Key state**:
-- `claimees[]`: List of Patron Card holders
-- `claimedAmount[]`: How many tokens each person claimed
-- `totalClaimed`: Total claimed so far
-- `vestingStart`: When vesting began
-- `vestingDuration`: How long until fully vested (typically 4 years = 126,144,000 seconds)
-
-**Key functions**:
-
-`availableBalance(address holder) -> uint`:
-- Calculates how many tokens are claimable
-- Based on: (allocation × time elapsed / vesting duration)
-- Returns: claimable amount
-
-`claim() -> uint`:
-- Called by holder
-- Checks: holder has Patron Card
-- Calculates: vested amount
-- Transfers: tokens to holder wallet
-- Records: claim in claimedAmount[holder]
-- Returns: tokens transferred
-
-`getForfeited() -> uint`:
-- Calculates total forfeited across all claimers
-- Used to distribute bonuses to remaining holders
-
-### Vesting Mathematics
-
-**Linear vesting formula**:
-```
-vestedAmount = allocation × (elapsed_time / total_duration)
-
-Example: 1,000 tokens, 4-year vesting
-- Day 0: 0 tokens vested
-- Day 365: 250 tokens vested (1/4)
-- Day 730: 500 tokens vested (2/4)
-- Day 1095: 750 tokens vested (3/4)
-- Day 1460: 1,000 tokens vested (4/4 = 100%)
-```
-
-**Bonus redistribution**:
-```
-bonus_per_holder = total_forfeited / num_remaining_holders
-
-Example:
-- Total Patron Cards: 10,000
-- Cards claimed so far: 5,000
-- Total forfeited from claims: 225M tokens
-- Remaining holders: 5,000
-- Bonus per remaining holder: 225M / 5,000 = 45k tokens each
-```
-
-## Real-World Example: DeFi Protocol
-
-**Project**: DeFi swap protocol raising $5M on Opals
-
-**Token allocation**: 600M tokens to Patron Cards
-- 10,000 Patron Cards = 60,000 tokens each
-- Vesting: 4 years linear, starting at deployment
-
-**Timeline**:
-
-**Day 0 (Launch)**:
-- Uniswap pair created
-- Claims open
-- Token price: $0.01 (1,000 ETH / 100M circulating)
-
-**Day 1**:
-- 1,000 impatient holders claim at 0% vesting
-- Each gets: 0 tokens (nothing vested yet)
-- Forfeit: 60,000 × 1,000 = 60M tokens
-- Bonus to remaining: 60M / 9,000 = ~6,667 extra tokens each
-
-**Day 30 (1 month)**:
-- Token price: $0.05 (volume growing)
-- 2,000 more holders claim at ~0.8% vesting
-- Each gets: ~480 tokens
-- Forfeit: ~59,520 × 2,000 = 119M tokens
-- Bonus to remaining: 119M / 7,000 = ~17k extra tokens
-
-**Year 1**:
-- Token price: $0.50 (successful project)
-- 2,000 more claim at 25% vesting
-- Each gets: 15,000 tokens
-- Forfeit: 45,000 × 2,000 = 90M tokens
-- Bonus to remaining: 90M / 5,000 = 18k extra tokens
-
-**Year 4 (Fully vested)**:
-- Token price: $5.00 (successful project)
-- Remaining 5,000 holders claim 100%
-- Each gets: 60,000 + accumulated bonus (~60k) = 120k tokens
-- They waited 4 years, now they have 2x the original allocation
-
-## Gas Costs
-
-**Claiming**: ~60k gas per transaction
-- At 50 Gwei: ~$3 (Ethereum mainnet)
-- At 5 Gwei: ~$0.30 (Base/Optimism)
-
-**Batch claiming**: Multiple cards in one tx
-- Card 1-10: ~60k gas + 5k per additional card
-- Claiming 10 cards: ~105k gas total
-
-## Common Questions
-
-**Q: Can I claim part of my allocation?**
-A: No. One claim transaction claims everything that's vested. All-or-nothing per holder.
-
-**Q: What if I lose my Patron Card after claiming?**
-A: You already have the tokens. The NFT doesn't matter after claiming. Tokens are yours.
-
-**Q: Can founders change the vesting schedule?**
-A: No. Vesting is immutable smart contract code. Founder cannot extend or shorten vesting.
-
-**Q: What happens if I never claim?**
-A: You keep the Patron Card forever. Earn 10x rewards. Never convert to tokens unless you want to.
-
-**Q: Can I claim on behalf of someone else?**
-A: No. Only the card holder can call claim(). They must sign the transaction.
-
-## Comparison: Claim Strategies
-
-| Strategy | Claim Time | Tokens Get | Bonus | Total | Best For |
-|----------|-----------|-----------|-------|-------|----------|
-| Immediate | Day 1 | 0-100 | None | 0-100 | Impatient |
-| Early | 1 year | 15k | Small | 17-18k | Need cash |
-| Patient | 2 years | 30k | Medium | 36-40k | Believers |
-| Diamond Hands | 4 years | 60k | Large | 100-120k | True believers |
-| Never Claim | Forever | 0 | N/A | ∞ rewards | Max rewards |
-
-## Next Steps
-
-- **[Tokens](./tokens.md)** - Token distribution and vesting
-- **[Patron Cards](./patron-cards.md)** - Card ownership mechanics
-- **[Staking](./staking.md)** - Lock tokens for rewards
+This is how you build projects that outlast their founders. This is how you create digital institutions, not exit liquidity. Smart contracts as actual contracts, unbreakable commitments that outlive their creators.

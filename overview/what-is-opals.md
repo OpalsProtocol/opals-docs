@@ -1,111 +1,118 @@
-# What is Opals?
 
-Deploy a complete token ecosystem in 5 minutes. Community funds your idea. Early supporters earn for the life of the project. 
+### Opals Method
 
-## The Three Problems It Solves
+We see capital formation as a 4-stage process over time:
 
-### Problem 1: VC Funding Costs
+#### Create - Mint and distribute digital assets from day one
+- **Collectables, not points** to community / team / advisors based on contributions
+- **NFT-based system** allows for granular tokenomics later
+- **Community building** through digital asset ownership
+- **Early engagement** without token speculation
 
-VCs offer capital but take 35% equity + board seats. Your timeline becomes their timeline. You end up with 10-15% of company you built, and their short term goals dont align with your long term vision.
+#### Sell - Limited edition Patron Cards to raise capital towards token liquidity
+- **Stepped pricing** rewards early supporters
+- **Transparent process** with clear pricing tiers
+- **Community validation** through member markets
+- **Anti-bot protection** through innovative mechanisms
 
-**Opals**: The Community Token Launcher.
+#### Launch - When communities reach critical mass, patron sales accumulate, eventually launching a token when a set price cap is reached
+- **Automatic token launch** when funding targets are met
+- **Permanent liquidity locks** prevent rug pulls
+- **Fair distribution** based on card ownership
+- **Immediate tradability** on OpalSwap
 
-### Problem 2: Exchanges Extract Value
+#### Claim - Card holders, both contributors and patrons, can claim tokens over a set vesting period, with diamond hand mechanics
+- **Linear vesting** with early claim penalties
+- **Diamond hand rewards** for long-term holders
+- **Community benefits** from early exits
+- **Sustainable tokenomics** without inflation
 
-Exchanges charge $500K upfront + 10% tokens just to be listed. They provide marketing (a tweet) and community (73% bots). Projects succeed despite the platform, not because of it.
 
-**Opals**: Deploy directly. 2% fee on NFT sales only. Card sales go towards launching your token and funding project treasury.
+### Architecture
 
-### Problem 3: Rug Pulls Are Easy
+#### Market Mechanisms
+- **Stepped Markets**: Fair launch standard with transparent pricing
+- **Linear Markets**: Linear price discovery for flexible contributions
+- **Members Markets**: Community-first with vouching system
+- **Key Markets**: Access control based on Card ownership
 
-Standard token launches let teams remove liquidity anytime. Timelocks delay rugs (6 months) but don't prevent them. No onchain guarantees exists.
+#### PatronPower Algorithm
+- **Mathematical foundation** for reward distribution
+- **Time-based multipliers** from 1.024x to 10x
+- **Commitment bonuses** for early supporters
+- **Card multipliers** for different card types
 
-**Opals**: LP tokens locked permanently in PatronClaim contract. No withdrawal function exists, making it impossible to rug.
+#### Anti-Rug Pull Mechanisms
+- **Permanent liquidity locks** with no admin keys
+- **Transparent tokenomics** visible before launch
+- **Community control** over token distribution
+- **Penalty redistribution** to diamond hands
 
-## How It Works (5 Steps)
+#### Template Factory Pattern
+- **95% gas savings** through EIP-1167 minimal proxy pattern
+- **Battle-tested templates** deployed once and cloned
+- **Configuration-based** setup instead of custom deployments
+- **Upgradeable master contracts** through governance
 
-1. **Deploy** - Fill out form, pay ~$15 gas, contracts wire automatically
-2. **Sell** - Community buys Patron Cards (NFTs) at stepped prices (bot-resistant)
-3. **Launch** - Sales end → ETH + tokens → Uniswap pair → LP locks forever
-4. **Trade** - Token trades, generates 1% fees (vs 0.3% standard)
-5. **Earn** - Supporters claim trading fees based on PatronPower multiplier
+## Economic Innovation
 
-## PatronPower: Time Over Capital
+### Non-Inflationary Farming
 
-**PatronPower = LP Amount × Time Multiplier**
+Traditional farming creates new tokens to pay rewards, diluting existing holders. Opals creates sustainable yield from real trading fees:
 
-| Lock Duration | Multiplier | Comparison |
-|---|---|---|
-| 7 days | 0.024x | $1M locked 7 days |
-| 1 year | 1.25x | vs |
-| Permanent | 10x | **$1K locked permanently = 416x more** |
+- **Real Revenue**: 1% trading fees on all swaps
+- **Sustainable Growth**: Rewards scale with trading volume
+- **No Dilution**: Existing holders are never diluted
+- **Fair Distribution**: Everyone benefits from real value creation
 
-Short-term speculators earn almost nothing. Diamond hands earn exponentially more. This prevents mercenary capital and creates genuine community.
+### Open Vested Liquidity (OVL)
 
-## The Components
+Traditional vesting is binary - lock or nothing. OVL provides flexibility with fairness:
 
-- **Patron Cards** (ERC721): Permanent ownership NFT, entitles you to LP share
-- **Market** (Stepped/Fixed/Members): Bot-resistant pricing during sale
-- **Token Contract** (ERC20): Your project token, role-based minting
-- **Liquidity Launcher**: Accumulates ETH, creates Uniswap V2 pair, locks LP forever
-- **PatronClaim**: Tracks card holders, distributes trading fees based on PatronPower
-- **VaultClaim**: Optional - stake LP tokens for additional 0-5x multiplier rewards
+- **Flexible Exits**: Exit anytime with predictable penalties
+- **Penalty Redistribution**: Early exits benefit long-term holders
+- **Aligned Incentives**: Long-term holders are rewarded
+- **Sustainable Model**: Reduces selling pressure
 
-All pre-audited. 375 passing tests. Proven patterns (Uniswap V2, Aave V3, EIP-1167).
+### Diamond Hand Vesting
 
-## Comparison
+Reward long-term commitment while providing flexibility:
 
-| | Opals | VC | Launchpad | DIY |
-|---|---|---|---|---|
-| **Cost** | $15 | $0 | $500K+ | $50K+ |
-| **Equity loss** | 0% | 35% | 0% | 0% |
-| **Control** | 100% | 65% | 100% | 100% |
-| **Time to launch** | 1 week | 6 months | 8 weeks | 8 weeks |
-| **Rug risk** | Impossible | Low | High | Medium |
-| **Gas savings** | 74.7% | - | - | - |
+- **One Claim Per Card**: Prevents multiple claims
+- **Early Claim Penalties**: Forfeited tokens redistributed
+- **Community Benefits**: Early exits benefit remaining holders
+- **Strong Incentives**: Encourages long-term holding
 
-## Design Principles
 
-**Transparency**: Smart contracts enforce all rules. No admin overrides, no multisig, no governance changes. When we say "locked permanently," the contract literally has no withdrawal function.
+## Why Opals Matters
 
-**Commitment Over Capital**: PatronPower rewards time commitment more than capital size. $1K permanent > $1M for 7 days.
+### For Projects
+- **Sustainable Funding**: Raise capital without giving up control
+- **Community Alignment**: Early supporters become stakeholders
+- **Technical Efficiency**: 95% gas savings on deployment
+- **Security Guarantees**: Permanent liquidity locks prevent rug pulls
 
-**Community Over VCs**: Communities provide capital + evangelism. They want success, not control. Founders keep sovereignty.
+### For Supporters
+- **Fair Access**: No preferential treatment for VCs or insiders
+- **Real Rewards**: Earn from actual trading fees, not inflation
+- **Community Benefits**: Long-term rewards for commitment
+- **Transparent Process**: Everything is on-chain and verifiable
 
-**Security Over Speed**: Pre-audited templates mean instant deployment is also instant security.
+### For the Ecosystem
+- **Reduced Rug Pulls**: Permanent liquidity locks prevent scams
+- **Sustainable Growth**: Real value creation instead of speculation
+- **Community Building**: Strong incentives for long-term commitment
+- **Innovation**: New primitives for project launches
 
-## Who Uses Opals
 
-**Founders**: Launch your token, create liquidity, distribute to early supporters, all in 5 minutes. Zero equity dilution. Keep 100% control.
+## Conclusion
 
-**Investors**: Buy projects early. Permanent lock gives you 10x rewards. Rug-proof liquidity. Real ownership.
+Ethereum enabled this future - Opals delivers it.
 
-**Developers**: Deploy governance token, staking system, liquidity, reward distribution. Inherit audited templates. 74.7% less gas. No custom security review needed.
+We're not just building another launchpad. We're creating the infrastructure for a new kind of internet - one where communities own their platforms, where early supporters become permanent stakeholders, and where the incentives of projects and their communities are perfectly aligned.
 
-## Key Numbers
+The future of community-owned projects is here. Welcome to Opals Protocol.
 
-- **$15** deployment cost (vs $500+ custom, $500K+ launchpad)
-- **2%** platform fee (50% back to creator)
-- **10x** multiplier for permanent locks
-- **416x** advantage (permanent vs 7-day lock, same capital)
-- **1%** trading fees (vs 0.3% standard Uniswap)
-- **375** passing tests
-- **74.7%** gas savings (EIP-1167 minimal proxies)
+---
 
-## Common Misconceptions
-
-❌ "Just another launchpad" → No, self-service infrastructure you control completely
-
-❌ "2% fee is hidden" → No, hardcoded in contracts, 50% returns to you
-
-❌ "Founders can unlock liquidity" → No, PatronClaim has zero withdrawal functions
-
-❌ "Early backers get diluted" → No, permanent locks earn 10x more forever
-
-## Next Steps
-
-- **[Why Opals](./why-opals.md)** - Problems + solutions + guarantees
-- **[How It Works](./how-it-works.md)** - 4-phase launch journey
-- **[For Founders](../for-founders/README.md)** - Launch your token
-- **[For Investors](../for-investors/README.md)** - Find & fund projects
-- **[Technical](../technical/README.md)** - Architecture & integration
+*Building something special? [Launch on Opals](https://opals.io) | [Join our Community](https://discord.gg/opals) | [Follow us on X](https://x.com/opals_io)*

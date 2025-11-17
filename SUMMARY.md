@@ -1,42 +1,38 @@
 # Table of Contents
 
-## Getting Started
-* [Introduction](README.md)
-* [What is Opals?](overview/what-is-opals.md)
-* [Why Opals Exists](overview/why-opals.md)
+## Introduction
+* [Overview](README.md)
+* [Litepaper](overview/litepaper.md)
 * [How It Works](overview/how-it-works.md)
-
-## For Founders
-* [Overview](for-founders/README.md)
-* [Quick Start (5 Minutes)](for-founders/quick-start.md)
-* [Launch Process](for-founders/launch-process.md)
-* [Market Types & Costs](for-founders/pricing-and-economics.md)
-
-## For Investors
-* [Overview](for-investors/README.md)
-* [Getting Started: Buy Your First Patron Card](for-investors/getting-started.md)
-* [Strategy & Risk Management](for-investors/strategy-and-risk.md)
+* [FAQ](overview/faq.md)
 
 ## Components
-* [Patron Cards](components/patron-cards.md)
+* [Cards](components/cards.md)
 * [Tokens](components/tokens.md)
 * [Markets](components/markets.md)
-* [Claims](components/claims.md)
+* [Keys](components/keys.md)
+* [Launcher](components/launcher.md)
 * [Distributor](components/distributor.md)
-* [Staking](components/staking.md)
-* [LP Tokens](components/lp-tokens.md)
+* [Claims](components/claims.md)
+* [Worklock](components/worklock.md)
+
+## For Founders
+* [Overview](for-founders/founders.md)
+* [Launch Process](for-founders/launch-process.md)
+* [Tokenomics](for-founders/tokenomics.md)
+
+## For Investors
+* [Overview](for-investors/investors.md)
+* [TAFTs](for-investors/tafts.md)
+* [Staking](for-investors/staking.md)
 
 ## Mechanisms 
-* [PatronPower System](mechanisms/patronpower-system.md)
-* [Template Factory Pattern](mechanisms/template-factory.md)
+* [Patron Power](mechanisms/patron-power.md)
+* [Pricing Strategies](mechanisms/pricing-strategies.md)
 * [Open Vested Liquidity (OVL)](mechanisms/open-vested-liquidity.md)
-* [Anti-Gaming Mechanisms](mechanisms/anti-gaming-mechanisms.md)
-* [Tokenomics](mechanisms/tokenomics.md)
+* [Template Factory](mechanisms/template-factory.md)
+
 
 ## Technical
-* [Overview](technical/README.md)
-* [Architecture Overview](technical/architecture-overview.md)
-* [Integration Guide](technical/integration-guide.md)
-* [Contracts Reference](technical/contracts-reference.md)
-* [Security](technical/security.md)
-* [Litepaper](technical/litepaper.md)
+* [Architecture](technical/architecture.md)
+* [Opals V2 Recipe](technical/opals-v2-recipe.md)
