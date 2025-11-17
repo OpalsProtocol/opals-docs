@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Litepaper](overview/litepaper.md)
+* [Opals Protocol](overview/opals.md)
 * [How It Works](overview/how-it-works.md)
 * [FAQ](overview/faq.md)
 
@@ -41,3 +41,5 @@
 
 * [Architecture](technical/architecture.md)
 * [Opals V2 Recipe](technical/opals-v2-recipe.md)
+* [Litepaper](technical/litepaper.md)
+
