@@ -12,7 +12,7 @@ PatronPower makes commitment the variable, not capital. Your reward multiplier s
 
 Consider the game theory. A whale needs $416,000 locked for seven days to match $1,000 locked permanently. But seven-day locks expire constantly, requiring gas fees to restake. Permanent locks set once and compound forever. The whale loses through friction alone.
 
-## Why LP Tokens Change Everything
+## LP Tokens Make Rug Pulls Impossible
 
 Most projects distribute tokens to supporters. This creates immediate sell pressure. Every airdrop, every unlock, every vesting cliff becomes a dump event. Price crashes. Community loses faith. Project dies.
 

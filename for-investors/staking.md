@@ -28,7 +28,7 @@ If you hold 1% of total PatronPower, you earn 1% of all trading fees. Forever. N
 
 When volume is high, rewards are high. When volume drops, rewards drop. This honesty prevents the death spirals that destroy inflationary protocols. You know exactly what you're earning and why.
 
-## Why LP Tokens Matter
+## Liquidity Provision Beats Token Dumping
 
 Staking regular tokens creates sell pressure. Stakers dump rewards to realize gains. Price drops. APR increases to compensate. More tokens printed. More selling. Death spiral.
 

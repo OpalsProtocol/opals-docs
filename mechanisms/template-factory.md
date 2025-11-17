@@ -44,7 +44,7 @@ This creates sustainable business models for tools and platforms. Build deployme
 
 The composability extends beyond code to economics. Everyone building on Opals benefits from Opals growth.
 
-## Why Immutability Matters
+## Permanent Code Creates Mathematical Trust
 
 Templates cannot be upgraded. This is a feature, not a limitation. Your clone points to a specific master address forever. That master's logic never changes. No rug risk through malicious upgrades.
 

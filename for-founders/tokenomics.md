@@ -197,7 +197,7 @@ These fees come from real trading activity, not token inflation. Sustainable as 
 
 The permanent liquidity lock prevents the worst-case scenario (rug pull) while allowing natural price discovery.
 
-## Why This Model Works
+## Align Every Participant
 
 **For early members**: Pay less ($20), wait longer, earn more (175k tokens at $0.01 = $1,750)
 

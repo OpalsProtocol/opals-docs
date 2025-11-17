@@ -72,7 +72,7 @@ This model has birthed projects like Infinex Protocol (sixty million raised thro
 
 The difference: We add token engineering tools to replace clout with trustless on-chain agreements.
 
-## Why Permanent Liquidity Changes Everything
+## Permanent Locks Make Trust Unnecessary
 
 Traditional approaches rely on promises. "We'll lock liquidity for six months." "The team won't dump." "The treasury will maintain the pools." Promises written in Medium posts, enforced by reputation, broken the moment incentives shift.
 

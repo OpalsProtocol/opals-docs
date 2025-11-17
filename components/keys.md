@@ -4,14 +4,14 @@ Every successful token launch faces a bot problem. The moment your market opens,
 
 Keys solve this by making market participation conditional on NFT ownership. Set a Membership Card as the key for a market, and only Membership Card holders can participate in that sale round. Want to reward contributors first? Set Contributor Cards as the key. Want to create exclusive access for existing NFT communities? Set Azuki, Pudgy Penguins, or Bored Ape as the key. Own the right NFT, access the market. Don't own it, wait your turn.
 
-## Why Keys Matter
+## Access Control Becomes Composable
 
 Traditional whitelists require backend databases, merkle trees, and trust in whoever controls the list. Projects manually verify addresses, update lists, hope they didn't miss anyone or include bots. It's labor-intensive, error-prone, and ultimately centralized. One person controls who gets access.
 
 Keys make access control a composable primitive. The smart contract checks: does this wallet hold the required NFT? Yes means proceed, no means revert. No backend. No manual verification. No central authority deciding who belongs. Just on-chain NFT ownership enforcing market access automatically. NFTs are perfect for this cause they are unique and trivial to verify that Card #4 has claimed, and #5 has not.
 
 
-## How It Works
+## Natural Tiering Through NFT Ownership
 
 When projects create markets, they configure which NFT collections can participate. Maybe the first market is members-only: only wallets holding Membership Cards can buy. After that sells out, open a second market to contributors: only Contributor Card holders. Finally, open a third market to the public with no key required.
 

@@ -4,7 +4,7 @@ Y Combinator revolutionized Silicon Valley with SAFEs (Simple Agreements for Fut
 
 TAFTs are the on-chain evolution. No lawyers. No offshore entities. Just smart contracts enforcing agreements through immutable code.
 
-## Why TAFTs Matter
+## Transferability Creates Secondary Markets
 
 Traditional SAFTs create a fundamental problem: they're not transferable. You invest in a project, sign legal agreements, then wait years with zero liquidity. Can't sell. Can't transfer. Can't exit. Your capital is trapped behind legal paperwork that only lawyers can untangle. 
 
@@ -12,7 +12,7 @@ TAFTs solve this through NFT ownership. Patron Cards are TAFTs—NFTs representi
 
 This transferability creates secondary markets. Missed the initial sale? Buy someone's Patron Card on OpenSea. Need liquidity before token launch? Sell your card to someone who values the opportunity more. The market prices risk continuously rather than forcing binary hold-or-nothing decisions.
 
-## How TAFTs Work Technically
+## NFT Ownership Encodes Agreement Terms
 
 Smart contracts encode the agreement terms immutably. Each Patron Card NFT points to specific claim amounts in the claim contracts. When tokens launch, NFT holders call the claim function to receive their vested allocation. If they sell the NFT before claiming, the new owner gets those rights.
 

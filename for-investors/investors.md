@@ -18,7 +18,7 @@ Opals offers TAFTs: Transferable Agreements for Future Tokens. Think of them as 
 
 **WorkLock (Risk-Free)**: Deposit USDC into WorkLock contracts. Your principal stays liquid and withdrawable anytime. Only the Aave interest converts to LP tokens earning PatronPower rewards. Zero principal risk, pure upside from interest conversion.
 
-## Why This Beats Traditional Investments
+## Smart Contracts Enforce What Founders Promise
 
 No accredited investor gatekeeping. No minimum investment requirements. No geographic restrictions. No three-year lockups with zero liquidity. Just buy a card, hold for rewards, or sell when you want. The smart contracts enforce economic incentives that traditional founders can only promise.
 

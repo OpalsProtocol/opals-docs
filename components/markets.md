@@ -4,7 +4,7 @@ Every token launch faces the same question: how do you distribute ownership fair
 
 Markets change this. Opals's Markets are the core mechanism that raise capital, giving projects the flexibility to choose how, when, and to whom they distribute ownership. At their heart, Opals' Markets are smart contracts that sell digital assets and issue Cards in return. But unlike traditional launchpads, Opals' Markets are modular. 
 
-## Why Markets Matter
+## Distribution Shapes Community
 
 The way you distribute Cards determines the community you create. Sell too fast, and you reward speed over conviction. Use bonding curves, and you create front-running wars. Launch without considerations for the community, and bots extract all the value before real supporters can participate.
 

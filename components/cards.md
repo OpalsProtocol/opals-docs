@@ -102,7 +102,7 @@ This creates a third path beyond "buy and hope" or "provide liquidity and lock."
 
 Capitcal cards creates sustainable project funding from DeFi yields rather than extracting capital from the community. Projects receive cashflow from Aave interest. Supporters keep their principal. Everyone wins.
 
-## How Cards Work Together
+## The Complete Incentive System
 
 The five Card types create a complete incentive system:
 

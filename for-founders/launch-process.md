@@ -1,6 +1,6 @@
 # Launch Process
 
-## How to Deploy Your Project
+## Five Minutes from Idea to Launch
 
 **1. Fill Out the Form**
 - Token name and supply

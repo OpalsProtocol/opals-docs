@@ -4,7 +4,7 @@ Risk-averse supporters face an impossible choice: commit capital early and accep
 
 WorkLock solves this with a simple proposition: deposit USDC, withdraw anytime, earn yield while you wait. Your principal stays liquid. Your interest supports the project. You participate without permanent commitment.
 
-## Why Risk-Free Participation Matters
+## Adverse Selection Gets Inverted
 
 Every failed token launch teaches the same lesson: early supporters take maximum risk for minimum protection. They buy tokens before liquidity exists, before teams prove execution, before product-market fit emerges. When projects collapse, early believers lose everything while founders keep the raised capital.
 
@@ -14,7 +14,7 @@ WorkLock inverts this dynamic. Deposit USDC into Aave V3 through the WorkLock co
 
 This creates genuine optionality. Believe in the project? Keep your deposit staked and earn compound returns as interest converts to LP tokens with PatronPower rewards. Lose conviction? Withdraw your USDC and walk away with your principal intact plus any unclaimed interest. You participate with downside protection that traditional presales never offer.
 
-## How Interest Becomes Liquidity
+## From Aave Yield to PatronPower Rewards
 
 When you deposit USDC into WorkLock, the contract immediately stakes it in Aave V3, receiving interest-bearing aTokens that accumulate yield continuously. Your USDC generates returns through Aave's lending markets, typically 2-4% APY, sometimes higher during periods of high DeFi activity.
 

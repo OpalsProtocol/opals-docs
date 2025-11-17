@@ -40,7 +40,7 @@ OVL creates graduated commitment. Lock with confidence knowing emergency exit ex
 
 This increases total value locked. Projects get more committed capital. Users get more flexibility. The penalty mechanism prevents exploitation while enabling genuine needs.
 
-## Why This Matters
+## Temporal Bridges Replace Binary Lockups
 
 Crypto suffers from temporal misalignment. VCs want exits in 3-5 years. Founders need decades to build. Communities oscillate between euphoria and panic. These timeframes clash constantly.
 
