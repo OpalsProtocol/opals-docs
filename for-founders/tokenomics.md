@@ -10,10 +10,10 @@ This walkthrough demonstrates a complete token launch using Opals with specific 
 **Total supply**: 1,000,000,000 tokens (fixed, no inflation)
 
 **Allocation**:
-- 800,000,000 tokens (80%) ’ Patron Card holders
-- 150,000,000 tokens (15%) ’ Liquidity pool
-- 30,000,000 tokens (3%) ’ Team (4-year vesting)
-- 20,000,000 tokens (2%) ’ Treasury operations
+- 800,000,000 tokens (80%) ï¿½ Patron Card holders
+- 150,000,000 tokens (15%) ï¿½ Liquidity pool
+- 30,000,000 tokens (3%) ï¿½ Team (4-year vesting)
+- 20,000,000 tokens (2%) ï¿½ Treasury operations
 
 ## Card Sales: Three Rounds
 
@@ -205,6 +205,6 @@ The permanent liquidity lock prevents the worst-case scenario (rug pull) while a
 
 **For the project**: 20% ($40k) operational capital immediately, 80% permanent liquidity ensures tradability forever
 
-**For long-term holders**: Fee distribution creates perpetual income, diamond vesting multiplies tokens, fixed supply prevents dilution
+**For long-term holders**: Fee distribution creates perpetual income, diamond vesting multiplies tokens, fixed supply prevents dilution. 
 
 The mathematics align every participant toward the same outcome: long-term protocol success.
